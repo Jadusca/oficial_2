@@ -1,0 +1,1443 @@
+/*Variables de colores*/
+
+:root{
+    --azulClaro: #1D96FF;
+    --grisClaro: #E2E2E2;
+    --rojoVino: #7E0827;
+    --blanco: #FFFFFF;
+    --azulFuerte: #003568;
+    --grisOscuro: #707070;
+    --rojoAdvertencia: #FF9191;
+}
+
+/*Final de variable de colores*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ancho{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*CSS de la pagina principal */
+
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #e2e2e2;
+    padding-left: 50px ;
+    padding-right: 50px;
+    font-size: 18px;
+}
+.uno{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    padding: 10px;
+}
+.dos{
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 600px;
+}
+.buscador input{
+    width: 540px;
+    height: 30px;
+    padding: 10px;
+}
+.buscador button{
+    width: 30px;
+    height: 30px;
+    background-color: #003568;
+    border: #003568;
+    border-radius: 5px;
+    color: white;
+}
+.logo img{
+    max-width: 60px;
+}
+.inicio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    color: #003568;
+}
+.cabecera a{
+    text-decoration: none;
+    color: #003568;
+}
+
+.seccionUno{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.seccionUno h2{
+    margin-top: 40px;
+}
+.tituloSeccionUno{
+    background: var(--azulFuerte);
+    color: var(--blanco);
+    padding: 15px;
+    margin-top: 50px;
+}
+.tituloSeccionUno p{
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.tituloFiltrar{
+    margin-top: 30px;
+    font-size: 30px;
+}
+.seccionUno form{
+    border: 1px var(--grisOscuro) solid;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.seccionUno form label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.seccionUno form select{
+    width: 200px;
+}
+.seccionUno input{
+    padding: 10px;
+   font-weight: bold;
+    width: 130px;
+}
+
+.divTabla{
+    max-width: 1200px;
+    position: relative;
+    border-collapse: collapse;
+}
+.tableFiltrada{
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid black;
+}
+.mostrarResultados{
+    background: var(--azulFuerte);
+    color: var(--blanco);
+    text-align: center;
+    font-weight: normal;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.divTabla tr th{
+    font-size: 25px;
+    text-align: left;
+    padding: 20px;
+}
+.divTabla .tableFiltrada tr th{
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+.tdUno{
+    width: 200px;
+    padding-left: 25px;
+}
+.tdTres{
+    width: 400px;
+    padding-left: 25px;
+}
+.final{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #003568;
+    color: white;
+    padding: 50px 0;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.tec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    font-size: 22px;
+}
+.textofinal p{
+    max-width: 380px;
+    font-size: 22px;
+    margin-top: 10px;
+}
+.tec figure img{
+    max-width: 100px;
+}
+.mapa{
+    max-width: 700px;
+    max-height: 250px;
+    overflow: hidden;
+}
+iframe{
+    width: 600px;
+}
+
+.mostrarResultadosAutores{
+    background: var(--azulFuerte);
+    color: var(--blanco);
+    text-align: center;
+    font-weight: normal;
+    padding: 10px;
+    font-size: 25px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.divTablaAutores{
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+.divTablaAutores .tableFiltrada {
+    border-bottom: 1px black solid;
+    padding: 20px;
+    font-weight: bold;
+}
+.redireccionFiltrar{
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s;
+}
+
+/*CSS de slide de fotos*/
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    }
+
+    .contenidoslider{
+        margin-top: 60px;
+    }
+  
+  .rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+    }
+  
+  .rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+    }
+  
+  .rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+    }
+  
+.caption {
+    position: absolute;
+    z-index: 2;
+    background-color: #1f1f1f41;
+    text-shadow: 0px 0px 10px #333;
+    color: var(--blanco);
+    left: 0px;
+    top: 0px;
+    width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: white;
+}
+.caption h1{
+    font-size: 60px;
+    margin-left: 50px;
+}
+
+/*Final de css de slide de fotos*/
+
+/*.redireccionadmin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #003568;
+    padding: 15px;
+    color: white;
+}
+.redireccionadmin h2{
+    font-size: 26px;
+}
+.redireccionadmin a{
+    font-size: 26px;
+    text-decoration: none;
+    color: white;
+}*/
+.redireccionadmin2{
+    max-width: 1200px;
+    margin-left: 70px;
+    padding: 10px 20px 10px;
+    background-color: #003568;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.redireccionadmin2 a{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+.redireccionadmin2 h2{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.fichaItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.fichaItem a{
+    transition: all 0.5s;
+}
+.seccionFicha h2{
+    margin-top: 20px;
+}
+
+.imagenFicha figure{
+    border: 1px black solid;
+    width: 230px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.imagenFicha figure img{
+    width: 90%;
+    height: 90%;
+    border: 1px black solid;
+}
+.imagenFicha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.imagenFicha h3{
+    background:#FFF5D4;
+    padding: 10px;
+}
+
+.imagenFicha a{
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px black solid;
+    text-align: center;
+    background: var(--grisClaro);
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+.imagenFicha form button{
+    padding: 5px 80px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: var(--grisClaro);
+    font-size: 14px;
+}
+
+.tablaFichaI{
+    max-width: 850px;
+    border-collapse: collapse;
+}
+
+.tablaFichaI th,  td{
+    border-bottom: 1px black solid;
+    padding: 15px;
+}
+
+.tablaFichaI tr:last-child th, tr:last-child td {
+    border-bottom: none;
+  }
+
+.tablaFichaI th{
+    font-size: 20px;
+    vertical-align: top;
+    text-align: start;
+}
+
+.segundaTablaFicha {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.segundaTablaFicha tr:first-child td{
+    background: var(--azulFuerte);
+    padding: 20px;
+}
+
+.segundaTablaFicha th {
+    padding: 20px;
+    font-size: 22px;
+    text-align: start;
+}
+.segundaTablaFicha th:first-child {
+    border-left: 1px solid black;
+    max-width: 250px;
+}
+
+.segundaTablaFicha th:last-child {
+    border-right: 1px solid black;
+}
+
+.segundaTablaFicha tr td {
+    border-bottom: 1px black solid;
+    padding: 20px;
+    border-top: 1px black solid;
+}
+
+.segundaTablaFicha td:first-child {
+    max-width: 250px;
+    font-size: 16px;
+    border-left: 1px black solid;
+
+}
+
+.segundaTablaFicha td:last-child{
+    border-right: 1px black solid;
+}
+
+.segundaTablaFicha tr td a{
+    text-decoration: none;
+    background: var(--azulFuerte);
+    padding: 10px 30px;
+    max-width: 130px;
+    color: var(--blanco);
+    text-align: center;
+    display: block;
+}
+.segundaTablaFicha{
+    border: 1px solid black;
+}
+.titFichero{
+    background-color: #003568;
+    color: white;
+    font-size: 25px;
+    padding: 10px 20px;
+}
+.segundaTablaTitulos{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+}
+.STT{
+    width: 40%;
+    padding: 10px 20px;
+}
+.STD{
+    width: 20%;
+    padding: 10px 20px;
+}
+.STTa{
+    width: 20%;
+    padding: 10px 20px;
+}
+.seguntaTablaTexto{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+}
+.visualizador{
+    text-decoration: none;
+    background-color: var(--azulFuerte);
+    color: var(--blanco);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 60px;
+    transition: all 0.5s;
+}
+.visualizadorOf{
+    text-decoration: none;
+    background-color: var(--azulFuerte);
+    color: var(--blanco);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 60px;
+    transition: all 0.5s;
+}
+.textOficio{
+    position: relative;
+}
+.oficio h1{
+    font-size: 30px;
+    margin: 20px 0;
+}
+.oficio p{
+    background-color: #93c7f7;
+    border: #707070;
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+.textOficio a{
+    margin: 20px 0;
+    position: absolute;
+    top: -10px;
+    left: 800px;
+}
+.segundaTablaFichaMovil{
+    display: none;
+}
+.STT{
+    width: 40%;
+    padding: 10px 20px;
+}
+.STD{
+    width: 20%;
+    padding: 10px 20px;
+}
+.STTa{
+    width: 20%;
+    padding: 10px 20px;
+}
+.seguntaTablaTexto{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+}
+.visualizador{
+    text-decoration: none;
+    background-color: var(--azulFuerte);
+    color: var(--blanco);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 60px;
+}
+.oficio h1{
+    font-size: 30px;
+    margin: 20px 0;
+}
+.oficio p{
+    background-color: #93c7f7;
+    border: #707070;
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
+
+/*css de agregarUsuario*/
+
+.seccionAgregarU{
+    padding: 50px;
+}
+.seccionAgregarU h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.seccionAgregarU p{
+    font-size: 18px;
+}
+
+.lineaForm{
+    display: flex;
+    flex-direction: row;
+}
+
+.lineaForm div{
+    max-width: 550px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.tituloapartadoUs{
+    font-size: 22px;
+    font-weight: bold;
+}
+.formNuevoUsuario p{
+    margin-bottom: 10px;
+}
+.inputAU{
+    width: 73%;
+    padding: 7px;
+}
+.inputUS{
+    width: 36%;
+    padding: 7px;
+}
+.selectAU{
+    width: 400px;
+    padding: 7px;
+}
+.lineaForm{
+    margin-top: 15px;
+}
+#passwordInput{
+    width: 400px;
+    padding: 7px;
+}
+#passwordInputConfirmar{
+    width: 400px;
+    padding: 7px;
+}
+
+.email{
+    max-width: 400px;
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.botonesForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    max-width: 85%;
+}
+
+.botonesForm a{
+    padding: 10px 60px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+.botonesForm a:first-child{
+    background: var(--grisClaro);
+    color: black;
+}
+
+.botonesForm a:last-child{
+    background: var(--azulFuerte);
+    color: var(--blanco);
+}
+
+.lineaForm div i{
+    cursor: pointer;
+}
+
+/* Final de css agregarUsuarios */
+
+/* Inicio de css CargarImagenes */
+
+.file-upload-container {
+    max-width: 800px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    border: 1px var(--grisOscuro) solid;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    background: var(--grisClaro);
+    position: relative;
+}
+
+.file-upload-container i {
+    font-size: 100px;
+    color: var(--azulFuerte);
+    margin-top: 30px;
+}
+.file-upload-container p{
+    font-size: 45px;
+    color: var(--azulFuerte);
+    font-weight: bold;
+    padding: 25px 0;
+}
+#fileInput {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#fileLabel {
+    display: none;
+}
+.tituloCI{
+    margin-left: 30px;
+    font-size: 30px;
+}
+.seccionCargarImagenes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    padding-left: 30px;
+    margin-top: 40px;
+}
+
+.seccionCargarImagenes div:first-child{
+    max-width: 750px;
+    width: 100%;
+}
+.infoCI{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.seccionCargarImagenes div:first-child a{
+    background-color: var(--grisClaro);
+    text-decoration: none;
+    color: black;
+    padding: 10px 50px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.tablaCargarImagenes{
+    max-width: 300px;
+    width: 100%;
+}
+.tablaCargarImagenes table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.tablaCargarImagenes table td a{
+    color: black;
+    text-decoration: none;
+}
+.tablaCargarImagenes table td{
+    border-left: 1px black solid;
+    border-right: 1px black solid ;
+}
+
+.tablaCargarImagenes table tr:first-child td{
+    background: var(--azulFuerte);
+    color: var(--blanco);
+    cursor: default;
+}
+.tablaCargarImagenes table tr:last-child td{
+    border-bottom: 1px black solid;
+}
+
+
+/* final css cargar imagen */
+
+/* inicio css imagen subida */
+
+.estatusIS{
+    font-size: 18px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+.seccionImagenSubida{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    padding-left: 50px;
+
+}
+.cuadroGrisIS{
+    max-width: 700px;
+    width: 100%;
+}
+
+.cuadroInformacionIS{
+    background: var(--grisClaro);
+    display: flex;
+    flex-direction: row;
+    padding: 25px 50px;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cuadroInformacionIS figure{
+    max-width: 200px;
+    border: 1px black solid;
+}
+.cuadroInformacionIS figure img{
+    width: 100%;
+    height: 100%;
+}
+.infoObtenidaI{
+    width: 100%;
+    padding: 20px;
+}
+.infoObtenidaI div{
+    display: flex;
+    flex-direction:row ;
+    justify-content: start;
+    margin: 5px;
+    
+}
+.infoObtenidaI div h3{
+    width: 80px;
+}
+
+.btnIS{
+    margin-top: 20px;
+}
+
+.btnIS a:first-child{
+    background: var(--grisClaro);
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+.btnIS a:last-child{
+    background: var(--azulFuerte);
+    text-decoration: none;
+    color: var(--blanco);
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+/* final css imagenSubida */
+
+/* Inicio css editar usuario */
+
+.tituloEU{
+    font-size: 30px;
+    padding: 30px;
+}
+.advertenciaEU{
+    padding: 30px;
+    background: var(--rojoAdvertencia);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.detallesUsuario{
+    margin: 5px;
+}
+.detallesUsuario p{
+    background: var(--azulFuerte);
+    padding: 20px;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.divDU{
+    border: 1px black solid;
+    width: 100%;
+    padding: 20px;
+}
+.tablaDU{
+    display: block !important;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.thDU{
+    text-align: start;
+    padding-left: 15px;
+    font-size: 20px;
+    border-bottom: 1.5px black solid;
+    border-collapse: collapse;
+}
+
+.thDU, .tdDU{
+    border-bottom: 1.5px black solid;
+    border-collapse: collapse;
+    border-top: 1px black solid;
+}
+.tdDU:last-child{
+    border-bottom: 1.5px black solid;
+}
+.thDU:first-child, .tdDU:first-child{
+    border-top: 1.5px black solid;
+}
+
+.formModificarDatos{
+    align-items: center;
+    margin: auto;
+}
+.formModificarDatos form{
+    padding: 50px;
+}
+
+/* final de css editar Usuario */
+
+/* inicio css lista Usuarios */
+
+/* .contenedorLUPadre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+} */
+
+.divListaU{
+    width: 100%;
+}
+
+.divListaU h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.tablaUsuarios{
+    max-width: 700px;
+    width: 100%;
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+.numeroResultados{
+    background-color: #003568;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Tabla de Usuarios*/
+
+.tablauser{
+    border: 1px solid #707070;
+    border-radius: 5px;
+}
+.tablauser h3{
+    font-size: 24px;
+    text-align: center;
+    background-color: #003568;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 10px 0;
+    color: white;
+}
+.nombrebotones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding: 0 50px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+}
+.nombrebotones:last-of-type{
+    border-bottom: none;
+
+}
+.conttablauser p{
+    font-size: 20px;
+    width: 400px;
+
+}
+.botonestablauser{
+    width: 150px;
+}
+.botonestablauser a{
+    padding: 7px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.botonestablauser i{
+    padding: 8px 25px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+    background-color: #ff0000;
+    transition: all 0.5s;
+}
+
+
+.resultadosUsuarios th{
+    text-align: start;
+    border-bottom: 1px black solid;
+    width: 70%;
+    padding: 20px;
+}
+.resultadosUsuarios:last-child th{
+    border-bottom: none;
+}
+
+.resultadosUsuarios td{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.resultadosUsuarios td a{
+    background-color: var(--azulFuerte);
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 5px 20px;
+}
+
+.resultadosUsuarios td i{
+    background: var(--rojoVino);
+    padding: 5px 20px;
+    color: var(--blanco);
+    cursor: pointer;
+}
+.agregarNU{
+    display: flex;
+    justify-content: end;
+}
+#btnAU{
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    background: var(--grisClaro);
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.5s;
+}
+
+/* fin css lista Usuarios */
+
+/* Inicio css catalogoCarrea */
+.titop2{
+    display: none;
+}
+.divTDPadre{
+    padding: 50px;
+}
+.divTDPadre h2{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.tiposDocumentos{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.tiposDocumentos article{
+    max-width: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.tiposDocumentos article div:first-child{
+    max-width: 150px;
+    width: 100%;
+    font-size: 90px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.infoTipoDocumento{
+    padding: 5px;
+    max-width: 400px;
+}
+.infoTipoDocumento h3{
+    padding: 10px;
+    color:  var(--azulFuerte);
+    font-size: 25px;
+}
+.infoTipoDocumento p{
+    padding: 10px;
+}
+
+.infoTipoDocumento a{
+    text-decoration: none;
+    background: var(--azulFuerte);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Fin css catalogoCarrea */
+
+/* Inicio css Verificar */
+.conjuntoBotones{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.conjuntoBotones a{
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+#btnDescribir, #btnSA{
+    background: var(--azulClaro);
+    color: black;
+}
+
+#btnVerificar{
+    background: var(--azulFuerte);
+    color: var(--blanco);
+}
+#btnCompleto{
+    background: var(--grisClaro);
+    color: var(--azulFuerte);
+}
+
+.datosVerificar{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.datosVerificar h2{
+    width: 100%;
+}
+.datosVerificar p{
+    font-size: 18px;
+    width: 100%;
+}
+.fichaVerificar{
+    width: 90%;
+    background: var(--grisClaro);
+    border: 1px black solid;
+    background:  var(--grisClaro);
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.tablaFV{
+    margin: 30px;
+}
+
+.tablaFV tr th{
+    width: 30%;
+    text-align: start;
+    vertical-align: top;
+    font-size: 20px;
+}
+
+.tablaFV tr td{
+    border: none;
+}
+
+#btnCorregir{
+    background-color: var(--grisOscuro);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 25px;
+    transition: all 0.5s;
+}
+
+.tablaFS{
+    margin: 30px;
+}
+
+.tablaFS tr th{
+    width: 32%;
+    text-align: start;
+    font-size: 20px;
+}
+
+.tablaFS tr td{
+    border:none;
+}
+#btnAoB{
+    background: var(--grisOscuro);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: var(--blanco);
+    margin-left: 20px;
+    transition: all 0.5s;
+}
+
+.btnsVFinal{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+#btnAnterior, #btnCG{
+    background: var(--grisClaro);
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#btnSiguiente{
+    background: var(--azulFuerte);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+.formularioEI{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.pFormularioEI{
+    font-size: 18px;
+}
+
+.formularioEI div{
+    display: flex;
+    flex-direction: row;
+}
+
+.inputsFEI {
+    max-width: 500px;
+    width: 100%;
+}
+
+#btnAnadirMas{
+    width: 100px;
+    margin-left: 15px;
+}
+
+.formularioEI div label{
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    max-width: 400px;
+    width: 100%;
+}
+
+.ficheroEI{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-top: 10px;
+}
+
+.tFicheroE{
+    border: 1px black solid;
+    width: 90%;
+    text-align: start;
+    border-collapse:collapse;
+}
+.h2ficheroEI{
+    font-size: 30px;
+}
+
+.tFicheroE tr th{
+    text-align: start;
+    font-size: 25px;
+    border-bottom: 1.5px black solid;
+    padding-bottom: 10px;
+}
+
+.tFicheroE tr td{
+    text-align: start;
+}
+
+.divBtnEI{
+    text-align: center;
+}
+
+.divBtnEI a{
+    background-color: var(--azulFuerte);
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 5px 20px;
+}
+
+.divBtnEI i{
+    background: var(--rojoVino);
+    padding: 5px 20px;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/* body{
+        background: red;
+    } */
+
+    .menuadmin{
+        display: none;
+    }
+    .cerrarsesionad{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 300px;
+        height: 60px;
+        z-index: 10000;
+        position: absolute;
+        top: 11.5%;
+        right: 0px;
+        margin-top: 20px;
+        box-shadow: #ccc 0px 0px 10px;
+    }
+    .cerrarsesionad li{
+        width: 100%;
+        padding: 20px;
+        background-color: #e2e2e2;
+    }
+    .cerrarsesionad a{
+        text-decoration: none;
+        color: #003568;
+        width: 100%;
+        text-align: right;
+        font-size: 20px;   
+    }
+    #opcerrar{
+        display: none;
+    }
+    .titop{
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 130px;
+        margin-top: 30px;
+    }
+    .flecha{
+        position: fixed;
+        background-color: #003668cb;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        bottom: 20px;
+        right: 80px;
+        z-index: 1000;
+        font-size: 22px;
+        box-shadow: #ccc 0px 0px 15px;
+        cursor: pointer;
+    }
+    .botonesPag{
+        display: inline-block;
+        background-color: #003568;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin-bottom: 40px;
+    }
+    .botonesPagFiltrar{
+        display: inline-block;
+        background-color: #003568;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin-top: 20px;
+    }
+    .btnCancelarAdmin{
+        border: 1px solid #707070;
+        padding: 10px 15px;
+        color: black;
+        background-color: var(--grisClaro);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .btnSiguienteAdmin{
+        border: 1px solid var(--azulFuerte);
+        padding: 10px 15px;
+        color: white;
+        background-color: var(--azulFuerte);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+/*------------ANIMACIONES------------------*/
+
+.visualizador:hover{
+    background-color: #001d38;
+}
+.visualizadorOf:hover{
+    background-color: #001d38;
+}
+.redireccionFiltrar:hover{
+    text-decoration: underline;
+    color: #003568;
+}
+.fichaItem a:hover{
+    background-color: #bbbbbb;
+}
+.btnCancelarAdmin:hover{
+    background-color: #bbbbbb;
+}
+.btnSiguienteAdmin:hover{
+    background-color: #001d38;
+}
+#btnCorregir:hover{
+    background-color: #bbbbbb;
+}
+#btnAoB:hover{
+    background-color: #bbbbbb;
+}
+.botonestablauser i:hover{
+    background-color: #660000;
+}
+.botonestablauser a:hover{
+    background-color: #001d38;
+}
+#btnAU:hover{
+    background-color: #001d38;
+    color: white !important;
+}

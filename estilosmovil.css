@@ -1,0 +1,1662 @@
+/*CSS Para el inicio de sesion en Tablet*/
+
+@media screen and (max-width: 780px) {
+  .muro {
+    display: none;
+  }
+
+  .formulariobiblio input {
+    width: 500px;
+    border: 1px solid;
+  }
+  .formulariobiblio input[type="submit"] {
+    width: 500px;
+  }
+  .textoforms {
+    min-width: 500px;
+  }
+  .azul {
+    left: 330px;
+  }
+  .mapa {
+    margin-top: 20px;
+    max-width: 500px;
+  }
+}
+
+/*CSS Para MOVIL*/
+
+@media screen and (max-width: 470px) {
+  /*CSS en Movil de la Cabecera*/
+  body {
+    width: 100% !important;
+  }
+  .cabecera {
+    width: 100% !important;
+    height: auto !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+  .pixeles {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+  }
+
+  .pixeles .uno {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+  .iniciousuarios {
+    min-width: 390px;
+  }
+  .logo img {
+    max-width: 50px;
+  }
+  .uno {
+    width: 100%;
+    margin: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 7px !important;
+  }
+  .unoadmin {
+    width: 100% !important;
+    padding: 0%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 45% !important;
+  }
+
+  .logo {
+    width: 53px;
+  }
+
+  .logo_nacional {
+    display: none !important;
+  }
+
+  .logo__nacional {
+    display: block !important;
+    width: 110px;
+    /* margin-left: 14px; */
+  }
+
+  .logo__nacional img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .inicio {
+    display: none !important;
+  }
+
+  .iniciomovil {
+    display: block !important;
+    font-size: 30px !important;
+  }
+
+  .iniciomovilindex {
+    display: block !important;
+    font-size: 40px !important;
+    margin-top: -7px !important;
+    margin-left: 70px;
+  }
+
+  .buscador {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .buscador input {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .rslides li {
+    width: 100%;
+    height: 180px;
+  }
+
+  .rslides li:first-child {
+    display: block;
+    float: left;
+  }
+
+  .rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+  }
+
+  .caption {
+    width: 100%;
+    height: 180px !important;
+  }
+
+  .caption h1 {
+    font-size: 25px !important;
+    line-height: 33px;
+    margin-left: 10px !important;
+  }
+
+  .recuadro {
+    height: auto;
+  }
+
+  .recuadro h2 {
+    margin-top: 25px;
+  }
+
+  .recuadro a {
+    margin-top: 20px;
+  }
+
+  .galeria {
+    margin: auto;
+    width: 90%;
+  }
+
+  .galeria_grid {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1100px;
+    display: grid;
+    grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6";
+    grid-gap: 15px;
+  }
+
+  .foto1 {
+    grid-area: foto1;
+  }
+
+  .foto2 {
+    grid-area: foto2;
+  }
+
+  .foto3 {
+    grid-area: foto3;
+  }
+
+  .foto4 {
+    grid-area: foto4;
+  }
+
+  .foto5 {
+    grid-area: foto5;
+  }
+
+  .foto6 {
+    grid-area: foto6;
+  }
+
+  .carruselinicio {
+    width: 100%;
+  }
+
+  #contcarrusel {
+    width: 100%;
+  }
+
+  .contenedorflechas {
+    margin: auto;
+    width: 99% !important;
+    margin-top: -160px;
+  }
+
+  .viewport {
+    margin: auto;
+    width: 100% !important;
+  }
+
+  .viewport {
+    margin: auto;
+    margin-right: 4%;
+    width: 100% !important;
+  }
+
+  .final {
+    width: 100% !important;
+  }
+
+  .tec {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tec h3 {
+    display: none;
+  }
+
+  .tec figure {
+    margin-left: -3%;
+    width: 88%;
+    text-align: center;
+  }
+
+  .tec figure img {
+    display: inline-block;
+    width: 70px;
+  }
+
+  .menu1 {
+    width: 100% !important;
+    margin-left: 0% !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu1 a {
+    font-size: 17px !important;
+    margin-left: 0% !important;
+  }
+
+  .cat_admin {
+    margin-top: 40px;
+    font-size: 27px;
+    line-height: 33px;
+    width: 80%;
+  }
+
+  .partes {
+    margin: auto;
+    margin-top: 50px;
+    width: 90%;
+    display: grid;
+    grid-template-areas: "periodo_uno" "periodo_dos" "periodo_tres" "periodo_cuatro";
+    grid-gap: 15px;
+  }
+
+  .periodo_uno {
+    grid-area: periodo_uno;
+  }
+
+  .periodo_dos {
+    grid-area: periodo_dos;
+  }
+
+  .partes1 {
+    margin: auto;
+    margin-top: -110px;
+    width: 90%;
+    display: grid;
+    grid-template-areas: "periodo_tres" "periodo_cuatro";
+    grid-gap: 15px;
+  }
+
+  .periodo_tres {
+    grid-area: periodo_tres;
+  }
+
+  .periodo_cuatro {
+    grid-area: periodo_cuatro;
+  }
+
+  /*CSS del Menu Administrativo*/
+
+  .menu_admin {
+    display: block !important;
+    border: 1px solid #003568;
+    font-size: 20px;
+    color: #003568;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .ingresaradmin {
+    display: none;
+  }
+  .cerrarsesionad2 {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 300px;
+    height: 60px;
+    z-index: 10000;
+    position: absolute;
+    top: 7.5%;
+    left: 1%;
+    margin-top: 20px;
+    box-shadow: #ccc 0px 0px 10px;
+  }
+  .cerrarsesionad2 li {
+    width: 100%;
+    padding: 20px;
+    background-color: #e2e2e2;
+  }
+  .cerrarsesionad2 a {
+    text-decoration: none;
+    color: #003568;
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+  }
+  #opcerrar2 {
+    display: none;
+  }
+
+  .parrallax {
+    width: 100%;
+    height: 200px;
+  }
+
+  .parrallax1 {
+    width: 100%;
+    height: 200px;
+  }
+
+  .info2 {
+    margin-left: 12% !important;
+  }
+
+  .info2 h1 {
+    font-size: 24px !important;
+    line-height: 32px;
+  }
+
+  .direccionesprincipales a {
+    font-size: 18px;
+  }
+
+  .opc_catalogo {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+  }
+
+  .opc_catalogo a {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .catalogo i {
+    font-size: 50px;
+  }
+
+  .catalogo h1 {
+    font-size: 25px;
+  }
+
+  .catalogo_super_admin i {
+    font-size: 50px;
+  }
+
+  .catalogo_super_admin h1 {
+    font-size: 25px;
+  }
+
+  /* CSS del Footer*/
+  .mapa {
+    width: 340px;
+  }
+  .textofinal {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .textofinal h3 {
+    font-size: 23px;
+  }
+  /*CSS del Slider en Movil*/
+
+  .caption {
+    max-width: 370px;
+    height: 132px;
+  }
+  .caption h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .contenidoslider {
+    margin-top: 10px;
+  }
+
+  .contenidoslider p {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .textofinal p {
+    font-size: 18px !important;
+  }
+
+  .Tit_tesis {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .titulo {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .titulo h1 {
+    width: 90%;
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+    font-size: 27px !important;
+  }
+
+  .titulo_proy_inv {
+    margin-bottom: 20px;
+  }
+
+  .titulo_proy_inv h1 {
+    font-size: 23px !important;
+    line-height: 16px;
+  }
+
+  .titulo_proy_EGEL {
+    margin-bottom: 20px;
+  }
+
+  .titulo_proy_EGEL h1 {
+    font-size: 23px !important;
+    line-height: 31px !important;
+  }
+
+  .listado {
+    width: 95% !important;
+  }
+
+  .titulo_listado h2 {
+    font-size: 20px;
+  }
+
+  .vinculos_listado a {
+    font-size: 16px !important;
+    padding: 5px 15px !important;
+  }
+
+  .tit_posg {
+    font-size: 24px !important;
+    text-align: center;
+  }
+
+  .opciones_duo_sabatico {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .Opciones_titulacion_sabatico h2 {
+    font-size: 20px !important;
+    line-height: 28px;
+  }
+
+  .Opciones_titulacion_sabatico a {
+    left: 35% !important;
+  }
+
+  .Opciones_titulacion_sabatico {
+    height: auto !important;
+  }
+  /*CSS en Movil del Index*/
+
+  .titulos {
+    text-align: center;
+    margin-left: 0;
+  }
+  .hrs {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  /* CSS del Carrusel del Index en Movil*/
+
+  .contenedorflechas {
+    width: 380px;
+  }
+  .viewport {
+    width: 450px;
+    height: 560px;
+    margin-left: 7px;
+  }
+  .carrusel {
+    flex-direction: column;
+    padding: 35px;
+    width: 300px;
+  }
+  .fotocard img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5;
+  }
+  .textocard {
+    padding: 10px;
+    font-size: 15px;
+    background-color: #ffffffad;
+    color: black;
+    height: 180px;
+  }
+  .fotocard figure img {
+    max-width: 230px;
+  }
+  #contcarrusel {
+    padding: 30px 15px;
+  }
+
+  /*CSS en Movil del Inicio de Sesion*/
+  .formulariobiblio input {
+    width: 300px;
+    border: 1px solid;
+  }
+  .formulariobiblio input[type="submit"] {
+    width: 300px;
+  }
+  .textoforms {
+    min-width: 300px;
+  }
+  .azul {
+    left: 170px;
+  }
+
+  /* CSS Tesis, Residencias y Sabaticos en Movil*/
+
+  .tablasbusqueda {
+    max-width: 350px;
+    margin-left: 15px;
+  }
+  .tablasbusqueda a {
+    width: 350px;
+  }
+  .partelogo figure img {
+    max-width: 80px;
+  }
+  .cardtextologo {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .titulologo h2 {
+    margin-bottom: 5px;
+    color: #003568;
+    font-size: 18px;
+  }
+  .residencias {
+    margin: auto;
+    height: 170px;
+    width: 100%;
+  }
+  .ordenar {
+    margin-top: 20px;
+    margin-left: 15px;
+    max-width: 350px;
+  }
+  .titCarrera {
+    display: none;
+  }
+  .botonesordenar {
+    padding: 0 10px;
+  }
+  .ordenar a {
+    font-size: 15px;
+  }
+  .titulocar {
+    display: block !important;
+    margin: auto !important;
+    width: 90% !important;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #003568;
+    color: white;
+    margin-top: 20px;
+  }
+  .titulocar1 {
+    display: block !important;
+    margin: auto !important;
+    width: 25% !important;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #003568;
+    color: white;
+    margin-top: 20px;
+    margin-left: 2.5% !important;
+  }
+  .carreras {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 350px;
+  }
+  .logocar figure img {
+    top: -90px !important;
+    left: 90px;
+  }
+  .cardcarreras {
+    padding-bottom: 120px !important;
+    width: 300px;
+    margin-top: 300px;
+    margin-bottom: -190px;
+  }
+  .cardcarreras h1 {
+    width: 98%;
+    text-align: center;
+    margin-left: -21%;
+  }
+  .cardcarreras a {
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    left: 65px;
+    text-align: center;
+  }
+  .cardcarrerassis {
+    width: 300px;
+    height: 140px;
+    margin-top: 300px;
+  }
+  .cardcarrerassis h1 {
+    width: 98% !important;
+    margin-top: -20px;
+    text-align: center;
+    margin-left: 0%;
+  }
+  .cardcarrerassis a {
+    font-size: 20px;
+    top: 50px;
+    left: 10px;
+    text-align: center;
+  }
+  .logocarsis figure img {
+    position: absolute;
+    top: -90px !important;
+    left: 95px;
+  }
+  .opcion2car {
+    width: 300px;
+    height: 140px;
+    margin-top: 300px;
+    margin-bottom: -190px;
+  }
+  .opcion2car h1 {
+    margin-top: -20px;
+    text-align: center;
+    width: 98%;
+    margin-left: -4%;
+  }
+  .opcion2car a {
+    font-size: 20px;
+    top: 50px;
+    left: 35px;
+    text-align: center;
+  }
+  .overview2 {
+    margin-top: -180px;
+    margin-bottom: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid transparent;
+    position: relative;
+  }
+
+  .overview21 {
+    margin-top: 0px;
+    margin-left: -4% !important;
+    margin-bottom: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: space-around;
+    width: 30% !important;
+    border: 1px solid transparent;
+    position: relative;
+  }
+
+  .overview21 a {
+    margin-top: 150px;
+    width: 100%;
+  }
+
+  .overview21 .cardcarreras {
+    margin-top: 150px;
+    width: 100%;
+    margin-top: -10%;
+    margin-bottom: 2%;
+  }
+
+  .overview21 .opcion2car {
+    margin-top: 150px;
+    width: 100%;
+    margin-top: -10%;
+    margin-bottom: 2%;
+  }
+
+  .overview21 .cardcarrerassis {
+    margin-top: 150px;
+    width: 100%;
+    margin-top: -10%;
+    margin-bottom: 2%;
+  }
+
+  .logocar figure img {
+    top: -75px;
+    left: 33% !important;
+  }
+
+  .logocarsis figure img {
+    left: 33% !important;
+  }
+
+  .viewport2 {
+    width: 90%;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .Opciones {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .opciones_duo {
+    margin: auto;
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .opciones_duo_posgrado {
+    margin: auto !important;
+    display: flex !important;
+    width: 90% !important;
+    flex-wrap: wrap !important;
+  }
+
+  .Opciones_titulacion_posgrado {
+    height: auto !important;
+  }
+
+  .Opciones_titulacion_posgrado a {
+    left: 35% !important;
+  }
+
+  .Opciones_titulacion_posgrado h2 {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+
+  .Opc_Tit {
+    font-size: 25px !important;
+    line-height: 33px !important;
+  }
+
+  .Opciones_titulacion {
+    height: auto !important;
+  }
+
+  .Opciones_titulacion a {
+    top: 90% !important;
+    left: 35% !important;
+  }
+  /*CSS Documentos en Movil*/
+
+  .titulodoc {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  .titulodoc a {
+    font-size: 20px;
+  }
+  .titulodoc h2 {
+    font-size: 20px;
+  }
+  .textdoc {
+    flex-wrap: wrap;
+  }
+  .textdoc p {
+    font-size: 18px;
+    max-width: 350px;
+  }
+  .imgdoc figure img {
+    display: none;
+  }
+  .apartadosdoc {
+    font-size: 16px;
+    margin: 0 10px;
+    max-height: 350px; /* Altura mínima */
+    padding: 0 5px;
+  }
+  /* CSS del Index Administrativo en Movil*/
+
+  .iniciosesion {
+    position: relative;
+    background-image: url(Imagenes/Inicio_Sesion/MuroTec.jpg);
+    width: 100% !important;
+    margin-left: -21%;
+  }
+
+  .textobiblio {
+    width: 75% !important;
+    z-index: 10;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 18%;
+    color: white;
+  }
+
+  .logotecbiblio {
+    /* border: 1px red solid; */
+    z-index: 10;
+    margin-left: 20%;
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+
+  .logotecbiblio img {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .logotecbiblio1 {
+    /* border: 1px red solid; */
+    z-index: 10 !important;
+    margin-left: 20% !important;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .logotecbiblio1 img {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .formulariobiblio input {
+    /* border: 1px red solid; */
+    z-index: 10;
+  }
+
+  .fondo-admin {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.527);
+  }
+
+  .biblioteca {
+    margin-left: 20%;
+    z-index: 10;
+    background-color: white;
+    padding: 5px;
+    border-radius: 7px;
+  }
+
+  .formulariobiblio {
+    margin-left: 20%;
+    z-index: 10;
+  }
+
+  .titulosadmin {
+    font-size: 22px;
+    margin-left: 15px;
+    margin-top: 0;
+  }
+  .contprincipal {
+    flex-wrap: wrap;
+  }
+  .bienvenida {
+    margin: auto;
+    max-width: 350px;
+    font-size: 16px;
+  }
+  .direccionesprincipales {
+    margin-top: 20px;
+  }
+  .direccionesprincipales a {
+    width: 200px;
+    margin: auto;
+  }
+
+  /* CSS Catalogo Administrativo en Movil*/
+
+  .juntarcar h2 {
+    display: none;
+  }
+  .soloacceder {
+    display: none;
+  }
+  .contcatalogoing {
+    justify-content: center;
+    gap: 5px;
+  }
+  .catalogocarreras {
+    width: 170px;
+  }
+  .parteunocat {
+    justify-content: center;
+    gap: 5px;
+  }
+  .tablaadmin {
+    display: none;
+  }
+  .catalogolic .catalogocarreras {
+    margin-left: 25px;
+    width: 305px;
+  }
+
+  /*CSS Describir para documentos Administrativo en Movil*/
+
+  .botonesdoc {
+    width: 360px;
+    margin-left: 10px;
+  }
+
+  .botonesdoc a {
+    margin-right: 0px;
+    font-size: 12px;
+  }
+  .textoapartadodoc {
+    max-width: 340px;
+    margin-left: 10px;
+  }
+  .textoapartadodoc h2 {
+    font-size: 25px;
+    margin: auto;
+  }
+  .descripcionapartadodoc {
+    font-size: 18px;
+    width: 350px;
+    margin-left: 10px;
+  }
+  .tituloapartado {
+    margin-bottom: 10px;
+  }
+
+  .describirforms {
+    margin: auto;
+    width: 90% !important;
+  }
+
+  .juntosdescribir {
+    width: 100% !important;
+    margin-left: 0%;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .juntosdescribir {
+    width: 100% !important;
+  }
+
+  .juntosdescribir input {
+    width: 100% !important;
+  }
+  .juntosdescribir select {
+    width: 100% !important;
+  }
+  .juntosdescribir button {
+    top: 75px;
+    left: 250px;
+  }
+  .selecdescribir {
+    margin-bottom: 10px;
+    width: 100% !important;
+  }
+  .selecdescribir input {
+    width: 100% !important;
+  }
+  .selecdescribir select {
+    width: 100px;
+  }
+  .informacion {
+    width: 370px;
+    display: flex;
+  }
+  .informacion p {
+    margin-left: 10px;
+  }
+
+  .info1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .info1 p {
+    margin-left: 10px;
+  }
+
+  .info1 a{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .apartadodescribir {
+    margin-left: 10px;
+  }
+
+  /* CSS para los Botones Finales Administrativos en Movil*/
+
+  .botonesfinalescompleto {
+    margin-top: 10px !important;
+    margin-left: -20%;
+    margin-bottom: auto !important;
+    text-align: center;
+    width: 95% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .botonesfinalescompleto a {
+    margin-right: 0px;
+    font-size: 14px;
+    width: 100% !important;
+  }
+  .botonesfinalescompleto1 {
+    margin-top: 10px !important;
+    margin-left: 0%;
+    margin-bottom: auto;
+    text-align: center;
+    width: 95% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .botonesfinalescompleto1 a {
+    margin-right: 0px;
+    font-size: 14px;
+    width: 100% !important;
+  }
+
+  /* CSS Subir Archivo para Documentos Administrativos en Movil*/
+
+  .archivoform {
+    margin-top: 40px;
+  }
+  .contfile i {
+    font-size: 45px;
+    color: #003568;
+  }
+  .contfile h2 {
+    font-size: 30px;
+    color: #003568;
+  }
+
+  /* CSS Completo para Documentos Administrativos en Movil*/
+  .descripcionapartado {
+    font-size: 18px;
+    width: 350px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  /* CSS Editar Contraseña y Usuario en Movil*/
+
+  .formseditarcontra {
+    max-width: 350px;
+  }
+  .formseditarcontra form {
+    width: 290px;
+    margin: auto;
+  }
+  .formseditarcontra label {
+    font-size: 18px;
+  }
+
+  /*CSS Detalles del Usuario Administrativo en Movil*/
+
+  .detallesindividual {
+    max-width: 350px;
+    margin-left: 10px;
+  }
+  .hrsdetalles {
+    width: 100%;
+    margin-left: 10px;
+    position: absolute;
+    top: 180px;
+    left: 0;
+  }
+  .hrsdetalles2 {
+    width: 100%;
+    margin-left: 10px;
+    position: absolute;
+    top: 690px;
+    left: 0;
+  }
+  .brmovil {
+    display: block;
+  }
+  .contdetalles {
+    margin-top: -30px !important;
+    width: 90% !important;
+    margin: auto !important;
+  }
+
+  .partedetalles {
+    width: 100% !important;
+  }
+
+  /* CSS Documentos por Carrera Administrativos en Movil*/
+
+  .contcarrera {
+    flex-direction: column;
+  }
+
+  .logocarrera figure img {
+    border: 2px solid #707070;
+    max-width: 150px;
+    border-radius: 50%;
+  }
+  .textocontcarrera {
+    font-size: 18px;
+    margin-left: 0px;
+  }
+  .textocontcarrera h1 {
+    margin-bottom: 10px;
+    margin-right: 40px;
+  }
+  .textocontcarrera p {
+    margin-left: 10px;
+  }
+  .botonnuevodoc {
+    padding: 10px 25px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 40px;
+  }
+
+  /* CSS Menu Desplegable de Opciones Administrativo*/
+
+  .titop {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .titop2 {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 380px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #opcionesadmin {
+    display: block;
+    font-size: 22px;
+    margin-right: 35px;
+    position: relative;
+    cursor: pointer;
+  }
+  .opcionesadmin2 {
+    display: block;
+    cursor: pointer;
+  }
+  .wrapper .sidebar {
+    background-color: #20202096;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 370px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+    display: block;
+    z-index: 100;
+  }
+  .menuopciones2 {
+    display: block;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 353px;
+    height: 220px;
+    margin-top: 10px;
+    box-shadow: #ccc 0px 0px 10px;
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    background-color: white;
+  }
+  .menuopciones2 p {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 15px;
+    background-color: #003568;
+    color: white;
+    width: 353px;
+  }
+  .menuopciones2 a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    width: 350px;
+    border-bottom: 1px solid #707070;
+    margin-right: 5px;
+  }
+  .menuopciones2 {
+    border: #707070 1px solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  #cerrarop {
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    text-decoration: none;
+  }
+  #cerrarop h1 {
+    font-size: 10px;
+  }
+  body .wrapper .sidebar {
+    right: -380px;
+  }
+  body.active .wrapper .sidebar {
+    right: 0;
+  }
+
+  /*CSS JS del Boton Autor en Movil*/
+
+  .contjsautor {
+    margin: left;
+  }
+  .formjs {
+    display: flex;
+    flex-direction: column;
+  }
+  .juntosjs {
+    flex-direction: column;
+    position: relative;
+    gap: 0;
+    width: 90px;
+  }
+  #jsautor {
+    margin-left: 285px;
+    width: 360px;
+    padding: 7px;
+  }
+  .botonjs {
+    position: absolute;
+    top: -5px;
+    left: 280px;
+  }
+  .contautores {
+    margin-top: 10px;
+  }
+  .listaasesoresjs li {
+    margin: 0 15px;
+  }
+
+  /*Flecha Subir*/
+  .flecha {
+    position: fixed;
+    background-color: #003668cb;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    bottom: 20px;
+    right: 10px !important;
+    z-index: 1000;
+    font-size: 22px;
+    box-shadow: #ccc 0px 0px 15px;
+    cursor: pointer;
+  }
+  .encabezadotit {
+    padding-left: 10px;
+    width: 100px;
+  }
+  .encabezadoautor {
+    padding-left: 15px;
+  }
+  .encabezadoop {
+    padding-left: 10px;
+  }
+  .tabladocumentos td {
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  .tabladocumentos a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .formNuevoUsuario .btnsPassword {
+    position: absolute;
+    top: 630px;
+    left: 80px;
+  }
+  .formNuevoUsuario .btnsPassword input {
+    margin-left: 5px;
+    width: 100px;
+  }
+
+  .formNuevoUsuario p{
+    margin-left: -15%;
+  }
+
+  /*CSS Documentos RTS Administrativo*/
+  .tablaRTS1 {
+    width: 300px;
+  }
+
+  .primeraParteRTS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+  }
+  .textDocRTS {
+    width: 300px;
+  }
+  .textDocRTS h1 {
+    font-size: 26px;
+  }
+  .textDocRTS p {
+    font-size: 18px;
+  }
+  .segundaParteRTS {
+    width: 300px;
+  }
+  .segundaParteRTS h1 {
+    font-size: 26px;
+  }
+  .formRTS {
+    margin-top: 15px;
+  }
+  .formRTS label {
+    font-size: 20px;
+  }
+  .formRTS select {
+    margin-top: 5px;
+    width: 300px;
+    padding: 7px;
+  }
+
+  .nombre_Usuario {
+    display: block !important;
+    border: 1px solid #003568;
+    font-size: 20px;
+    color: #003568;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .redireccionadmin2 {
+    border: 3px #003568 solid;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  .admin {
+    order: 1;
+  }
+
+  .admin h2 {
+    font-size: 20px;
+  }
+
+  .super-admin {
+    margin-bottom: -70px;
+    order: -1;
+  }
+
+  .super-admin h2 {
+    font-size: 20px;
+  }
+
+  .admin1 {
+    order: 1;
+  }
+
+  .admin1 h2 {
+    font-size: 20px;
+  }
+
+  .super-admin1 {
+    margin-bottom: -70px;
+    order: -1;
+  }
+
+  .super-admin1 h2 {
+    font-size: 20px;
+  }
+
+  .divListaU {
+    width: 95%;
+    margin: auto;
+  }
+
+  .divListaU h2 {
+    font-size: 25px;
+    line-height: 33px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .tablauser {
+    border: 1px #707070 solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tablauser h3 {
+    /* border: 1px red solid; */
+    font-size: 20px;
+  }
+
+  .nombrebotones {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nombrebotones p {
+    width: 130% !important;
+    font-size: 18px;
+  }
+
+  .botonestablauser {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .botonestablauser a {
+    display: block;
+  }
+  .botonestablauser i {
+    display: block;
+    font-size: 20px;
+  }
+
+  .detallesUsuario {
+    width: 95%;
+    margin: auto;
+  }
+
+  .tablaDU {
+    width: 100%;
+  }
+  .thDU {
+    font-size: 17px !important;
+    padding-left: 0px !important;
+  }
+
+  .lineaForm {
+    display: flex;
+    flex-direction: column;
+    width: 130% !important;
+    margin-left: -15%;
+  }
+
+  .lineaForm p{
+    margin-left: 0% !important;
+  }
+
+  .tituloapartadoUs_p {
+    margin-left: -15% !important;
+  }
+
+  .tituloapartadoUs {
+    margin-left: -0% !important;
+  }
+
+  .tituloapartadoUs_email{
+    margin-left: -15% !important;
+  }
+
+  .inputAU_numero{
+    margin-left: -15% !important;
+  }
+
+  .describirforms .seccionesdescribir{
+    margin-left: 1%;
+    width: 100% !important;
+  }
+
+  .seccionesdescribir {
+    width: 130% !important;
+    margin-left: -15%;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .seccionesdescribir p{
+    margin-left: 0% !important;
+  }
+
+  .seccionesdescribir h3{
+    /* border: 1px red solid !important;
+    margin: auto;
+    width: 100% !important; */
+  }
+
+  .tituloapartadoUs_email {
+    margin-left: -15% !important;
+  }
+
+  .email {
+    margin-left: -15% !important;
+  }
+
+  .juntosdescribir1 {
+    width: 100% !important;
+    margin-left: 0%;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .selecdescribir1 {
+    width: 100%;
+  }
+
+  .selecdescribir1 input {
+    width: 100%;
+  }
+
+  .selectAU {
+    margin-left: 0% !important;
+    width: 100%;
+  }
+
+  .tit_biblioteca {
+    margin-left: -15% !important;
+  }
+
+  .tituloapartadoUs_biblioteca {
+    margin-left: -15% !important;
+  }
+
+  .selectAU_biblio{
+    margin-left: -15% !important;
+  }
+
+  .btnCancelarAdmin{
+    order: 1;
+    width: 100% !important;
+  }
+
+  .btnSiguienteAdmin{
+    order: -1;
+    margin-bottom: 10px;
+    width: 100% !important;
+  }
+
+  .seccionAgregarU h1{
+    font-size: 20px !important;
+  }
+
+  .inputAU{
+    margin-left: 0% !important;
+  }
+
+  .name_usuario{
+    width: 70% !important;
+    margin: auto;
+    font-size: 14px;
+  }
+
+  .inputPS{
+    width: 100% !important;
+  }
+
+  .usuario{
+    margin-left: -15% !important;
+  }
+
+  .inputUS{
+    margin-left: -15% !important;
+  }
+}

@@ -1,0 +1,2886 @@
+* {
+  box-sizing: border-box;
+  margin: 0% ;
+  padding: 0%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.white {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 8px;
+}
+
+.white:hover {
+  color: rgb(0, 119, 255);
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px;
+}
+
+/* Css del header*/
+.cabecera {
+  margin: 0% !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100% !important;
+  height: 100px;
+  background-color: #e2e2e2;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 18px;
+}
+
+.campo {
+  margin-bottom: 10px;
+}
+
+.icono {
+  cursor: pointer;
+  user-select: none;
+}
+
+.uno {
+  display: flex;
+  margin-left: -20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  padding: 10px;
+}
+
+.uno_admin {
+  display: flex;
+  width: 35% !important;
+  margin-left: -20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  padding: 10px;
+}
+
+.unosuperadmin {
+  width: 35% !important;
+  display: flex;
+  margin-left: -20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 875px;
+}
+
+.iniciomovil{
+  display: none;
+}
+
+.buscador input {
+  width: 540px;
+  height: 30px;
+  padding: 10px;
+}
+
+.edit-button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.buscador button {
+  width: 30px;
+  height: 30px;
+  background-color: #003568;
+  border: #003568;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.iniciomovilindex{
+  display: none !important;
+}
+
+.logo_nacional img {
+  max-width: 150px;
+}
+
+.logo__nacional{
+  display: none;
+}
+
+.logo img {
+  max-width: 60px;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 130px;
+  color: #003568;
+  transition: all 0.5s;
+}
+
+.cabecera a {
+  text-decoration: none;
+  color: #003568;
+  transition: all 0.5s;
+}
+
+/* CSS del Slide de Fotos*/
+
+.contenidoslider {
+  margin-top: 60px;
+}
+
+.contenidoslider figure img {
+  max-width: 1200px;
+  height: 500px;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 430px;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+}
+
+.caption {
+  position: absolute;
+  z-index: 2;
+  background-color: #1f1f1f41;
+  text-shadow: 0px 0px 10px #333;
+  color: var(--blanco);
+  left: 0px;
+  top: 0px;
+  width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: white;
+}
+
+.caption h1 {
+  font-size: 60px;
+  line-height: 68px;
+  margin-left: 50px;
+}
+
+/* CSS del texto abajo del Slide de Fotos*/
+
+.contenidoslider p {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #003568;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.menuadmin {
+  display: none;
+}
+
+.menu_admin{
+  display: none;
+}
+
+/* CSS Seccion Contenido Index*/
+
+.seccioncontenido {
+  margin-top: 50px;
+  background-color: #e2e2e2;
+  padding: 30px;
+}
+
+.titulos {
+  margin-left: 30px;
+  font-size: 30px;
+  color: #003568;
+}
+
+.hrs {
+  max-width: 250px;
+  height: 3px;
+  background-color: black;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.contrecuadros {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.recuadro {
+  border: 1px solid black;
+  background-color: white;
+  max-width: 400px;
+  height: 200px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+
+.recuadro i {
+  font-size: 70px;
+  position: absolute;
+  top: -50px;
+  left: 150;
+}
+
+.recuadro a {
+  text-decoration: none;
+  color: white;
+  background-color: #707070;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.Opciones_titulacion {
+  border: 1px solid black;
+  background-color: white;
+  max-width: 400px;
+  height: 200px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+
+.Opciones_titulacion i {
+  font-size: 70px;
+  position: absolute;
+  top: -50px;
+  left: 150;
+}
+
+.Opciones_titulacion a {
+  text-decoration: none;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  color: white;
+  background-color: #707070;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s;
+  margin-top: 15px;
+}
+
+.Opciones_titulacion h2 {
+  text-align: center;
+  line-height: 28px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* CSS Seccion Destacados del Index*/
+
+.secciondestacados {
+  margin-top: 50px;
+}
+
+.recuadros2 {
+  width: 310px;
+  margin-top: 30px;
+}
+
+.recuadros2 a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #003568;
+  margin-top: 100px;
+  transition: all 0.5s;
+}
+
+.fotosdestacadas img {
+  width: 150px;
+  height: 200px;
+}
+
+.contrecuadros2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/*CSS del Carrusel Index*/
+
+.carruselinicio {
+  margin-top: 50px;
+}
+
+.carrusel {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: #707070;
+  padding: 20px 20px;
+  width: 480px;
+  cursor: pointer;
+}
+
+.textocard {
+  padding: 15px;
+  font-size: 18px;
+  background-color: white;
+  max-width: 240px;
+  height: 323px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.textocard a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s;
+}
+
+.fotocard figure img {
+  max-width: 250px;
+  max-height: 325px;
+}
+
+#contcarrusel {
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 100px 75px;
+  position: relative;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 1200px;
+  height: 380px;
+  position: relative;
+}
+
+.overview {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carrusel {
+  margin: 0 20px;
+}
+
+.contenedorflechas {
+  margin-top: 20px;
+  width: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  z-index: 66;
+}
+
+.contenedorflechas i {
+  font-size: 35px;
+  color: #707070;
+  background-color: var(--morado);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+/* CSS Footer*/
+
+.final {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #003568;
+  color: white;
+  padding: 50px 0;
+  flex-wrap: wrap;
+}
+
+.tec {
+  display: flex;
+  width: 410px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.textofinal p {
+  max-width: 380px;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.tec figure img {
+  max-width: 100px;
+}
+
+.mapa {
+  max-width: 700px;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 600px;
+}
+
+/* CSS Residencias, Sabaticos y Tesis*/
+
+.tablas {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+
+.partelogo figure img {
+  max-width: 100px;
+}
+
+.cardtextologo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #e2e2e2;
+  max-width: 630px;
+  padding: 20px;
+}
+
+.titulologo h2 {
+  margin-bottom: 15px;
+  color: #003568;
+  font-size: 30px;
+}
+
+.titulologo hr {
+  height: 3px;
+  background-color: black;
+}
+
+/* CSS Tabla Ordenar*/
+
+.footer {
+  margin-top: -7px;
+}
+
+.ordenar {
+  margin-left: 50px;
+  max-width: 500px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.ordenar p {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px 15px;
+  background-color: #003568;
+  color: white;
+}
+
+.botonesordenar {
+  padding: 0 60px;
+  border: #707070 1px solid;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.ordenar a {
+  border: #707070 1px solid;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  color: black;
+}
+
+.titCarrera {
+  margin-left: 50px;
+  max-width: 500px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.titCarrera p {
+  font-size: 30px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #003568;
+  color: white;
+}
+
+.residencias {
+  width: 600px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* CSS Tabla de busqueda*/
+.tablasbusqueda {
+  max-width: 400px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.tablasbusqueda p {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 20px 25px;
+  background-color: #003568;
+  color: white;
+}
+
+.tablasbusqueda a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  width: 400px;
+  border-bottom: 1px solid #707070;
+}
+
+.textotitulotabla a {
+  text-decoration: none;
+  color: black;
+}
+
+.tablasbusqueda a:last-of-type {
+  border-bottom: none;
+}
+
+.tablasdirecciones {
+  border: #707070 1px solid;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.tablasdirecciones a {
+  width: 398px;
+  transition: all 0.5s;
+  padding: 15px;
+}
+
+.partetablas {
+  max-width: 400px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*CSS de la seccion Carreras*/
+
+.titulocar {
+  display: none;
+}
+
+.dosadmin{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+
+.overview2 {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 1200px;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.carreras {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 1200px;
+  border: 1px solid transparent;
+}
+
+.cardcarreras {
+  border: 1px solid #707070;
+  border-radius: 15px;
+  width: 400px;
+  height: 100px;
+  background-image: url(Imagenes/Slider/slide3.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  margin-top: 130px;
+  transition: all 0.5s linear;
+}
+
+.cardcarreras:hover {
+  transform: scale(1.05);
+}
+
+.logocar figure img {
+  border: 1px solid #707070;
+  max-width: 120px;
+  z-index: 10;
+  border-radius: 50%;
+  position: absolute;
+  top: -75px;
+  left: 140px;
+}
+
+.cardcarreras h1 {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+  position: absolute;
+  top: 60%;
+  left: 22%;
+  transition: all 0.5s;
+}
+
+.cardcarrerassis {
+  border: 1px solid #707070;
+  border-radius: 15px;
+  width: 500px;
+  height: 100px;
+  background-image: url(Imagenes/Slider/slide3.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  margin-top: 130px;
+  transition: all 0.5s linear;
+}
+
+.cardcarrerassis:hover {
+  transform: scale(1.05);
+}
+
+.cardcarrerassis h1 {
+  font-size: 25px;
+  width: 495px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+  position: absolute;
+  top: 60%;
+  left: 1%;
+  transition: all 0.5s;
+}
+
+.logocarsis figure img {
+  border: 1px solid #707070;
+  max-width: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: -75px;
+  left: 190px;
+  z-index: 10;
+}
+
+.opcion2car {
+  border: 1px solid #707070;
+  border-radius: 15px;
+  width: 400px;
+  height: 100px;
+  background-image: url(Imagenes/Slider/slide3.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  margin-top: 130px;
+  transition: all 0.5s linear;
+}
+
+.opcion2car:hover {
+  transform: scale(1.05);
+}
+
+.opcion2car h1 {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  z-index: 10;
+}
+
+.blue {
+  border: 1px #003568 solid;
+  background-color: #003568;
+  color: white;
+  margin-left: 350px;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.blueh1 {
+  border: 1px #003568 solid;
+  background-color: #003568;
+  color: white;
+  margin: auto;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/*CSS Inicio de sesion*/
+
+.iniciousuarios {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+
+.muro figure img {
+  margin-left: -0.6%;
+  min-width: 900px;
+  height: 700px;
+}
+
+.iniciosesion {
+  min-width: 443px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.biblioteca figure img {
+  margin-top: 20px;
+  max-width: 220px;
+}
+
+.textobiblio h1 {
+  font-size: 28px;
+  line-height: 36px;
+  max-width: 350px;
+  text-align: center;
+}
+
+.formulariobiblio input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+.formulariobiblio input[type="submit"] {
+  background-color: #003568;
+  border: 1px solid #003568;
+  color: white;
+}
+
+.textoforms {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.azul {
+  color: #088ee7;
+  position: absolute;
+  top: 0;
+  left: 170px;
+}
+
+.textobiblio p {
+  text-align: center;
+}
+
+.logotecbiblio figure img {
+  margin-top: -200px;
+  max-width: 100px;
+  margin-top: auto !important;
+}
+.logotecbiblio1 figure img {
+  margin-top: -200px;
+  max-width: 100px;
+}
+
+.logotecbiblio_admin figure img {
+  max-width: 120px;
+}
+
+/* CSS Documentos del Index*/
+
+.titulodoc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 60px;
+}
+
+.documentosus hr {
+  height: 3px;
+  background-color: black;
+  margin-top: 10px;
+}
+
+.titulodoc a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+
+.titulodoc h2 {
+  font-size: 30px;
+}
+
+.textdoc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.textdoc p {
+  font-size: 20px;
+  max-width: 550px;
+}
+
+.imgdoc figure img {
+  max-width: 170px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.partedocumentos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin: 20px 0;
+}
+
+.apartadosdoc {
+  font-size: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 180px;
+  transition: all 0.5s;
+}
+
+.tituloazul {
+  text-decoration: none;
+  color: #003568;
+}
+
+.botonsig {
+  max-width: 100px;
+  margin-left: 90%;
+}
+
+.botonsig button {
+  background-color: #003568;
+  color: white;
+  padding: 10px 15px;
+  border: 1px solid #003568;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* CSS Menu Desplegable Opciones Administrativo*/
+
+.wrapper .sidebar {
+  display: none;
+}
+
+.opcionesadmin2 {
+  display: none;
+}
+
+/*CSS Menu Administrativo*/
+
+.menuadmin {
+  display: none;
+}
+
+.cerrarsesionad {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 300px;
+  height: 60px;
+  z-index: 10000000;
+  position: absolute;
+  top: 11.5%;
+  right: 0px;
+  margin-top: 20px;
+  box-shadow: #ccc 0px 0px 10px;
+}
+
+.cerrarsesionad li {
+  width: 100%;
+  padding: 20px;
+  background-color: #e2e2e2;
+}
+
+.cerrarsesionad a {
+  text-decoration: none;
+  color: #003568;
+  width: 100%;
+  text-align: right;
+  font-size: 20px;
+}
+
+#opcerrar {
+  display: none;
+}
+
+.ingresaradmin i {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.nombreUsuario {
+  position: relative;
+  display: inline-block;
+}
+
+.nombre_Usuario{
+  display: none !important;
+}
+
+.nombreUsuario .cerrarsesionad {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: -200px;
+  /* Ajusta el valor según sea necesario para mover el menú a la izquierda */
+}
+
+.nombreUsuario:hover .cerrarsesionad {
+  display: block;
+}
+
+.nombreUsuario .cerrarsesionad a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nombreUsuario .cerrarsesionad a:hover {
+  background-color: #f1f1f1;
+}
+
+/* CSS Index Principal Administrativo*/
+
+.contenidoslideradmin {
+  margin-top: 30px;
+}
+
+.contenidoslideradmin figure img {
+  width: 1200px;
+  height: 400px;
+}
+
+.titulosadmin {
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+/* CSS Contenido Principal del Index Administrativo*/
+
+.contprincipal {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.bienvenida {
+  border: 1px solid #707070;
+  background-color: #82c3fb;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  font-size: 20px;
+}
+
+.direccionesprincipales {
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.direccionesprincipales a {
+  border: 1px solid #707070;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  width: 280px;
+  text-align: center;
+  padding: 20px 30px;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+/*CSS del Catalogo Administrativo*/
+
+.titulosadmin {
+  font-size: 30px;
+}
+
+.contcatalogoing {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.catalogocarreras {
+  border: 1px solid #707070;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  width: 350px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #e2e2e2;
+}
+
+.solocar {
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.juntarcar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.soloacceder {
+  border: 1px solid #003568;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  background-color: #003568;
+  border-radius: 5px;
+}
+
+.parteunocat {
+  width: 740px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalogolic {
+  margin-top: 30px;
+}
+
+.catalogolic .catalogocarreras {
+  margin-left: 35px;
+  width: 375px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+/* CSS Menu Opciones*/
+
+#opcionesadmin {
+  display: none;
+}
+
+.tablaadmin {
+  max-width: 350px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.tablaadmin p {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px 15px;
+  background-color: #003568;
+  color: white;
+}
+
+.tablaadmin a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  width: 350px;
+  border-bottom: 1px solid #707070;
+}
+
+.tablasopciones {
+  border: #707070 1px solid;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.tablasopciones a {
+  width: 348px;
+  transition: all 0.5s;
+}
+
+.tablasopciones a:last-of-type {
+  border-bottom: none;
+}
+
+/*CSS Botones para el la subida de documentos administrativo*/
+
+.botonesdoc {
+  margin-top: 50px;
+}
+
+.listo {
+  background-color: #1d96ff;
+  border: #1d96ff 1px solid;
+  color: black;
+}
+
+.botonesdoc a {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.botonazulfuerte {
+  color: white;
+  background-color: #003568;
+  border: 1px solid #003568;
+}
+
+.botongris {
+  color: black;
+  background-color: #e2e2e2;
+  border: 1px solid #707070;
+}
+
+/* CSS Contenido Describir Documento Administrativo*/
+
+.textoapartadodoc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  max-width: 700px;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.textoapartadodoc h2 {
+  font-size: 30px;
+}
+
+.descripcionapartadodoc {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* CSS Formulario de Describir Administrativo*/
+
+.describirforms {
+  margin-top: 30px;
+  width: 660px;
+  margin-left: 3%;
+}
+
+.apartadodescribir {
+  font-size: 18px;
+}
+
+.seccionesdescribir {
+  position: relative;
+}
+
+.juntosdescribir {
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.tituloapartado {
+  font-size: 22px;
+  max-width: 250px;
+  text-align: center;
+  background-color: #003568;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.red {
+  color: red;
+}
+
+.juntosdescribir input {
+  width: 655px;
+  padding: 7px;
+}
+
+.juntosdescribir select {
+  width: 655px;
+  padding: 7px;
+}
+
+.juntosdescribir button {
+  padding: 7px 15px;
+  background-color: #e2e2e2;
+  border: #707070;
+  border-radius: 5px;
+  position: absolute;
+  top: 38px;
+  left: 920px;
+}
+
+.selecdescribir {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.selecdescribir label {
+  border: 1px solid #707070;
+  padding: 7px 10px;
+  background-color: #e2e2e2;
+}
+
+.selecdescribir input {
+  width: 100px;
+}
+
+.selecdescribir select {
+  width: 100px;
+}
+
+/* CSS Botones Finales Administrativos*/
+
+.botonesfinalescompleto {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: right;
+}
+
+.botonesfinalescompleto a {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+/* CSS del Archivo para subir de la parte Administrativa*/
+
+.archivoform {
+  margin-top: 50px;
+}
+
+.contfile {
+  margin: auto;
+  text-align: center;
+  border: 1px solid #707070;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  max-width: 1000px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contfile i {
+  font-size: 60px;
+  color: #003568;
+}
+
+.contfile h2 {
+  font-size: 40px;
+  color: #003568;
+}
+
+#enviararchivo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.enviar {
+  cursor: pointer;
+}
+
+/* CSS de la parte de Completo del documento Administrativo*/
+
+.descripcionapartado {
+  font-size: 24px;
+  border: 1px solid #707070;
+  background-color: #e2e2e2;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/*CSS Detalles de los Usuarios de la parte Administrativa*/
+
+/*Redirecciones*/
+.redireccionadmin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  background-color: #003568;
+  padding: 15px;
+  margin: 50px 0;
+  color: white;
+}
+
+.redireccionadmin2 {
+  margin-top: 40px;
+  background-color: transparent;
+}
+
+.redireccionadmin2 h2 {
+  color: #003568;
+}
+
+.redireccionadmin h2 {
+  font-size: 26px;
+}
+
+.admin a h2 {
+  color: white;
+  background-color: #003568;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.super-admin a h2 {
+  padding: 10px 20px;
+  transition: all 0.5s linear;
+}
+
+.super-admin a h2:hover {
+  color: white;
+  background-color: #003568;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.super-admin1 a h2 {
+  color: white;
+  background-color: #003568;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.admin1 a h2 {
+  padding: 10px 20px;
+  transition: all 0.5s linear;
+}
+
+.admin1 a h2:hover {
+  color: white;
+  background-color: #003568;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.redireccionadmin a {
+  font-size: 26px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s;
+}
+
+/*Fin Redirecciones*/
+
+.contdetalles {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-bottom: 50px;
+  justify-content: start;
+}
+
+.informacion {
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.informacion p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.botonespequeños {
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.detallesindividual {
+  max-width: 600px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.negritas {
+  font-weight: bold;
+  width: 200px;
+}
+
+.td {
+  width: 398px;
+}
+
+.partedetalles {
+  position: relative;
+}
+
+.hrsdetalles {
+  width: 600px;
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+
+.hrsdetalles hr {
+  margin-bottom: 50px;
+}
+
+.hrsdetalles2 {
+  width: 600px;
+  position: absolute;
+  top: 660px;
+  left: 0;
+}
+
+.hrsdetalles2 hr {
+  margin-bottom: 50px;
+}
+
+.contdetalles h1 {
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.contdetalles {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* CSS Documentos por carrera parte Administrativa*/
+
+.contcarrera {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logocarrera figure img {
+  border: 2px solid #707070;
+  max-width: 180px;
+  border-radius: 50%;
+}
+
+.textocontcarrera {
+  max-width: 500px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.textocontcarrera h1 {
+  margin-bottom: 10px;
+}
+
+.botonnuevodoc {
+  padding: 10px 25px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 15px 0;
+  transition: all 0.5s;
+}
+
+.generaltit {
+  background-color: #003568;
+  color: white;
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+.tabladocumentos {
+  margin-bottom: 50px;
+}
+
+.tabladocumentos table {
+  border-collapse: collapse;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #707070;
+}
+
+.tabladocumentos tr {
+  border-bottom: 1px solid #707070;
+  padding: 8px;
+}
+
+.tabladocumentos td {
+  border-bottom: 1px solid #707070;
+  padding: 8px;
+}
+
+.encabezadotit {
+  text-align: left;
+  width: 550px;
+  padding-left: 40px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.encabezadoautor {
+  text-align: left;
+  width: 450px;
+  padding-left: 70px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.encabezadoop {
+  text-align: center;
+  width: 250px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.tabladocumentos td {
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.btnDoc {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.textotitulotabla {
+  padding-left: 40px;
+}
+
+.textoautortabla {
+  padding-left: 70px;
+}
+
+.textofechatabla {
+  padding-left: 80px;
+}
+
+/* CSS Editar Contraseña y Usuario Administrativo*/
+
+.formseditarcontra {
+  padding-top: 30px;
+  border: 1px solid #707070;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.formseditarcontra form {
+  width: 500px;
+  margin: auto;
+}
+
+.formseditarcontra label {
+  font-size: 22px;
+}
+
+.formseditarcontra p {
+  margin-bottom: 30px;
+}
+
+.formseditarcontra input {
+  padding: 6px;
+  width: 250px;
+  margin-left: 20px;
+}
+
+.editaruc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* CSS Del Autor en JS*/
+
+.contjsautor {
+  margin-right: 600px;
+  padding: 0;
+  width: 100%;
+}
+
+.formjs {
+  display: flex;
+  flex-direction: column;
+}
+
+.juntosjs {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  gap: 230px;
+  width: 1200px;
+  margin-top: 25px;
+}
+
+#jsautor {
+  width: 600px;
+  padding: 7px;
+}
+
+.botonjs {
+  padding: 7px 15px;
+  background-color: #e2e2e2;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 920px;
+}
+
+.formjs input {
+  width: 600px;
+  padding: 7px;
+}
+
+.contautores {
+  background-color: white;
+  width: 70%;
+  margin-top: 20px;
+}
+
+.contautores .listaasesoresjs {
+  padding: 0;
+}
+
+.listaasesoresjs li {
+  list-style: none;
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.listaasesoresjs li p {
+  margin: 0;
+  width: 500px;
+  margin-bottom: 20px;
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.btn-delete {
+  padding-left: 20px;
+  padding-right: 70px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  width: 10%;
+  height: 35px;
+}
+
+/*CSS Archivo Subido Administrativo*/
+
+.tablaficherosubido {
+  border: 1px solid #707070;
+  margin-top: 40px;
+}
+
+.tablaficherosubido h3 {
+  border: 1px solid #003568;
+  padding: 20px;
+  font-size: 22px;
+  color: white;
+  background-color: #003568;
+}
+
+.titUNO {
+  width: 500px;
+  padding: 20px;
+}
+
+.titDOS {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.titAS {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.descripcionTAS {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+}
+
+.unoTAS {
+  width: 500px;
+  padding: 20px;
+}
+
+.unoTAS a {
+  border: 1px solid #ff0000;
+  padding: 7px 15px;
+  display: inline-block;
+  margin-top: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: #ff0000;
+  border-radius: 5px;
+  margin-left: 280px;
+}
+
+.dosTAS {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  padding-left: 10px;
+}
+
+.descR {
+  width: 120px;
+}
+
+.descR a {
+  border: 1px solid #707070;
+  padding: 7px 15px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: -5px;
+  color: black;
+  text-decoration: none;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+}
+
+.btnOtroArchivo {
+  width: 230px;
+  padding: 10px 15px;
+  background-color: #003568;
+  color: white;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/*CSS Documentos RTS Administrativo*/
+.tabladocumentos {
+  margin-top: 40px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabladocumentos td {
+  border-bottom: 1px solid black;
+}
+
+.tabladocumentos tr {
+  border-bottom: 1px solid black;
+}
+
+.primeraParteRTS {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+.primeraParteRTS {
+  margin-bottom: 50px;
+}
+
+.textDocRTS {
+  width: 500px;
+}
+
+.primeraParteRTS h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.textDocRTS p {
+  font-size: 20px;
+}
+
+.formRTS {
+  margin-top: 15px;
+}
+
+.formRTS label {
+  font-size: 24px;
+}
+
+.formRTS select {
+  width: 400px;
+  padding: 7px;
+}
+
+.flecha {
+  position: fixed;
+  background-color: #003568;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  bottom: 20px;
+  right: 80px;
+  z-index: 1000;
+  font-size: 22px;
+  box-shadow: #ccc 0px 0px 15px;
+  cursor: pointer;
+}
+
+.botonesPag {
+  display: inline-block;
+  background-color: #003568;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 40px;
+}
+
+.botonesPagFiltrar {
+  display: inline-block;
+  background-color: #003568;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.btnCancelarAdmin {
+  border: 1px solid #707070;
+  padding: 10px 15px;
+  color: black;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btnSiguienteAdmin {
+  border: 1px solid #003568;
+  padding: 10px 15px;
+  color: white;
+  background-color: #003568;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.editar {
+  margin-bottom: 90px;
+}
+
+.formNuevoUsuario .btnsPassword {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  position: absolute;
+  top: 550px;
+  left: 600px;
+}
+
+.formNuevoUsuario .btnsPassword input {
+  margin-left: 10px;
+}
+
+/*---------ANIMACIONES-----------------*/
+
+.inicio:hover {
+  color: #691926;
+}
+
+.inicio i {
+  color: #003568;
+}
+
+.inicio a {
+  color: #003568;
+}
+
+.inicio a:hover {
+  color: #003568 !important;
+}
+
+.cabecera a:hover {
+  color: #088ee7;
+}
+
+.buscador button:hover {
+  background-color: white;
+  color: #003568;
+}
+
+.recuadro:hover {
+  box-shadow: 0px 0px 10px #333;
+}
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  border-radius: 5px;
+}
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #003568;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  border-radius: 5px;
+}
+
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+  color: white;
+  border-radius: 5px;
+}
+
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  border-radius: 5px;
+}
+
+.recuadros2 a:hover {
+  text-decoration: underline;
+}
+
+.textocard a:hover {
+  text-decoration: underline;
+}
+
+.tablasdirecciones a:hover {
+  background-color: #e2e2e2;
+}
+
+.cardcarreras a:hover {
+  text-decoration: underline;
+}
+
+.cardcarrerassis a:hover {
+  text-decoration: underline;
+}
+
+.opcion2car a:hover {
+  text-decoration: underline;
+}
+
+.apartadosdoc a:hover {
+  text-decoration: underline;
+}
+
+.ingresaradmin i:hover {
+  color: #088ee7;
+}
+
+.tablasopciones a:hover {
+  background-color: #e2e2e2;
+}
+
+/* Sweep To Right */
+.hvr-sweep-to-right2 {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+.hvr-sweep-to-right2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #707070;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+.hvr-sweep-to-right2:hover,
+.hvr-sweep-to-right2:focus,
+.hvr-sweep-to-right2:active {
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+.hvr-sweep-to-right2:hover:before,
+.hvr-sweep-to-right2:focus:before,
+.hvr-sweep-to-right2:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+.redireccionadmin a:hover {
+  text-decoration: underline;
+}
+
+.botonnuevodoc:hover {
+  background-color: #001d38;
+}
+
+.textotitulotabla a:hover {
+  text-decoration: underline;
+}
+
+.btnCancelarAdmin:hover {
+  background-color: #bbbbbb;
+}
+
+.btnSiguienteAdmin:hover {
+  background-color: #001d38;
+}
+
+.Opc_Tit {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 40px;
+  line-height: 48px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.opciones_duo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Tit_tesis {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+/* .titulo{
+  border: 1px blue solid;
+} */
+
+.titulo h1 {
+  display: inline-block;
+  font-size: 35px;
+  line-height: 43px;
+}
+
+/* .titulo_proy_inv{
+  border: 1px red solid;
+} */
+
+.titulo_proy_inv h1 {
+  display: inline-block;
+  font-size: 40px;
+}
+
+/* .titulo_proy_EGEL{
+  border: 1px red solid;
+} */
+
+.titulo_proy_EGEL h1 {
+  display: inline-block;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.listado {
+  width: 500px;
+}
+
+.titulo_listado {
+  width: 100%;
+  padding: 15px 25px;
+  color: white;
+  background-color: #003568;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.vinculos_listado {
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-right: 1px #707070 solid;
+  border-left: 1px #707070 solid;
+  border-bottom: 1px #707070 solid;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.vinculos_listado a {
+  text-decoration: none;
+  display: inline-block;
+  border: 1px #707070 solid;
+  border-radius: 10px;
+  background-color: #e2e2e2;
+  color: black;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.opciones_duo_posgrado {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Opciones_titulacion_posgrado {
+  border: 1px solid black;
+  background-color: white;
+  width: 400px !important;
+  height: 200px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+
+.Opciones_titulacion_posgrado i {
+  font-size: 70px;
+  position: absolute;
+  top: -50px;
+  left: 150;
+}
+
+.Opciones_titulacion_posgrado a {
+  text-decoration: none;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  color: white;
+  background-color: #707070;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s;
+  margin-top: 15px;
+}
+
+.Opciones_titulacion_posgrado h2 {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 25px;
+  line-height: 33px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.tit_posg {
+  font-size: 29px;
+  line-height: 37px;
+}
+
+.posgrados {
+  border: none;
+  border-top: 4px #003568 solid;
+  margin-top: 10px;
+}
+
+.opciones_duo_sabatico {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Opciones_titulacion_sabatico {
+  border: 1px solid black;
+  background-color: white;
+  width: 500px !important;
+  height: auto;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+
+.Opciones_titulacion_sabatico i {
+  font-size: 70px;
+  position: absolute;
+  top: -50px;
+  left: 150;
+}
+
+.Opciones_titulacion_sabatico a {
+  text-decoration: none;
+  color: white;
+  background-color: #707070;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0%;
+  left: 40%;
+  transition: all 0.5s;
+  margin-bottom: 30px;
+}
+
+.Opciones_titulacion_sabatico h2 {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 25px;
+  line-height: 33px;
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+.galeria_grid {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 1100px;
+  display: grid;
+  grid-template-areas: "foto1 foto2 foto3" "foto4 foto5 foto6";
+  grid-gap: 15px;
+}
+
+.foto1 {
+  grid-area: foto1;
+}
+
+.foto2 {
+  grid-area: foto2;
+}
+
+.foto3 {
+  grid-area: foto3;
+}
+
+.foto4 {
+  grid-area: foto4;
+}
+
+.foto5 {
+  grid-area: foto5;
+}
+
+.foto6 {
+  grid-area: foto6;
+}
+
+.galeria_grid figure {
+  cursor: pointer;
+  filter: grayscale(100%);
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s linear;
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+.galeria_grid figure:hover {
+  filter: grayscale(0%);
+}
+
+.galeria_grid figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s linear;
+}
+
+.galeria_grid figure img:hover {
+  transform: scale(1.05);
+}
+
+.galeria {
+  text-align: center;
+}
+
+.galeria hr {
+  margin-top: 10px;
+  border: none;
+  background-color: #003568;
+  height: 5px;
+  width: 30%;
+  margin: auto;
+}
+
+.galeria h1 {
+  color: #003568;
+  font-size: 41px;
+  line-height: 49px;
+  margin-top: 80px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.menu1 {
+  /* border: 1px red solid; */
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: -30px;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: #003568;
+  font-size: 25px;
+}
+
+.menu1 a {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 20px;
+  margin-right: 15px;
+  text-decoration: underline;
+  transition: all 0.5s linear;
+}
+
+.menu1 a:hover {
+  transform: scale(1.05);
+  background-color: #003568;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.arrow {
+  color: #003568;
+  font-size: 25px;
+}
+
+.cat_admin {
+  width: 620px;
+  margin-top: 0.5%;
+  margin-left: 7%;
+}
+
+.catalogo {
+  width: auto;
+  color: white;
+  background-image: url(Imagenes/Slider/slide3.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  /* height: 150px; */
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px transparent solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.catalogo i {
+  z-index: 10;
+}
+
+.catalogo h1 {
+  z-index: 10;
+}
+
+.catalogo_super_admin {
+  width: auto;
+  color: white;
+  background-image: url(Imagenes/Slider/slide4.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  /* height: 150px; */
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px transparent solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.catalogo_super_admin i {
+  z-index: 10;
+}
+
+.catalogo_super_admin h1 {
+  z-index: 10;
+}
+
+.fondo {
+  background-color: rgba(0, 29, 56, 0.514);
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.catalogo:hover {
+  border-radius: 15px;
+  border: 1px transparent solid;
+  color: white;
+  background: rgb(0, 29, 56);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 29, 56, 1) 9%,
+    rgba(0, 53, 104, 1) 42%,
+    rgba(8, 142, 231, 1) 81%
+  );
+}
+
+.catalogo i {
+  font-size: 90px;
+}
+
+.catalogo h1 {
+  font-size: 30px;
+}
+
+.catalogo_super_admin:hover {
+  border-radius: 15px;
+  border: 1px transparent solid;
+  color: white;
+  background: rgb(0, 29, 56);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 29, 56, 1) 9%,
+    rgba(0, 53, 104, 1) 42%,
+    rgba(8, 142, 231, 1) 81%
+  );
+}
+
+.catalogo_super_admin i {
+  font-size: 90px;
+}
+
+.catalogo_super_admin h1 {
+  font-size: 30px;
+}
+
+.opc_catalogo {
+  display: flex;
+  margin-top: 5%;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.opc_catalogo a {
+  text-decoration: none;
+  color: #333;
+}
+
+.parrallax {
+  margin: auto;
+  font-family: "Oswald", sans-serif;
+  background-image: url(Imagenes/Slider/slide3.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 350px;
+  width: 100%;
+  position: relative;
+}
+
+.parrallax::before {
+  content: "";
+  background: rgb(0, 29, 56);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 29, 56, 0.6) 9%,
+    rgba(0, 53, 104, 0.4) 42%,
+    rgba(8, 142, 231, 0.4) 81%
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+.parrallax1 {
+  margin: auto;
+  font-family: "Oswald", sans-serif;
+  background-image: url(Imagenes/Slider/slide4.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 350px;
+  width: 100%;
+  position: relative;
+}
+
+.parrallax1::before {
+  content: "";
+  background: rgb(0, 29, 56);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 29, 56, 0.6) 9%,
+    rgba(0, 53, 104, 0.4) 42%,
+    rgba(8, 142, 231, 0.4) 81%
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.info2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  padding: 15px;
+  position: absolute;
+  z-index: 4;
+  top: 27%;
+  left: -25%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.info2 h1 {
+  font-size: 45px;
+  line-height: 53px;
+  margin-top: 5px;
+}
+
+.periodos {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.primero {
+  border: 1px black solid;
+  width: 300px;
+  border-radius: 5px;
+  background-color: #e2e2e2;
+  padding: 20px 50px;
+}
+
+.partes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.partes a {
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.partes a:hover {
+  transform: scale(1.1);
+}
+
+.acceder {
+  margin-top: 10px;
+}
+
+.acceder a {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #003568;
+  color: white;
+  padding: 5px 20px;
+}
+
+.echo_periodo{
+  border: 1px red solid;
+}
