@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repositorio del Instituto Tecnologico de Merida</title>
+    <title>Herramientas</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">
@@ -34,16 +34,21 @@
     </section>
     <section class="contprincipal ancho">
         <div class="bienvenida">
-            <p>Bienvenido al Repositorio Institucional de Acceso Abierto del Instituto Tecnológico de Mérida,
-                que almacena y organiza la documentación y producción de índole científica y académica con el
-                propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
+            <p>Bienvenido al módulo de Herramientas del sistema.
+                Desde esta sección podrás gestionar los diferentes elementos que forman parte de la plataforma:
+                Agregar o modificar Licenciaturas, Posgrados y Sabáticos.
+                Administrar las imágenes de la galería.
+                Gestionar los Tipos de Titulación disponibles.
+                Configurar los Periodos de Licenciaturas.
+                Utiliza cada módulo con responsabilidad para asegurar que la información publicada esté siempre actualizada y correcta.
+
+</p>
         </div>
         <div class="direccionesprincipales">
             <?php
-            echo "<a class='hvr-sweep-to-right' href='listaUsuariosSuperAdmin.php'>Usuarios</a>";
-            echo "<a class='hvr-sweep-to-right' href='consulta_documentos.php'>Catálogo</a>";
-            echo "<a class='hvr-sweep-to-right' href='Subir_archivos.php'>Subir Archivos</a>";
-            echo "<a class='hvr-sweep-to-right' href='herramientas.php'>Herramientas</a>";
+            echo "<a class='hvr-sweep-to-right' href='modulo_carreras.php'>Modulo de licenciaturas</a>";
+            echo "<a class='hvr-sweep-to-right' href='modulo_posgrados.php'>Modulo de posgrados</a>";
+            echo "<a class='hvr-sweep-to-right' href='modulo_sabaticos.php'>Modulo de sabáticos</a>";
             ?>
         </div>
     </section>

@@ -122,7 +122,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
         while ($tipo = $tipos->fetch_assoc()) {
             if ($contador % 2 == 0)
                 echo "<div class='opciones_duo'>"; // inicia fila
-    
+
             $idTipo = $tipo['id_tipo_titulacion'];
             $nombre = $tipo['nombre_titulacion'];
             $descripcion = $tipo['descripcion_titulacion'];
