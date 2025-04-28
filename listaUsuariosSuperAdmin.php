@@ -19,7 +19,7 @@
     include "headerSuperadmin.php";
     include('conexion.php');
 
-    $sql = "SELECT id, nombre, apellido FROM usuarios";
+    $sql = "SELECT id_administrador, nombre, apellido FROM administradores";
     $result = $conectar->query($sql);
 
     // Establecer $privilegiosId para permitir borrar sin restricciones
@@ -66,7 +66,7 @@
 
                         while ($row = $result->fetch_assoc()) {
                             $nombreCompleto = $row["nombre"] . " " . $row["apellido"];
-                            $id = $row["id_super_administrador"];
+                            $id = $row["id_administrador"];
 
                             echo "<div class='nombrebotones'>
                                 <p>" . $nombreCompleto . "</p>
