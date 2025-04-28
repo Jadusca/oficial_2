@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repositorio del Instituto Tecnologico de Merida</title>
+    <title>Subida de archivos</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">
@@ -34,16 +34,16 @@
     </section>
     <section class="contprincipal ancho">
         <div class="bienvenida">
-            <p>Bienvenido al Repositorio Institucional de Acceso Abierto del Instituto Tecnológico de Mérida,
-                que almacena y organiza la documentación y producción de índole científica y académica con el
-                propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
+            <p>Bienvenido al módulo de gestión de documentos académicos.
+              Aquí podrás cargar, organizar y administrar los archivos correspondientes a Licenciaturas, Posgrados y Sabáticos.
+              Asegúrate de completar todos los campos requeridos y de subir los documentos en formato PDF. Cada archivo pasará por un proceso de revisión antes de ser publicado oficialmente.
+              Gracias por contribuir a mantener actualizada nuestra plataforma académica.</p>
         </div>
         <div class="direccionesprincipales">
             <?php
-            echo "<a class='hvr-sweep-to-right' href='listaUsuariosSuperAdmin.php'>Usuarios</a>";
-            echo "<a class='hvr-sweep-to-right' href='consulta_documentos.php'>Catálogo</a>";
-            echo "<a class='hvr-sweep-to-right' href='Subir_archivos.php'>Subir Archivos</a>";
-            echo "<a class='hvr-sweep-to-right' href='herramientas.php'>Herramientas</a>";
+            echo "<a class='hvr-sweep-to-right' href='formulario_ficha_carrera.php'>Licenciaturas</a>";
+            echo "<a class='hvr-sweep-to-right' href='formulario_ficha_posgrado.php'>Posgrados</a>";
+            echo "<a class='hvr-sweep-to-right' href='formulario_ficha_sabatico.php'>Sabáticos</a>";
             ?>
         </div>
     </section>

@@ -170,13 +170,17 @@ function consultar($tabla, $joins = "", $campos_extra = "") {
         while ($row = $result->fetch_assoc()) {
             $row['Tipo Titulación'] = $row['nombre_titulacion'];
             $row['Carrera'] = $row['nombre_carrera'];
+
+            $nombreArchivo = rawurlencode(basename($row['documento']));
+            $ruta = "../../documentos/$nombreArchivo";
+
             echo "<tr>
                     <td>{$row['titulo']}</td>
                     <td>{$row['autor']}</td>
                     <td>{$row['fecha']}</td>
                     <td>{$row['nombre_carrera']}</td>
                     <td>{$row['nombre_titulacion']}</td>
-                    <td><a href='{$row['documento']}' target='_blank'>Ver</a></td>
+                    <td><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'>Ver</a></td>
                     <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'>Ver ficha</button></td>
                 </tr>";
         }
@@ -196,13 +200,17 @@ function consultar($tabla, $joins = "", $campos_extra = "") {
         while ($row = $result->fetch_assoc()) {
             $row['Tipo Titulación'] = $row['nombre_titulacion_pos'];
             $row['Posgrado'] = $row['nombre_posgrado'];
+
+            $nombreArchivo = rawurlencode(basename($row['documento']));
+            $ruta = "../../documentos/$nombreArchivo";
+
             echo "<tr>
                     <td>{$row['titulo']}</td>
                     <td>{$row['autor']}</td>
                     <td>{$row['fecha']}</td>
                     <td>{$row['nombre_posgrado']}</td>
                     <td>{$row['nombre_titulacion_pos']}</td>
-                    <td><a href='{$row['documento']}' target='_blank'>Ver</a></td>
+                    <td><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'>Ver</a></td>
                     <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'>Ver ficha</button></td>
                 </tr>";
         }
@@ -220,13 +228,15 @@ function consultar($tabla, $joins = "", $campos_extra = "") {
         $campos_extra = ", categoria_sabatico.nombre_categoria, sabaticos.nombre_sabatico";
         $result = consultar("ficha_sabaticos", $joins, $campos_extra);
         while ($row = $result->fetch_assoc()) {
+            $nombreArchivo = rawurlencode(basename($row['documento']));
+            $ruta = "../../documentos/$nombreArchivo";
             echo "<tr>
                     <td>{$row['titulo']}</td>
                     <td>{$row['autor']}</td>
                     <td>{$row['fecha']}</td>
                     <td>{$row['nombre_sabatico']}</td>
                     <td>{$row['nombre_categoria']}</td>
-                    <td><a href='{$row['documento']}' target='_blank'>Ver</a></td>
+                    <td><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'>Ver</a></td>
                     <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'>Ver ficha</button></td>
                 </tr>";
         }
