@@ -2847,6 +2847,30 @@ iframe {
   margin-top: 50px;
 }
 
+.periodos_flecha{
+  width: 10%;
+  margin-top: -40px;
+  margin-left: -20px;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.periodos_flecha a{
+  color: #003568;
+  text-decoration: underline;
+  margin-left: 20px;
+  padding: 5px 10px;
+  transition: all 0.5s linear;
+}
+
+.periodos_flecha a:hover{
+  transform: scale(1.05);
+  background-color: #003568;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
 .primero {
   border: 1px black solid;
   width: 300px;
@@ -2908,10 +2932,49 @@ iframe {
 .documentos_disponibles{
   font-size: 28px;
   padding-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 50px !important;
 }
 
 .mensaje{
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 30px;
+}
+
+.doc_disp{
+  border: 3px #001d38 solid;
+  border-radius: 20px;
+  margin: auto;
+  padding: 25px;
+  margin-top: 20px;
+  width: 70%;
+}
+
+.titulo_autor{
+  font-size: 25px;
+  line-height: 33px;
+  color: #001d38;
+}
+
+.nombre_carrera{
+  font-size: 22px;
+  margin-top: -15px;
+}
+
+.ficha{
+  border: 5px #001d38 solid;
+  padding: 18px;
+  border-radius: 7px;
+  line-height: 30px;
+}
+
+.pdf{
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 20px;
+  background-color: #001d38;
+  padding: 10px;
+  font-size: 17px;
 }

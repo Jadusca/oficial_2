@@ -88,12 +88,15 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
         echo "<h2 class='documentos_disponibles'>Documentos disponibles:</h2>";
         if ($docs->num_rows > 0) {
             while ($doc = $docs->fetch_assoc()) {
-                echo "<p><strong>{$doc['titulo']}</strong> - {$doc['autor']}<br>";
-                echo "<em>{$doc['nombre_carrera']} | {$doc['nombre_titulacion']}</em><br>";
+                echo "<div class='doc_disp'>
+                <div class='titulo_autor'>
+                <strong>{$doc['titulo']}</strong> <br> {$doc['autor']}
+                </div><br>";
+                echo "<div class='nombre_carrera'><em>{$doc['nombre_carrera']} | {$doc['nombre_titulacion']}</em></div><br>";
                 $nombreArchivo = rawurlencode(basename($doc['documento']));
                 $ruta = "../../documentos/$nombreArchivo";
-                echo "<a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'>📄 Ver documento</a>";
-                echo "<a href='javascript:void(0)' onclick='verFicha({$doc['id_ficha_carrera']})'>🔍 Ver ficha</a></p>";
+                echo "<a class='pdf' href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i> Ver documento</a>";
+                echo "<a href='javascript:void(0)' onclick='verFicha({$doc['id_ficha_carrera']})'><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</a></div>";
             }
         } else {
             echo "<div class='mensaje'>No hay documentos aprobados para esta combinación.</div>";
@@ -181,7 +184,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
 
     } else {
         echo '<section class="periodos" id="periodosContainer">';
-        echo '<a href="index.php" class="periodos"><i class="fa-solid fa-arrow-left"></i></a></div>';
+        echo '<div class="periodos_flecha"><a href="index.php" class="periodos"><i class="fa-solid fa-arrow-left"></i></a></div>';
         $periodos = $conectar->query("SELECT * FROM periodo_carrera");
         $contador = 0;
         echo '<div class="partes">';
