@@ -181,6 +181,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
 
     } else {
         echo '<section class="periodos" id="periodosContainer">';
+        echo '<a href="index.php" class="periodos"><i class="fa-solid fa-arrow-left"></i></a></div>';
         $periodos = $conectar->query("SELECT * FROM periodo_carrera");
         $contador = 0;
         echo '<div class="partes">';

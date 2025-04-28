@@ -12,9 +12,12 @@ $numero_celular = $_POST["numero_celular"];
 $usuario = $_POST["usuario"];
 $contrasena = $_POST["contrasena"];
 
-// Aquí va el SQL para insertar directo a la tabla administradores
+// Cifrar la contraseña antes de guardar
+$contrasena_cifrada = password_hash($contrasena, PASSWORD_DEFAULT);
+
+// Insertar en la base de datos
 $sql = "INSERT INTO administradores (nombre, apellido, email, fecha_nacimiento, genero, biblioteca, numero_celular, usuario, contrasena)
-        VALUES ('$nombre', '$apellido', '$email', '$fecha_nacimiento', '$genero', '$biblioteca', '$numero_celular', '$usuario', '$contrasena')";
+        VALUES ('$nombre', '$apellido', '$email', '$fecha_nacimiento', '$genero', '$biblioteca', '$numero_celular', '$usuario', '$contrasena_cifrada')";
 
 if ($conectar->query($sql) === TRUE) {
     echo '<script>
@@ -25,6 +28,5 @@ if ($conectar->query($sql) === TRUE) {
     echo "❌ Error al insertar datos: " . $conectar->error;
 }
 
-// Cerrar conexión
 $conectar->close();
 ?>

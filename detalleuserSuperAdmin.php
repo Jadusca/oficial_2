@@ -30,9 +30,6 @@
     $sql = "SELECT * FROM administradores WHERE id_administrador = $idDelUsuario";
     $result = $conectar->query($sql);
 
-    // Leer privilegios (opcional)
-    $privilegiosId = file_exists('idUsuario.txt') ? file_get_contents('idUsuario.txt') : "0";
-
     include 'sidebar2.php';
     ?>
 
@@ -50,9 +47,6 @@
             <div class="partedetalles">
                 <div class="informacion info1">
                     <p>Información del Usuario</p>
-                    <?php
-                    echo "<a class='botonespequeños botongris' href='editarUsuarioSuperAdmin.php?idUsuario=$idDelUsuario'>Editar <i class='fa-solid fa-pen'></i></a>";
-                    ?>
                 </div>
 
                 <?php
@@ -61,7 +55,7 @@
 
                     $fecha = $row['fecha_nacimiento'];
                     $usuario = $row['usuario'];
-                    $contrasenia = ($privilegiosId === "1") ? $row['contrasena'] : "*******";
+                    $contrasenia = "*******"; // SIEMPRE se oculta la contraseña
 
                     echo "
                     <div class='detallesindividual'>
@@ -95,7 +89,7 @@
 
                     <div class='informacion info1'>
                         <p>Administrador</p>
-                        <a class='botonespequeños botongris' href='editarpasswordSuperAdmin.php?idUsuario=$idDelUsuario&usuario=$usuario'>Editar <i class='fa-solid fa-pen'></i></a>
+                        <a class='botonespequeños botongris' href='editarpasswordAdmin.php?idUsuario={$idDelUsuario}&usuario={$usuario}'>Editar <i class='fa-solid fa-pen'></i></a>
                     </div>
 
                     <div class='detallesindividual'>
@@ -111,7 +105,7 @@
                     echo "<div class='informacion info1'>
                             <p class='animate__animated animate__fadeInDown' style='color:red;'>❗ Usuario no encontrado ❗</p>
                             <a class='botonespequeños botongris' href='listaUsuariosSuperAdmin.php'>Volver</a>
-                          </div>";
+                        </div>";
                 }
                 ?>
             </div>
