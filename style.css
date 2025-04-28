@@ -311,7 +311,7 @@ body {
   border: 1px solid black;
   background-color: white;
   max-width: 400px;
-  height: 200px;
+  height: auto !important;
   padding: 15px;
   border-radius: 5px;
   display: flex;
@@ -334,7 +334,7 @@ body {
 .Opciones_titulacion a {
   text-decoration: none;
   position: absolute;
-  top: 80%;
+  top: 92%;
   left: 40%;
   color: white;
   background-color: #707070;
@@ -715,7 +715,7 @@ iframe {
   border: 1px solid #707070;
   border-radius: 15px;
   width: 400px;
-  height: 100px;
+  height: 130px;
   background-image: url(Imagenes/Slider/slide3.jpg);
   background-size: cover;
   background-position: center center;
@@ -740,14 +740,16 @@ iframe {
 }
 
 .cardcarreras h1 {
+  text-align: center;
   font-size: 25px;
+  line-height: 33px;
   text-decoration: none;
   color: white;
   font-weight: bold;
   z-index: 10;
   position: absolute;
-  top: 60%;
-  left: 22%;
+  top: 44%;
+  width: 100%;
   transition: all 0.5s;
 }
 
@@ -2040,6 +2042,7 @@ iframe {
 
 .flecha {
   position: fixed;
+  display: none;
   background-color: #003568;
   padding: 5px 10px;
   border-radius: 5px;
@@ -2309,7 +2312,7 @@ iframe {
 
 .Opc_Tit {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0px;
   font-size: 40px;
   line-height: 48px;
   padding: 10px;
@@ -2882,5 +2885,33 @@ iframe {
 }
 
 .echo_periodo{
-  border: 1px red solid;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.echo_periodo a{
+  color: #003568;
+  text-decoration: underline;
+  margin-left: 20px;
+  padding: 5px 10px;
+  transition: all 0.5s linear;
+}
+
+.echo_periodo a:hover {
+  transform: scale(1.05);
+  background-color: #003568;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.documentos_disponibles{
+  font-size: 28px;
+  padding-left: 30px;
+}
+
+.mensaje{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 30px;
 }
