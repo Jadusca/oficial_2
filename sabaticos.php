@@ -117,7 +117,6 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
         } else {
             echo "<div class='mensaje'>No hay documentos aprobados en esta categoría.</div>";
         }
-<<<<<<< HEAD
 
     } elseif ($id_sabatico) {
         echo '<br><br>';
@@ -125,11 +124,6 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
         // Mostrar categorías de un sabático
         $nombre_sab = $conectar->query("SELECT nombre_sabatico FROM sabaticos WHERE id_sabaticos = $id_sabatico")->fetch_assoc()['nombre_sabatico'];
         echo "<h2 class='tit_doc_posg'>Categorías de <em>$nombre_sab</em>:</h2>";
-=======
-    } else {
-        echo "<p>No hay documentos aprobados en esta categoría.</p>";
-    }
->>>>>>> ad5a973c911ea06d94f44d32627f67b01a8e7059
 
         echo "<div class='Opciones'>";
         $categorias = $conectar->query("SELECT * FROM categoria_sabatico WHERE sabaticos = $id_sabatico");
