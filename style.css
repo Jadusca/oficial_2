@@ -49,6 +49,13 @@ body {
   font-size: 18px;
 }
 
+.cab_uni{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  align-items: center;
+}
+
 .campo {
   margin-bottom: 10px;
 }
@@ -147,6 +154,17 @@ body {
 }
 
 .inicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 130px;
+  color: #003568;
+  transition: all 0.5s;
+}
+
+.inicio_uni{
+  margin-left: 85%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3069,4 +3087,100 @@ iframe {
   padding: 20px;
   font-size: 24;
   line-height: 32px;
+}
+
+.pdf_busqueda{
+  text-align: center;
+}
+
+.pdf_busqueda a{
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: white;
+  color: #001d38;
+  font-size: 27px;
+  transition: all 0.5s linear;
+}
+
+.tit_panel_consulta{
+  padding-left: 20px;
+}
+
+.botones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.boton_doc{
+  border: 3px #001d38 solid;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #001d38;
+  color: white;
+  font-size: 25px;
+  padding: 15px 55px;
+  transition: all 0.5s linear;
+}
+
+.boton_doc:hover{
+  border: 3px #001d38 solid;
+  background-color: white;
+  color: #001d38;
+}
+
+.clasificaciones{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.clasificaciones input{
+  border: 3px #001d38 solid;
+  border-radius: 20px;
+  color: #001d38;
+  width: 190px;
+  padding: 10px 15px;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.clasificaciones label{
+  margin-right: 20px;
+  font-size: 20px;
+  color: #001d38;
+  font-weight: bold;
+}
+
+.busqueda_archivos{
+  background-color: #001d38;
+  color: white !important;
+  cursor: pointer;
+  transition: all 0.5s linear
+}
+
+.busqueda_archivos:hover{
+  background-color: white;
+  color: #001d38 !important
+}
+
+.tit_doc_busq td{
+  background-color: #e2e2e2;
+  text-align: center;
+  padding: 20px !important;
+}
+
+.tit_doc_busq button{
+  text-decoration: none;
+  border: 0px;
+  background-color: transparent;
+  color: #001d38 !important;
+  font-size: 27px;
+  transition: all 0.5s linear;
+  cursor: pointer;
 }
