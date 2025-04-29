@@ -231,7 +231,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
                 echo "<tr class='tit_doc_busq'>
                     <td>{$row['titulo']}</td>
                     <td>{$row['autor']}</td>
-                    <td>{$row['fecha']}</td>
+                    <td class='prueba'>{$row['fecha']}</td>
                     <td>{$row['nombre_carrera']}</td>
                     <td>{$row['nombre_titulacion']}</td>
                     <td class='pdf_busqueda'><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i></a></td>
