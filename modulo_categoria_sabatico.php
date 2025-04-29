@@ -53,7 +53,7 @@ $sabaticos = $conectar->query("SELECT * FROM sabaticos");
         <tr>
             <td><?= $row['id_categoria_sab'] ?></td>
             <td><?= htmlspecialchars($row['nombre_categoria']) ?></td>
-            <td><?= htmlspecialchars($row['nombre_sabatico']) ?> (<?= htmlspecialchars($row['anio_sabatico']) ?>)</td>
+            <td><?= htmlspecialchars($row['nombre_sabatico']) ?></td>
             <td>
                 <a href="editar_categoria_sabatico.php?id=<?= $row['id_categoria_sab'] ?>">Editar</a> |
                 <a href="eliminar_categoria_sabatico.php?id=<?= $row['id_categoria_sab'] ?>"

@@ -49,6 +49,9 @@
             echo "<a class='hvr-sweep-to-right' href='modulo_carreras.php'>Modulo de licenciaturas</a>";
             echo "<a class='hvr-sweep-to-right' href='modulo_posgrados.php'>Modulo de posgrados</a>";
             echo "<a class='hvr-sweep-to-right' href='modulo_sabaticos.php'>Modulo de sabáticos</a>";
+            echo "<a class='hvr-sweep-to-right' href='modulo_categoria_sabatico.php'>Modulo de categoria sabáticos</a>";
+            echo "<a class='hvr-sweep-to-right' href='modulo_periodo_carrera.php'>Modulo de periodo carrera</a>";
+            echo "<a class='hvr-sweep-to-right' href='modulo_galeria.php'>Modulo de galería</a>";
             ?>
         </div>
     </section>
