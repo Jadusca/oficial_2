@@ -2975,6 +2975,14 @@ iframe {
   text-decoration: none;
   margin-right: 20px;
   background-color: #001d38;
+  border: 3px #001d38 solid;
   padding: 10px;
   font-size: 17px;
+  transition: all 0.5s linear;
+}
+
+.pdf:hover{
+  border: 3px #001d38 solid;
+  background-color: white;
+  color: #001d38;
 }
