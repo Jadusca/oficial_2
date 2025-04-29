@@ -106,16 +106,7 @@ if ($id_sabatico && $id_categoria) {
                 </div>";
         }
     } else {
-<<<<<<< HEAD
         echo "<p>No hay documentos aprobados en esta categoría.</p>";
-=======
-        echo "<h2>Sabáticos disponibles:</h2>";
-
-        $sabaticos = $conectar->query("SELECT * FROM sabaticos");
-        while ($sab = $sabaticos->fetch_assoc()) {
-            echo "<div class='sab'><a href='?sabatico={$sab['id_sabaticos']}'>{$sab['nombre_sabatico']}</a></div>";
-        }
->>>>>>> 3e56a5de6850afff85546d5f7f8f9039e5e6648f
     }
 
     echo "<p><a href='?sabatico=$id_sabatico'>← Volver a categorías</a></p>";

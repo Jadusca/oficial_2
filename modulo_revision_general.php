@@ -34,17 +34,16 @@
     </section>
     <section class="contprincipal ancho">
         <div class="bienvenida">
-            <p>Bienvenido al Repositorio Institucional de Acceso Abierto del Instituto Tecnológico de Mérida,
-                que almacena y organiza la documentación y producción de índole científica y académica con el
-                propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
+            <p>Bienvenido al módulo de revisión de documentos.
+              En este espacio podrás consultar, revisar y aprobar los documentos correspondientes a los procesos de Licenciatura, Posgrado y Sabáticos.
+              Es responsabilidad del revisor garantizar que los archivos cumplan con los criterios establecidos antes de ser publicados en la plataforma.
+              Selecciona el tipo de documento que deseas revisar y procede a su validación.</p>
         </div>
         <div class="direccionesprincipales">
             <?php
-            echo "<a class='hvr-sweep-to-right' href='listaUsuariosSuperAdmin.php'>Usuarios</a>";
-            echo "<a class='hvr-sweep-to-right' href='consulta_documentos.php'>Catálogo</a>";
-            echo "<a class='hvr-sweep-to-right' href='Subir_archivos.php'>Subir Archivos</a>";
-            echo "<a class='hvr-sweep-to-right' href='herramientas.php'>Herramientas</a>";
-            echo "<a class='hvr-sweep-to-right' href='modulo_revision_general.php'>Revisar documentos pendientes</a>";
+            echo "<a class='hvr-sweep-to-right' href='revisar_ficha_licenciatura.php'>Revisar licenciaturas</a>";
+            echo "<a class='hvr-sweep-to-right' href='revisar_ficha_posgrado.php'>Revisar posgrados</a>";
+            echo "<a class='hvr-sweep-to-right' href='revisar_ficha_sabaticos.php'>Revisar sabáticos</a>";
             ?>
         </div>
     </section>
