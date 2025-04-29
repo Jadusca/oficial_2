@@ -123,6 +123,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
         #modal-close {
             float: right;
             cursor: pointer;
+            font-size: 25px;
             color: red;
             font-weight: bold;
         }
@@ -244,16 +245,16 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     </div>
 
     <div id="pos" class="tab">
-        <h2>Documentos de Posgrado</h2>
-        <table border="1">
+        <h2 class="tit_doc_lic">Documentos de Posgrado</h2>
+        <table class="tabla" border="1">
             <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Fecha</th>
-                <th>Posgrado</th>
-                <th>Titulación</th>
-                <th>Documento</th>
-                <th>Ficha</th>
+                <th class="tit_def">Título</th>
+                <th class="tit_def">Autor</th>
+                <th class="tit_def">Fecha</th>
+                <th class="tit_def">Posgrado</th>
+                <th class="tit_def">Titulación</th>
+                <th class="tit_def">Documento</th>
+                <th class="tit_def">Ficha</th>
             </tr>
             <?php
             $joins = "JOIN tipo_titulacion_posgrado ON ficha_posgrados.tipo_titulacion_posgrado = tipo_titulacion_posgrado.id_tipo_titulacion_pos
@@ -267,14 +268,14 @@ function consultar($tabla, $joins = "", $campos_extra = "")
                 $nombreArchivo = rawurlencode(basename($row['documento']));
                 $ruta = "../../documentos/$nombreArchivo";
 
-                echo "<tr>
+                echo "<tr class='tit_doc_busq'>
                     <td>{$row['titulo']}</td>
                     <td>{$row['autor']}</td>
                     <td>{$row['fecha']}</td>
                     <td>{$row['nombre_posgrado']}</td>
                     <td>{$row['nombre_titulacion_pos']}</td>
-                    <td><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'>Ver</a></td>
-                    <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'>Ver ficha</button></td>
+                    <td><div class='pdf_busqueda'><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i></a></div></td>
+                    <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'><i class='fa-solid fa-magnifying-glass'></i></button></td>
                 </tr>";
             }
             ?>
@@ -282,16 +283,16 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     </div>
 
     <div id="sab" class="tab">
-        <h2>Documentos Sabáticos</h2>
-        <table border="1">
+        <h2 class="tit_doc_lic">Documentos Sabáticos</h2>
+        <table class="tabla" border="1">
             <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Fecha</th>
-                <th>Sabático</th>
-                <th>Categoría</th>
-                <th>Documento</th>
-                <th>Ficha</th>
+                <th class="tit_def">Título</th>
+                <th class="tit_def">Autor</th>
+                <th class="tit_def">Fecha</th>
+                <th class="tit_def">Sabático</th>
+                <th class="tit_def">Categoría</th>
+                <th class="tit_def">Documento</th>
+                <th class="tit_def">Ficha</th>
             </tr>
             <?php
             $joins = "JOIN categoria_sabatico ON ficha_sabaticos.categoria_sabatico = categoria_sabatico.id_categoria_sab
@@ -301,14 +302,14 @@ function consultar($tabla, $joins = "", $campos_extra = "")
             while ($row = $result->fetch_assoc()) {
                 $nombreArchivo = rawurlencode(basename($row['documento']));
                 $ruta = "../../documentos/$nombreArchivo";
-                echo "<tr>
+                echo "<tr class='tit_doc_busq'>
                     <td>{$row['titulo']}</td>
                     <td>{$row['autor']}</td>
                     <td>{$row['fecha']}</td>
                     <td>{$row['nombre_sabatico']}</td>
                     <td>{$row['nombre_categoria']}</td>
-                    <td><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'>Ver</a></td>
-                    <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'>Ver ficha</button></td>
+                    <td><div class='pdf_busqueda'><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i></a></div></td>
+                    <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'><i class='fa-solid fa-magnifying-glass'></i></button></td>
                 </tr>";
             }
             ?>
@@ -317,8 +318,8 @@ function consultar($tabla, $joins = "", $campos_extra = "")
 
 
     <div id="modal-overlay">
-        <div id="modal">
-            <span id="modal-close" onclick="cerrarModal()">[Cerrar]</span>
+        <div class="ficha" id="modal">
+            <span id="modal-close" onclick="cerrarModal()"><i class="fa-solid fa-circle-xmark"></i></span>
             <div id="modal-content"></div>
         </div>
     </div>
