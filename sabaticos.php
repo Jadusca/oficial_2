@@ -148,7 +148,7 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
 
         $sabaticos = $conectar->query("SELECT * FROM sabaticos");
         while ($sab = $sabaticos->fetch_assoc()) {
-            echo "<p><a href='?sabatico={$sab['id_sabaticos']}'>{$sab['nombre_sabatico']}</a></p>";
+            echo "<div class='sab'><a href='?sabatico={$sab['id_sabaticos']}'>{$sab['nombre_sabatico']}</a></div>";
         }
     }
     ?>
