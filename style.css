@@ -3091,6 +3091,11 @@ iframe {
 
 .pdf_busqueda{
   text-align: center;
+  transition: all 0.5s linear;
+}
+
+.pdf_busqueda:hover{
+  transform: scale(1.2);
 }
 
 .pdf_busqueda a{
@@ -3099,7 +3104,6 @@ iframe {
   background-color: white;
   color: #001d38;
   font-size: 27px;
-  transition: all 0.5s linear;
 }
 
 .tit_panel_consulta{
@@ -3170,7 +3174,7 @@ iframe {
 }
 
 .tit_doc_busq td{
-  background-color: #e2e2e2;
+  background-color: #ececec;
   text-align: center;
   padding: 20px !important;
 }
@@ -3183,4 +3187,25 @@ iframe {
   font-size: 27px;
   transition: all 0.5s linear;
   cursor: pointer;
+}
+
+.tit_doc_busq button:hover{
+  transform: scale(1.2);
+}
+
+.tit_def{
+  padding: 15px;
+  background-color: #001d38;
+  color: white;
+}
+
+.tit_doc_lic{
+  padding: 20px !important;
+  font-size: 25px;
+}
+
+.tabla{
+  border: 1px red solid;
+  margin: auto;
+  width: 95%;
 }

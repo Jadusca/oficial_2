@@ -203,17 +203,18 @@ function consultar($tabla, $joins = "", $campos_extra = "")
         <input class="busqueda_archivos" type="submit" value="Buscar">
     </form>
 
+    <br><br>
     <div id="lic" class="tab active">
-        <h2>Documentos de Licenciatura</h2>
-        <table border="1">
+        <h2 class="tit_doc_lic">Documentos de Licenciatura</h2>
+        <table class="tabla" border="1">
             <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Fecha</th>
-                <th>Carrera</th>
-                <th>Titulación</th>
-                <th>Documento</th>
-                <th>Ficha</th>
+                <th class="tit_def">Título</th>
+                <th class="tit_def">Autor</th>
+                <th class="tit_def">Fecha</th>
+                <th class="tit_def">Carrera</th>
+                <th class="tit_def">Titulación</th>
+                <th class="tit_def">Documento</th>
+                <th class="tit_def">Ficha</th>
             </tr>
             <?php
             $joins = "
@@ -234,7 +235,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
                     <td class='prueba'>{$row['fecha']}</td>
                     <td>{$row['nombre_carrera']}</td>
                     <td>{$row['nombre_titulacion']}</td>
-                    <td class='pdf_busqueda'><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i></a></td>
+                    <td><div class='pdf_busqueda'><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i></a></div></td>
                     <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'><i class='fa-solid fa-magnifying-glass'></i></button></td>
                 </tr>";
             }
