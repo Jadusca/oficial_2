@@ -1155,9 +1155,9 @@ iframe {
 
 .contprincipal {
   display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: space-between;
+  width: 100% !important;
+  flex-direction: column;
+  align-items: center;
   margin-top: 50px;
 }
 
@@ -1166,7 +1166,7 @@ iframe {
   background-color: #82c3fb;
   border-radius: 5px;
   padding: 20px;
-  max-width: 400px;
+  width: 100%;
   font-size: 20px;
 }
 
@@ -2782,9 +2782,11 @@ iframe {
 
 .opc_catalogo {
   display: flex;
+  width: 100%;
   margin-top: 5%;
+  margin-bottom: 30px;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .opc_catalogo a {
@@ -3210,4 +3212,109 @@ iframe {
 .tabla {
   margin: auto;
   width: 95%;
+}
+
+/* .opc_catalogo {
+  display: flex;
+  margin-top: 5%;
+  flex-direction: row;
+  justify-content: space-evenly;
+} */
+
+.opc_catalogo a {
+  text-decoration: none;
+  color: #333;
+}
+
+.catalogo {
+  width: auto;
+  color: white;
+  background-image: url(Imagenes/Slider/slide3.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  /* height: 150px; */
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px transparent solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.catalogo i {
+  z-index: 10;
+  font-size: 90px;
+}
+
+.catalogo h1 {
+  z-index: 10;
+  font-size: 30px;
+}
+
+.tit_lic {
+  background-color: #001d38;
+  color: white;
+  border-radius: 10px;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.form_lic {
+  margin: auto;
+  margin-top: 40px;
+  width: 70%;
+}
+
+.form_lic label {
+  color: white;
+  background-color: #003568;
+  font-size: 28px;
+  padding: 10px;
+  margin-top: 30px;
+  display: block;
+}
+
+.form_lic input {
+  border: 3px #001d38 solid;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #001d38;
+  font-family: helvetica;
+}
+
+.file{
+  border: none !important;
+}
+
+.form_lic textarea{
+  border: 3px #001d38 solid;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #001d38;
+  font-family: helvetica;
+}
+
+.form_lic select{
+  border: 3px #001d38 solid;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #001d38;
+  font-family: helvetica;
+}
+
+.enviar_doc{
+  margin: auto !important;
+  border-radius: 10px;
+  background-color: #001d38;
+  color: white !important;
+  width: 40% !important;
 }

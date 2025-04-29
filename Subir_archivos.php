@@ -35,17 +35,38 @@
     <section class="contprincipal ancho">
         <div class="bienvenida">
             <p>Bienvenido al módulo de gestión de documentos académicos.
-              Aquí podrás cargar, organizar y administrar los archivos correspondientes a Licenciaturas, Posgrados y Sabáticos.
-              Asegúrate de completar todos los campos requeridos y de subir los documentos en formato PDF. Cada archivo pasará por un proceso de revisión antes de ser publicado oficialmente.
-              Gracias por contribuir a mantener actualizada nuestra plataforma académica.</p>
+                Aquí podrás cargar, organizar y administrar los archivos correspondientes a Licenciaturas, Posgrados y
+                Sabáticos.
+                Asegúrate de completar todos los campos requeridos y de subir los documentos en formato PDF. Cada
+                archivo pasará por un proceso de revisión antes de ser publicado oficialmente.
+                Gracias por contribuir a mantener actualizada nuestra plataforma académica.</p>
         </div>
-        <div class="direccionesprincipales">
+        <section class="opc_catalogo">
             <?php
-            echo "<a class='hvr-sweep-to-right' href='formulario_ficha_carrera.php'>Licenciaturas</a>";
-            echo "<a class='hvr-sweep-to-right' href='formulario_ficha_posgrado.php'>Posgrados</a>";
-            echo "<a class='hvr-sweep-to-right' href='formulario_ficha_sabatico.php'>Sabáticos</a>";
+            echo "<a href='formulario_ficha_carrera.php'>
+            <section class='catalogo'>
+            <i class='fa-solid fa-laptop-file'></i>
+                <h1>Licenciaturas</h1>
+                <div class='fondo'>
+
+                </div>
+                </section></a>";
+            echo "<a href='formulario_ficha_posgrado.php'><section class='catalogo'>
+            <i class='fa-solid fa-laptop-file'></i>
+                <h1>Posgrados</h1>
+                <div class='fondo'>
+
+                </div>
+                </section></a>";
+            echo "<a href='formulario_ficha_sabatico.php'><section class='catalogo'>
+            <i class='fa-solid fa-laptop-file'></i>
+                <h1>Sabáticos</h1>
+                <div class='fondo'>
+
+                </div>
+                </section></a>";
             ?>
-        </div>
+        </section>
     </section>
     <br>
     <?php
