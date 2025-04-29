@@ -96,7 +96,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
                 $nombreArchivo = rawurlencode(basename($doc['documento']));
                 $ruta = "../../documentos/$nombreArchivo";
                 echo "<a class='pdf' href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i> Ver documento</a>";
-                echo "<a href='javascript:void(0)' onclick='verFicha({$doc['id_ficha_carrera']})'><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</a></div>";
+                echo "<a class='view_ficha' href='javascript:void(0)' onclick='verFicha({$doc['id_ficha_carrera']})'><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</a></div>";
             }
         } else {
             echo "<div class='mensaje'>No hay documentos aprobados para esta combinación.</div>";
