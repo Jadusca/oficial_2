@@ -113,11 +113,18 @@ body {
 }
 
 .buscador button {
-  width: 30px;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150%;
   height: 30px;
+  padding: 20px;
+  margin-left: 85px;
   background-color: #003568;
-  border: #003568;
-  border-radius: 5px;
+  border: 2px#003568 solid;
+  border-radius: 15px;
   color: white;
   cursor: pointer;
   transition: all 0.5s;
@@ -2140,6 +2147,7 @@ iframe {
 .buscador button:hover {
   background-color: white;
   color: #003568;
+  border: 2px#003568 solid;
 }
 
 .recuadro:hover {
@@ -2937,6 +2945,7 @@ iframe {
 }
 
 .mensaje {
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 30px;
@@ -2989,6 +2998,33 @@ iframe {
   font-size: 18px;
 }
 
+.ficha_posg {
+  padding: 18px;
+  border-radius: 7px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.ficha_posg h3 {
+  padding: 15px 25px;
+  border-radius: 15px;
+  text-align: center !important;
+  margin-bottom: 15px;
+  color: white;
+  background-color: #001d38;
+  font-size: 30px;
+}
+
+.ficha_posg p {
+  margin-bottom: 15px;
+}
+
+.ficha_posg strong {
+  color: #001d38;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .pdf {
   border-radius: 10px;
   text-decoration: none;
@@ -3025,6 +3061,12 @@ iframe {
   color: #001d38;
 }
 
-.sab{
+/* .sab{
   border: 1px red solid;
+} */
+
+.tit_doc_posg{
+  padding: 20px;
+  font-size: 24;
+  line-height: 32px;
 }

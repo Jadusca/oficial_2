@@ -21,8 +21,7 @@
     </div>
     <div class="dos">
         <form id="formBusqueda" class="buscador" action="consulta_documentos.php" method="post">
-            <input type="search" id="site-search" name="q" placeholder="Buscar" />
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button type="submit">Busqueda<i class="fa-solid fa-magnifying-glass"></i></button>
             <!-- <center>👤<a href="#" title="Contador De Visitas Gratis">
                     <img style="border: 0px solid; display: inline;" alt="contador de visitas"
                         src="https://websmultimedia.com/contador-de-visitas.php?id=17542"></a></center> -->

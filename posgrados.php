@@ -25,6 +25,9 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
 
     <?php
     if (!$id_posgrado && !$id_tipo) {
+        echo '<br></br>';
+        echo '<div class="periodos_flecha"><a href="index.php" class="periodos"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>';
         echo '<section class="carreras ancho">
             <div class="titulocar">
                 <h1>Posgrados</h1>
@@ -94,11 +97,13 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
 
         if ($docs->num_rows > 0) {
             while ($doc = $docs->fetch_assoc()) {
-                echo "<div class='card'>
+                echo "<div class='doc_disp'>
+                    <div class='titulo_autor'>
                     <strong>{$doc['titulo']}</strong><br>
-                    <em>{$doc['autor']}</em><br><br>
-                    <button class='btn' onclick=\"window.open('pdf/web/viewer.html?file=" . urlencode("../../documentos/" . rawurlencode(basename($doc['documento']))) . "', '_blank')\">📄 Ver documento</button>
-                    <button class='btn' onclick=\"mostrarFicha(" . htmlspecialchars(json_encode($doc), ENT_QUOTES, 'UTF-8') . ")\">Ver ficha</button>
+                    <em>{$doc['autor']}
+                    </div></em><br><br>
+                    <button class='pdf' onclick=\"window.open('pdf/web/viewer.html?file=" . urlencode("../../documentos/" . rawurlencode(basename($doc['documento']))) . "', '_blank')\"><i class='fa-solid fa-file-invoice'></i> Ver documento</button>
+                    <button class='view_ficha' onclick=\"mostrarFicha(" . htmlspecialchars(json_encode($doc), ENT_QUOTES, 'UTF-8') . ")\"><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</button>
                 </div>";
             }
         } else {
@@ -108,36 +113,89 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
     ?>
 
     <!-- Modal -->
-    <div id="modalFicha" class="modal"
-        style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6);">
-        <div class="modal-content"
-            style="background-color: #fff; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 80%; max-height: 80vh; overflow-y: auto; border-radius: 5px;">
-            <span class="close" onclick="cerrarModal()"
-                style="color: #aaa; float: right; font-size: 28px; font-weight: bold;">&times;</span>
+    <div id="modalFicha" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
             <div id="contenidoModal"></div>
         </div>
     </div>
 
+    <style>
+        /* Estilos del modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            /* top: 0; left: 0; bottom: 0; right: 0; simplificado */
+            background-color: rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+        }
+
+        /* Centrar el contenido */
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Botón cerrar */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Al pasar el mouse */
+        .close:hover {
+            color: #000;
+        }
+
+        /* Cuando el modal está abierto, desactivar scroll en body */
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+
     <script>
         function mostrarFicha(doc) {
             let html = `
-        <h3>${doc.titulo}</h3>
-        <p><strong>Autor:</strong> ${doc.autor}</p>
-        <p><strong>Asesor interno:</strong> ${doc.asesor_interno}</p>
-        <p><strong>Asesor externo:</strong> ${doc.asesor_externo}</p>
-        <p><strong>Resumen:</strong> ${doc.resumen}</p>
-        <p><strong>Fecha:</strong> ${doc.fecha}</p>
-        <p><strong>Palabras clave:</strong> ${doc.palabras_clave}</p>
-        <p><strong>Páginas:</strong> ${doc.paginas}</p>
-        <p><strong>Dimensiones:</strong> ${doc.dimensiones}</p>
+        <div class="ficha">
+            <h3>${doc.titulo}</h3>
+            <p><strong>Autor:</strong> ${doc.autor}</p>
+            <p><strong>Asesor interno:</strong> ${doc.asesor_interno}</p>
+            <p><strong>Asesor externo:</strong> ${doc.asesor_externo}</p>
+            <p><strong>Resumen:</strong> ${doc.resumen}</p>
+            <p><strong>Fecha:</strong> ${doc.fecha}</p>
+            <p><strong>Palabras clave:</strong> ${doc.palabras_clave}</p>
+            <p><strong>Páginas:</strong> ${doc.paginas}</p>
+            <p><strong>Dimensiones:</strong> ${doc.dimensiones}</p>
+        </div>
     `;
             document.getElementById('contenidoModal').innerHTML = html;
             document.getElementById('modalFicha').style.display = 'block';
+            document.body.classList.add('modal-open');
         }
+
         function cerrarModal() {
             document.getElementById('modalFicha').style.display = 'none';
+            document.body.classList.remove('modal-open');
         }
     </script>
+
+    <br><br>
 
     <?php
     include 'footer.php';
