@@ -40,7 +40,6 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
 
         a:hover { text-decoration: underline; }
 
-        /* Modal mejorado */
         .modal {
             display: none;
             position: fixed;
@@ -77,8 +76,39 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
         .close:hover,
         .close:focus { color: #000; text-decoration: none; }
 
-        /* Bloquear scroll de fondo */
         body.modal-open { overflow: hidden; }
+
+        .paginacion {
+          text-align: center;
+          margin: 40px auto 20px auto;
+          padding-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 6px;
+        }
+
+        .paginacion .pagina {
+          display: inline-block;
+          padding: 6px 14px;
+          background-color: #f0f0f0;
+          color: #333;
+          text-decoration: none;
+          border-radius: 5px;
+          font-weight: 500;
+          transition: all 0.2s ease-in-out;
+        }
+
+        .paginacion .pagina:hover {
+          background-color: #ccc;
+          color: black;
+        }
+
+        .paginacion .pagina-activa {
+          background-color: #003568;
+          color: white;
+          font-weight: bold;
+        }
     </style>
 </head>
 
@@ -91,31 +121,61 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
     <?php
 
     if ($id_sabatico && $id_categoria) {
-        // Mostrar documentos de la categoría seleccionada
-
         $estado = $conectar->query("SELECT id_estado FROM estado_revision WHERE nombre_estado = 'Aprobado' LIMIT 1");
         $id_aprobado = $estado->fetch_assoc()['id_estado'];
 
         $nombre_sab = $conectar->query("SELECT nombre_sabatico FROM sabaticos WHERE id_sabaticos = $id_sabatico")->fetch_assoc()['nombre_sabatico'];
         $nombre_cat = $conectar->query("SELECT nombre_categoria FROM categoria_sabatico WHERE id_categoria_sab = $id_categoria")->fetch_assoc()['nombre_categoria'];
 
-        $docs = $conectar->query("SELECT * FROM ficha_sabaticos WHERE sabaticos = $id_sabatico AND categoria_sabatico = $id_categoria AND estado_revision = $id_aprobado");
-
         echo "<br><br>";
-
         echo "<div class='periodos_flecha'><a href='?sabatico=$id_sabatico'><i class='fa-solid fa-arrow-left'></i></a></div>";
+        echo "<h2 class='tit_doc_posg'>Documentos disponibles:</h2>";
 
-        echo "<h2 class='tit_doc_posg'>Documentos disponibles de <em>$nombre_sab</em> en la categoría <em>$nombre_cat</em>:</h2>";
+        $por_pagina = 6;
+        $pagina_actual = isset($_GET['pagina']) ? intval($_GET['pagina']) : 1;
+        $inicio = ($pagina_actual - 1) * $por_pagina;
+
+        $total_resultado = $conectar->query("SELECT COUNT(*) as total FROM ficha_sabaticos WHERE sabaticos = $id_sabatico AND categoria_sabatico = $id_categoria AND estado_revision = $id_aprobado");
+        $total_filas = $total_resultado->fetch_assoc()['total'];
+        $total_paginas = ceil($total_filas / $por_pagina);
+
+        $docs = $conectar->query("
+            SELECT fs.*, s.nombre_sabatico, cs.nombre_categoria
+            FROM ficha_sabaticos fs
+            JOIN sabaticos s ON fs.sabaticos = s.id_sabaticos
+            JOIN categoria_sabatico cs ON fs.categoria_sabatico = cs.id_categoria_sab
+            WHERE fs.sabaticos = $id_sabatico
+            AND fs.categoria_sabatico = $id_categoria
+            AND fs.estado_revision = $id_aprobado
+            LIMIT $inicio, $por_pagina
+        ");
 
         if ($docs->num_rows > 0) {
             while ($doc = $docs->fetch_assoc()) {
                 echo "<div class='doc_disp'>
                     <div class='titulo_autor'><strong>{$doc['titulo']}</strong><br>
-                    <em>{$doc['autor']}</em></div><br><br>
+                    <p>{$doc['autor']}</p></div><br>
+                    <div class='nombre_carrera'><em>{$doc['nombre_sabatico']} | {$doc['nombre_categoria']}</em></div><br>
                     <button class='pdf' onclick=\"window.open('pdf/web/viewer.html?file=" . urlencode("../../documentos/" . rawurlencode(basename($doc['documento']))) . "', '_blank')\"><i class='fa-solid fa-file-invoice'></i> Ver documento</button>
                     <button class='view_ficha' onclick=\"mostrarFicha(" . htmlspecialchars(json_encode($doc), ENT_QUOTES, 'UTF-8') . ")\"><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</button>
                 </div>";
             }
+
+            echo "<div class='paginacion'>";
+            if ($pagina_actual > 1) {
+                echo "<a class='pagina' href='?sabatico=$id_sabatico&categoria=$id_categoria&pagina=" . ($pagina_actual - 1) . "'>&laquo; Anterior</a>";
+            }
+            for ($i = 1; $i <= $total_paginas; $i++) {
+                if ($i == $pagina_actual) {
+                    echo "<span class='pagina pagina-activa'>$i</span>";
+                } else {
+                    echo "<a class='pagina' href='?sabatico=$id_sabatico&categoria=$id_categoria&pagina=$i'>$i</a>";
+                }
+            }
+            if ($pagina_actual < $total_paginas) {
+                echo "<a class='pagina' href='?sabatico=$id_sabatico&categoria=$id_categoria&pagina=" . ($pagina_actual + 1) . "'>Siguiente &raquo;</a>";
+            }
+            echo "</div>";
         } else {
             echo "<div class='mensaje'>No hay documentos aprobados en esta categoría.</div>";
         }
@@ -123,7 +183,6 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
     } elseif ($id_sabatico) {
         echo '<br><br>';
         echo "<div class='periodos_flecha'><a href='sabaticos.php'><i class='fa-solid fa-arrow-left'></i></a></div>";
-        // Mostrar categorías de un sabático
         $nombre_sab = $conectar->query("SELECT nombre_sabatico FROM sabaticos WHERE id_sabaticos = $id_sabatico")->fetch_assoc()['nombre_sabatico'];
         echo "<h2 class='tit_doc_posg'>Categorías de <em>$nombre_sab</em>:</h2>";
 
@@ -145,17 +204,15 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
                     echo "</div><div class='opciones_duo_sabatico'>";
                 }
             }
-            echo "</div>"; // Cierra último duo sabatico
+            echo "</div>";
         } else {
             echo "<p>No hay categorías registradas para este sabático.</p>";
         }
-        echo "</div>"; // Cierra Opciones
+        echo "</div>";
 
     } else {
-        // Mostrar todos los sabáticos
         echo '<br></br>';
-        echo '<div class="periodos_flecha"><a href="index.php" class="periodos"><i class="fa-solid fa-arrow-left"></i></a>
-    </div>';
+        echo '<div class="periodos_flecha"><a href="index.php" class="periodos"><i class="fa-solid fa-arrow-left"></i></a></div>';
         echo "<div class='Opciones'>";
         $sabaticos = $conectar->query("SELECT * FROM sabaticos");
         $contador = 0;
@@ -174,15 +231,14 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
                     echo "</div><div class='opciones_duo_sabatico'>";
                 }
             }
-            echo "</div>"; // Cierra último duo sabatico
+            echo "</div>";
         } else {
             echo "<p>No hay sabáticos registrados.</p>";
         }
-        echo "</div>"; // Cierra Opciones
+        echo "</div>";
     }
     ?>
 
-    <!-- Modal -->
     <div id="modalFicha" class="modal" onclick="cerrarModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <span class="close" onclick="cerrarModal()">&times;</span>
