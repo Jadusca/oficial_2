@@ -2683,6 +2683,7 @@ iframe {
 }
 
 .menu1_1 a {
+  padding: 5px 10px;
   border-radius: 5px;
   text-decoration: underline;
   transition: all 0.5s linear;

@@ -56,15 +56,21 @@ $result = $conectar->query("SELECT * FROM sabaticos");
                 <div class="actions">
                     <div class="pdf_busqueda">
                         <a href="editar_sabatico.php?id=<?= $row['id_sabaticos'] ?>"><i
-                        class="fa-solid fa-pen-to-square"></i></a>
+                                class="fa-solid fa-pen-to-square"></i></a>
                     </div>
                     <div class="pdf_busqueda">
                         <a href="eliminar_sabatico.php?id=<?= $row['id_sabaticos'] ?>"
                             onclick="return confirm('¿Estás seguro de eliminar este sabático?')"><i
-                            class="fa-solid fa-trash-can"></i></a>
+                                class="fa-solid fa-trash-can"></i></a>
                     </div>
                 </div>
             </td>
         </tr>
     <?php endwhile; ?>
 </table>
+
+<br><br>
+
+<?php
+include "footer.php";
+?>
