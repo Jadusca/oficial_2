@@ -3313,8 +3313,51 @@ iframe {
 
 .enviar_doc{
   margin: auto !important;
+  border:1px transparent solid;
   border-radius: 10px;
   background-color: #001d38;
   color: white !important;
   width: 40% !important;
+  cursor: pointer;
 }
+
+.enviar_doc:hover{
+  border-radius: 10px;
+  border:1px #001d38 solid;
+  background-color: white;
+  color: #001d38 !important;
+  transition: all 0.5s;
+}
+
+.paginacion {
+  text-align: center;
+  margin: 40px auto 20px auto;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.paginacion .pagina {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.paginacion .pagina:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.paginacion .pagina-activa {
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+}
+
