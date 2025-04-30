@@ -65,6 +65,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
 <body>
 
     <?php
+    include "registrar_visita.php";
     include 'headerBusqueda.php';
     ?>
 
@@ -241,7 +242,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
     </script>
     <br>
     <?php
-    include 'footer.php';
+    include 'footer-index.php';
     ?>
 
 </body>

@@ -25,6 +25,7 @@
 
 <body>
     <?php
+    include "registrar_visita.php";
     include 'headerBusqueda.php';
     include 'conexion.php';
     ?>

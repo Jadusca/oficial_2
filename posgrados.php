@@ -20,6 +20,7 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
 <body>
 
     <?php
+    include "registrar_visita.php";
     include 'headerBusqueda.php';
     ?>
 
@@ -198,7 +199,7 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
     <br><br>
 
     <?php
-    include 'footer.php';
+    include 'footer-index.php';
     ?>
 
 </body>

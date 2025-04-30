@@ -41,10 +41,11 @@
         <div class="direccionesprincipales">
             <?php
             echo "<a class='hvr-sweep-to-right' href='listaUsuariosSuperAdmin.php'>Usuarios</a>";
-            echo "<a class='hvr-sweep-to-right' href='consulta_documentos.php'>Catálogo</a>";
+            echo "<a class='hvr-sweep-to-right' href='consulta_documentosSuperAdmin.php'>Catálogo</a>";
             echo "<a class='hvr-sweep-to-right' href='Subir_archivos.php'>Subir Archivos</a>";
             echo "<a class='hvr-sweep-to-right' href='herramientas.php'>Herramientas</a>";
             echo "<a class='hvr-sweep-to-right' href='modulo_revision_general.php'>Revisar documentos pendientes</a>";
+            echo "<a class='hvr-sweep-to-right' href='ver_visitas.php'>Reporte de visitas</a>";
             ?>
         </div>
     </section>

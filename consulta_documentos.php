@@ -21,6 +21,7 @@
 </head>
 
 <?php
+include "registrar_visita.php";
 include 'header.php';
 ?>
 

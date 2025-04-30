@@ -84,13 +84,15 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
 
 <body>
 
-    <?php include 'headerBusqueda.php'; ?>
+    <?php
+    include "registrar_visita.php";
+    include 'headerBusqueda.php'; ?>
 
     <?php
-    
+
     if ($id_sabatico && $id_categoria) {
         // Mostrar documentos de la categoría seleccionada
-        
+
         $estado = $conectar->query("SELECT id_estado FROM estado_revision WHERE nombre_estado = 'Aprobado' LIMIT 1");
         $id_aprobado = $estado->fetch_assoc()['id_estado'];
 
@@ -216,7 +218,7 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
 
     <br><br>
 
-    <?php include 'footer.php'; ?>
+    <?php include 'footer-index.php'; ?>
 
 </body>
 

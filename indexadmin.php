@@ -37,15 +37,16 @@
     </section>
 
     <section class="contprincipal ancho">
-        <div class="bienvenida">
+        <article class="bienvenida">
             <p>Bienvenido al Repositorio Institucional de Acceso Abierto del Instituto Tecnológico de Mérida,
                 que almacena y organiza la documentación y producción de índole científica y académica con el
                 propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
-        </div>
-        <div class="direccionesprincipales">
-            <a class='hvr-sweep-to-right' href='catalogo_admin.php'>Catalogo</a>
-            <a class='hvr-sweep-to-right' href='subir_archivos.php'>Subir archivos</a>
-        </div>
+        </article>
+        <article class="direccionesprincipales">
+            <a class='hvr-sweep-to-right' href='consulta_documentosAdmin.php'>Catalogo</a>
+            <a class='hvr-sweep-to-right' href='subir_archivosAdmin.php'>Subir archivos</a>
+            <a class='hvr-sweep-to-right' href='ver_visitasAdmin.php'>Reporte de visitas</a>
+        </article>
     </section>
     <br><br>
     <?php
