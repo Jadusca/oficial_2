@@ -34,6 +34,10 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     include "headerSuperadmin.php";
     ?>
 
+    <div class="menu1">
+        <a class="arrow" href="herramientas.php"><i class="fa-solid fa-arrow-left"></i></a>
+    </div><br>
+
     <h2 class="tit_mod_car">Agregar nueva carrera</h2>
 
     <?php if (isset($_GET['mensaje'])): ?>
@@ -113,6 +117,12 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
             </tr>
         <?php endwhile; ?>
     </table>
+
+    <br><br>
+
+    <?php
+    include "footer.php";
+    ?>
 
 </body>
 
