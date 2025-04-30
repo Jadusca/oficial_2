@@ -3448,8 +3448,19 @@ iframe {
 .nuevas_carreras select {
   border: 3px #001d38 solid;
   border-radius: 10px;
-  width: 40%;
+  width: 56%;
   height: 40px;
+  padding: 5px;
+  font-size: 18px;
+  color: #001d38;
+  font-family: helvetica;
+}
+
+.nuevas_carreras textarea {
+  border: 3px #001d38 solid;
+  border-radius: 10px;
+  width: 56%;
+  height: auto;
   padding: 5px;
   font-size: 18px;
   color: #001d38;
@@ -3462,6 +3473,14 @@ iframe {
   justify-content: start;
   gap: 5px;
   align-items: center;
+}
+
+.nuevas_carreras img{
+  border: 3px #001d38 solid;
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .image {
