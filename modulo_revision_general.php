@@ -28,10 +28,11 @@
     <div id="subir" class="flecha">
         <i class="fa-solid fa-angle-up"></i>
     </div>
-    <section class="parrallax1">
-        <article class="info2">
-            <h1>Centro de información <br> "Antonio Mediz Bolio"</h1>
-    </section>
+
+    <div class="menu1">
+        <a class="arrow" href="indexSuperadmin.php"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+
     <section class="contprincipal ancho">
         <div class="bienvenida">
             <p>Bienvenido al módulo de revisión de documentos.
@@ -39,11 +40,13 @@
               Es responsabilidad del revisor garantizar que los archivos cumplan con los criterios establecidos antes de ser publicados en la plataforma.
               Selecciona el tipo de documento que deseas revisar y procede a su validación.</p>
         </div>
+        <br>
         <div class="direccionesprincipales">
             <?php
             echo "<a class='hvr-sweep-to-right' href='revisar_ficha_licenciatura.php'>Revisar licenciaturas</a>";
             echo "<a class='hvr-sweep-to-right' href='revisar_ficha_posgrado.php'>Revisar posgrados</a>";
             echo "<a class='hvr-sweep-to-right' href='revisar_ficha_sabaticos.php'>Revisar sabáticos</a>";
+            echo "<a class='hvr-sweep-to-right' href='documentos_revisados.php'>Documentos revisados</a>";
             ?>
         </div>
     </section>

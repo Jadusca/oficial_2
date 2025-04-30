@@ -47,7 +47,7 @@
             </div>
             <div>
                 <a class='hvr-sweep-to-right' href='herramientas.php'>Herramientas</a>
-                <a class='hvr-sweep-to-right' href='modulo_revision_general.php'>Revisar documentos pendientes</a>
+                <a class='hvr-sweep-to-right' href='modulo_revision_general.php'>Revisar documentos</a>
                 <a class='hvr-sweep-to-right' href='ver_visitas.php'>Reporte de visitas</a>
             </div>
         </section>
