@@ -65,7 +65,6 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
 <body>
 
     <?php
-    include "registrar_visita.php";
     include 'headerBusqueda.php';
     ?>
 
@@ -84,10 +83,10 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
     $inicio = ($pagina - 1) * $por_pagina;
 
     // Total de documentos aprobados
-    $total_resultado = $conectar->query("SELECT COUNT(*) AS total 
-        FROM ficha_carreras 
-        WHERE carreras = $id_carrera 
-        AND tipo_titulacion_carrera = $id_tipo 
+    $total_resultado = $conectar->query("SELECT COUNT(*) AS total
+        FROM ficha_carreras
+        WHERE carreras = $id_carrera
+        AND tipo_titulacion_carrera = $id_tipo
         AND estado_revision = $estado_aprobado");
     $total_filas = $total_resultado->fetch_assoc()['total'];
     $total_paginas = ceil($total_filas / $por_pagina);

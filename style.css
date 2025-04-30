@@ -3351,12 +3351,12 @@ iframe {
 }
 
 .paginacion .pagina:hover {
-  background-color: #007BFF;
-  color: #fff;
+  background-color: #ccc;
+  color: black;
 }
 
 .paginacion .pagina-activa {
-  background-color: #007BFF;
+  background-color: #003568;
   color: white;
   font-weight: bold;
 }

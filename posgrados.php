@@ -20,7 +20,6 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
 <body>
 
     <?php
-    include "registrar_visita.php";
     include 'headerBusqueda.php';
     ?>
 
@@ -91,22 +90,68 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
         $nombre_pos = $conectar->query("SELECT nombre_posgrado FROM posgrados WHERE id_posgrados = $id_posgrado")->fetch_assoc()['nombre_posgrado'];
         $nombre_tipo = $conectar->query("SELECT nombre_titulacion_pos FROM tipo_titulacion_posgrado WHERE id_tipo_titulacion_pos = $id_tipo")->fetch_assoc()['nombre_titulacion_pos'];
 
-        $docs = $conectar->query("SELECT * FROM ficha_posgrados WHERE posgrados = $id_posgrado AND tipo_titulacion_posgrado = $id_tipo AND estado_revision = $id_aprobado");
+        // Paginación
+        $por_pagina = 20;
+        $pagina_actual = isset($_GET['pagina']) ? intval($_GET['pagina']) : 1;
+        $offset = ($pagina_actual - 1) * $por_pagina;
 
-        echo "<div class='echo_periodo';'><a href='?posgrado=$id_posgrado'><i class='fa-solid fa-arrow-left'></i></a></div>";
-        echo "<h2 style='padding: 20px;'>Documentos disponibles en <em>$nombre_pos</em> para <em>$nombre_tipo</em>:</h2>";
+        // Total de resultados
+        $resultado_total = $conectar->query("SELECT COUNT(*) AS total FROM ficha_posgrados WHERE posgrados = $id_posgrado AND tipo_titulacion_posgrado = $id_tipo AND estado_revision = $id_aprobado");
+        $total_filas = $resultado_total->fetch_assoc()['total'];
+        $total_paginas = ceil($total_filas / $por_pagina);
+
+        $docs = $conectar->query("
+            SELECT fp.*, p.nombre_posgrado, ttp.nombre_titulacion_pos
+            FROM ficha_posgrados fp
+            JOIN posgrados p ON fp.posgrados = p.id_posgrados
+            JOIN tipo_titulacion_posgrado ttp ON fp.tipo_titulacion_posgrado = ttp.id_tipo_titulacion_pos
+            WHERE fp.posgrados = $id_posgrado AND fp.tipo_titulacion_posgrado = $id_tipo AND fp.estado_revision = $id_aprobado
+            LIMIT $por_pagina OFFSET $offset
+        ");
+
+        echo "<div class='echo_periodo'><a href='?posgrado=$id_posgrado'><i class='fa-solid fa-arrow-left'></i></a></div>";
+        echo "<h2 class='documentos_disponibles'>Documentos disponibles</h2>";
 
         if ($docs->num_rows > 0) {
             while ($doc = $docs->fetch_assoc()) {
                 echo "<div class='doc_disp'>
                     <div class='titulo_autor'>
-                    <strong>{$doc['titulo']}</strong><br>
-                    <em>{$doc['autor']}
-                    </div></em><br><br>
-                    <button class='pdf' onclick=\"window.open('pdf/web/viewer.html?file=" . urlencode("../../documentos/" . rawurlencode(basename($doc['documento']))) . "', '_blank')\"><i class='fa-solid fa-file-invoice'></i> Ver documento</button>
-                    <button class='view_ficha' onclick=\"mostrarFicha(" . htmlspecialchars(json_encode($doc), ENT_QUOTES, 'UTF-8') . ")\"><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</button>
+                        <strong>{$doc['titulo']}</strong><br>
+                        <p>{$doc['autor']}</p>
+                    </div><br>
+                    <div class='nombre_carrera'><em>{$doc['nombre_posgrado']} | {$doc['nombre_titulacion_pos']}</em></div><br>
+                    <button class='pdf' onclick=\"window.open('pdf/web/viewer.html?file=" . urlencode("../../documentos/" . rawurlencode(basename($doc['documento']))) . "', '_blank')\">
+                        <i class='fa-solid fa-file-invoice'></i> Ver documento
+                    </button>
+                    <button class='view_ficha' onclick=\"mostrarFicha(" . htmlspecialchars(json_encode($doc), ENT_QUOTES, 'UTF-8') . ")\">
+                        <i class='fa-solid fa-magnifying-glass'></i> Ver ficha
+                    </button>
                 </div>";
             }
+
+            // Navegación con íconos y estilo
+            echo "<div class='paginacion'>";
+
+            // Botón "Anterior"
+            if ($pagina_actual > 1) {
+                $prev = $pagina_actual - 1;
+                echo "<a class='pagina' href='?posgrado=$id_posgrado&tipo=$id_tipo&pagina=$prev'><i class='fa-solid fa-angle-left'></i></a>";
+            }
+
+            // Números de página
+            for ($i = 1; $i <= $total_paginas; $i++) {
+                $clase = ($i == $pagina_actual) ? "pagina pagina-activa" : "pagina";
+                echo "<a class='$clase' href='?posgrado=$id_posgrado&tipo=$id_tipo&pagina=$i'>$i</a>";
+            }
+
+            // Botón "Siguiente"
+            if ($pagina_actual < $total_paginas) {
+                $next = $pagina_actual + 1;
+                echo "<a class='pagina' href='?posgrado=$id_posgrado&tipo=$id_tipo&pagina=$next'><i class='fa-solid fa-angle-right'></i></a>";
+            }
+
+            echo "</div>";
+
         } else {
             echo "<p style='padding: 20px;'>No hay documentos aprobados para este tipo de titulación.</p>";
         }
