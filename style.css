@@ -3313,7 +3313,7 @@ iframe {
 
 .enviar_doc{
   margin: auto !important;
-  border:1px transparent solid;
+  border:3px #001d38 solid;
   border-radius: 10px;
   background-color: #001d38;
   color: white !important;
@@ -3323,7 +3323,7 @@ iframe {
 
 .enviar_doc:hover{
   border-radius: 10px;
-  border:1px #001d38 solid;
+  border:3px #001d38 solid;
   background-color: white;
   color: #001d38 !important;
   transition: all 0.5s;

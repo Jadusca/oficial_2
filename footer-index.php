@@ -12,7 +12,8 @@
         <!-- <p><a class="white" href="https://mail.google.com/mail/?view=cm&fs=1&to=ci_merida@tecnm.mx" target="_blank">ci_merida@tecnm.mx</a></p> -->
         <p>Correo: <a class="white" href="https://outlook.office.com/mail/deeplink/compose?to=ci_merida@tecnm.mx"
                 target="_blank">ci_merida@tecnm.mx</a></p>
-        <div style="text-align:center; padding:10px; background:#f2f2f2; color:#555;">
+                <br>
+        <div>
             <p><?php include "contador_footer.php"; ?></p>
         </div>
 

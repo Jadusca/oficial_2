@@ -38,6 +38,7 @@
                 que almacena y organiza la documentación y producción de índole científica y académica con el
                 propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
         </div>
+        <br><br>
         <div class="direccionesprincipales">
             <?php
             echo "<a class='hvr-sweep-to-right' href='listaUsuariosSuperAdmin.php'>Usuarios</a>";

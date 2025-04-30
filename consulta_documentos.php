@@ -328,7 +328,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     <br><br>
 
     <?php
-    include 'footer.php';
+    include 'footer-index.php';
     ?>
 
 </body>
