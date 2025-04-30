@@ -18,6 +18,10 @@
     include "headerSuperadmin.php";
     ?>
 
+    <div class="menu1">
+        <a class="arrow" href="indexSuperadmin.php"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+
     <?php
     $nombreUsuario = file_exists('nombreUsuario.txt') ? file_get_contents('nombreUsuario.txt') : 'Invitado';
 
@@ -28,22 +32,7 @@
     <div id="subir" class="flecha">
         <i class="fa-solid fa-angle-up"></i>
     </div>
-    <section class="parrallax1">
-        <article class="info2">
-            <h1>Centro de información <br> "Antonio Mediz Bolio"</h1>
-    </section>
     <section class="contprincipal ancho">
-        <div class="bienvenida">
-            <p>Bienvenido al módulo de Herramientas del sistema.
-                Desde esta sección podrás gestionar los diferentes elementos que forman parte de la plataforma:
-                Agregar o modificar Licenciaturas, Posgrados y Sabáticos.
-                Administrar las imágenes de la galería.
-                Gestionar los Tipos de Titulación disponibles.
-                Configurar los Periodos de Licenciaturas.
-                Utiliza cada módulo con responsabilidad para asegurar que la información publicada esté siempre actualizada y correcta.
-
-</p>
-        </div>
         <div class="direccionesprincipales">
             <?php
             echo "<a class='hvr-sweep-to-right' href='modulo_carreras.php'>Modulo de licenciaturas</a>";

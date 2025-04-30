@@ -18,6 +18,10 @@
     include "headerSuperadmin.php";
     ?>
 
+    <div class="menu1">
+        <a class="arrow" href="indexSuperadmin.php"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+
     <?php
     $nombreUsuario = file_exists('nombreUsuario.txt') ? file_get_contents('nombreUsuario.txt') : 'Invitado';
 
@@ -28,19 +32,19 @@
     <div id="subir" class="flecha">
         <i class="fa-solid fa-angle-up"></i>
     </div>
-    <section class="parrallax1">
+    <!-- <section class="parrallax1">
         <article class="info2">
             <h1>Centro de información <br> "Antonio Mediz Bolio"</h1>
-    </section>
+    </section> -->
     <section class="contprincipal ancho">
-        <div class="bienvenida">
+        <!-- <div class="bienvenida">
             <p>Bienvenido al módulo de gestión de documentos académicos.
                 Aquí podrás cargar, organizar y administrar los archivos correspondientes a Licenciaturas, Posgrados y
                 Sabáticos.
                 Asegúrate de completar todos los campos requeridos y de subir los documentos en formato PDF. Cada
                 archivo pasará por un proceso de revisión antes de ser publicado oficialmente.
                 Gracias por contribuir a mantener actualizada nuestra plataforma académica.</p>
-        </div>
+        </div> -->
         <section class="opc_catalogo">
             <?php
             echo "<a href='formulario_ficha_carrera.php'>

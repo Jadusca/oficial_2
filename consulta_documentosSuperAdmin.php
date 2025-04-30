@@ -24,7 +24,11 @@
 include 'headerSuperadmin.php';
 ?>
 
-<br>
+<div class="menu1">
+    <a class="arrow" href="indexSuperadmin.php"><i class="fa-solid fa-arrow-left"></i></a>
+</div>
+
+<br><br>
 
 <?php
 require "conexion.php";

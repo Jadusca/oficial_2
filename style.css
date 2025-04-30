@@ -1171,11 +1171,11 @@ iframe {
 }
 
 .direccionesprincipales {
-  max-width: 700px;
+  max-width: 90%;
   display: flex;
   flex-direction: row;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content: space-evenly;
   gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 50px;
@@ -1193,6 +1193,14 @@ iframe {
   font-weight: bold;
   text-decoration: none;
   color: black;
+}
+
+.direccionesprincipales div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /*CSS del Catalogo Administrativo*/
@@ -3289,11 +3297,11 @@ iframe {
   font-family: helvetica;
 }
 
-.file{
+.file {
   border: none !important;
 }
 
-.form_lic textarea{
+.form_lic textarea {
   border: 3px #001d38 solid;
   width: 100%;
   padding: 10px;
@@ -3302,7 +3310,7 @@ iframe {
   font-family: helvetica;
 }
 
-.form_lic select{
+.form_lic select {
   border: 3px #001d38 solid;
   width: 100%;
   padding: 10px;
@@ -3311,9 +3319,9 @@ iframe {
   font-family: helvetica;
 }
 
-.enviar_doc{
+.enviar_doc {
   margin: auto !important;
-  border:3px #001d38 solid;
+  border: 3px #001d38 solid;
   border-radius: 10px;
   background-color: #001d38;
   color: white !important;
@@ -3321,9 +3329,9 @@ iframe {
   cursor: pointer;
 }
 
-.enviar_doc:hover{
+.enviar_doc:hover {
   border-radius: 10px;
-  border:3px #001d38 solid;
+  border: 3px #001d38 solid;
   background-color: white;
   color: #001d38 !important;
   transition: all 0.5s;
@@ -3351,13 +3359,114 @@ iframe {
 }
 
 .paginacion .pagina:hover {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
 }
 
 .paginacion .pagina-activa {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   font-weight: bold;
 }
 
+.tit_mod_car {
+  padding: 20px;
+  padding-left: 75px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.nuevas_carreras {
+  width: 58%;
+  margin-left: 3%;
+  margin-bottom: 40px;
+}
+
+.nuevas_carreras label {
+  display: block;
+  width: auto !important;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #003568;
+  color: white;
+  border-radius: 10px;
+}
+
+.nuevas_carreras input {
+  border: 3px #001d38 solid;
+  border-radius: 10px;
+  width: 56%;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  color: #001d38;
+  font-family: helvetica;
+}
+
+.nuevas_carreras select {
+  border: 3px #001d38 solid;
+  border-radius: 10px;
+  width: 40%;
+  height: 40px;
+  padding: 5px;
+  font-size: 18px;
+  color: #001d38;
+  font-family: helvetica;
+}
+
+.nuevas_carreras section {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 5px;
+  align-items: center;
+}
+
+.image {
+  border: none !important;
+}
+
+.mod_car {
+  background-color: #001d38 !important;
+  color: white !important;
+  transition: all 0.5s linear;
+}
+
+.mod_car:hover {
+  background-color: white !important;
+  color: #001d38 !important;
+  cursor: pointer;
+}
+
+.tab_mod {
+  margin: auto;
+  width: 90%;
+}
+
+.tab_mod
+th,
+td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.tab_mod th {
+  background-color: #003568 !important;
+  color: white !important;
+}
+
+.tab_mod img{
+  border: 3px #001d38 solid;
+  border-radius: 100%;
+  width: 90px;
+}
+
+.actions{
+  border: none !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 15%;
+}

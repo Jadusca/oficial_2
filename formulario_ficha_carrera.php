@@ -65,6 +65,10 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     include "headerSuperadmin.php";
     ?>
 
+    <div class="menu1">
+        <a class="arrow" href="Subir_archivos.php"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+
     <br><br>
 
     <h2 class="tit_lic">Subir documento de licenciatura</h2>
@@ -101,7 +105,8 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
         <input type="text" name="paginas" placeholder="Introduce UNICAMENTE el número de páginas" required><br><br>
 
         <label>Dimensiones:</label><br>
-        <input type="text" name="dimensiones" placeholder="Introduce las dimensiones del documento, ejemplo (50 x 50)" required><br><br>
+        <input type="text" name="dimensiones" placeholder="Introduce las dimensiones del documento, ejemplo (50 x 50)"
+            required><br><br>
 
         <label>Periodo:</label><br>
         <select name="periodo_id" id="periodo_id" required>

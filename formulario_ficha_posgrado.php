@@ -26,6 +26,10 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
     include "headerSuperadmin.php";
     ?>
 
+    <div class="menu1">
+        <a class="arrow" href="Subir_archivos.php"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+
     <br><br>
 
     <h2 class="tit_lic">Subir documento de posgrado</h2>

@@ -39,16 +39,18 @@
                 propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
         </div>
         <br><br>
-        <div class="direccionesprincipales">
-            <?php
-            echo "<a class='hvr-sweep-to-right' href='listaUsuariosSuperAdmin.php'>Usuarios</a>";
-            echo "<a class='hvr-sweep-to-right' href='consulta_documentosSuperAdmin.php'>Catálogo</a>";
-            echo "<a class='hvr-sweep-to-right' href='Subir_archivos.php'>Subir Archivos</a>";
-            echo "<a class='hvr-sweep-to-right' href='herramientas.php'>Herramientas</a>";
-            echo "<a class='hvr-sweep-to-right' href='modulo_revision_general.php'>Revisar documentos pendientes</a>";
-            echo "<a class='hvr-sweep-to-right' href='ver_visitas.php'>Reporte de visitas</a>";
-            ?>
-        </div>
+        <section class="direccionesprincipales">
+            <div>
+                <a class='hvr-sweep-to-right' href='listaUsuariosSuperAdmin.php'>Usuarios</a>
+                <a class='hvr-sweep-to-right' href='consulta_documentosSuperAdmin.php'>Catálogo</a>
+                <a class='hvr-sweep-to-right' href='Subir_archivos.php'>Subir Archivos</a>
+            </div>
+            <div>
+                <a class='hvr-sweep-to-right' href='herramientas.php'>Herramientas</a>
+                <a class='hvr-sweep-to-right' href='modulo_revision_general.php'>Revisar documentos pendientes</a>
+                <a class='hvr-sweep-to-right' href='ver_visitas.php'>Reporte de visitas</a>
+            </div>
+        </section>
     </section>
     <br>
     <?php
