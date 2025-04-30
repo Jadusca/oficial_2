@@ -1,25 +1,3 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repositorio del Instituto Tecnológico de Mérida</title>
-    <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="estilosmovil.css">
-    <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-    <script type="text/javascript" src="jquery.tinycarousel.js"></script>
-    <script src="funciones.js"></script>
-    <script src="responsiveslides.min.js"></script>
-    <script src="wow.min.js"></script>
-    <script src="fancybox/jquery.fancybox.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" href="animate.css/animate.css" />
-    <link rel="stylesheet" href="fancybox.css" />
-    <script src="fancybox.js"></script>
-</head>
-
 <?php
 include "registrar_visita.php";
 include 'header.php';
@@ -74,10 +52,26 @@ function consultar($tabla, $joins = "", $campos_extra = "")
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Consulta de Documentos</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio del Instituto Tecnológico de Mérida</title>
+    <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilosmovil.css">
+    <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script type="text/javascript" src="jquery.tinycarousel.js"></script>
+    <script src="funciones.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <script src="wow.min.js"></script>
+    <script src="fancybox/jquery.fancybox.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="animate.css/animate.css" />
+    <link rel="stylesheet" href="fancybox.css" />
+    <script src="fancybox.js"></script>
     <style>
         .tab {
             display: none;
@@ -259,7 +253,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
             </tr>
             <?php
             $joins = "JOIN tipo_titulacion_posgrado ON ficha_posgrados.tipo_titulacion_posgrado = tipo_titulacion_posgrado.id_tipo_titulacion_pos
-                  JOIN posgrados ON ficha_posgrados.posgrados = posgrados.id_posgrados";
+                JOIN posgrados ON ficha_posgrados.posgrados = posgrados.id_posgrados";
             $campos_extra = ", tipo_titulacion_posgrado.nombre_titulacion_pos, posgrados.nombre_posgrado";
             $result = consultar("ficha_posgrados", $joins, $campos_extra);
             while ($row = $result->fetch_assoc()) {
