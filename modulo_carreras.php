@@ -34,11 +34,12 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     include "headerSuperadmin.php";
     ?>
 
-    <div class="menu1">
-        <a class="arrow" href="herramientas.php"><i class="fa-solid fa-arrow-left"></i></a>
-    </div><br>
-
-    <h2 class="tit_mod_car">Agregar nueva carrera</h2>
+    <div class="edit_car">
+        <div class="menu1_1">
+            <a class="arrow" href="herramientas.php"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <h2 class="tit_mod_car">Agregar nueva carrera</h2>
+    </div>
 
     <?php if (isset($_GET['mensaje'])): ?>
         <div class="mensaje">

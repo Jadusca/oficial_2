@@ -31,11 +31,12 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     include "headerSuperadmin.php";
     ?>
 
-    <div class="menu1">
-        <a class="arrow" href="modulo_carreras.php"><i class="fa-solid fa-arrow-left"></i></a>
-    </div><br>
-
-    <h2 class="tit_mod_car">Editar carrera</h2>
+    <div class="edit_car">
+        <div class="menu1_1">
+            <a class="arrow" href="modulo_carreras.php"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <h2 class="tit_mod_car">Editar carrera</h2>
+    </div>
 
     <form class="nuevas_carreras" action="actualizar_carrera.php" method="POST" enctype="multipart/form-data"> <input
             type="hidden" name="id_carreras" value="<?= $datos['id_carreras'] ?>">

@@ -2671,6 +2671,30 @@ iframe {
   padding: 5px 10px;
 }
 
+.menu1_1 {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: #003568;
+  font-size: 25px;
+}
+
+.menu1_1 a {
+  border-radius: 5px;
+  text-decoration: underline;
+  transition: all 0.5s linear;
+}
+
+.menu1_1 a:hover {
+  transform: scale(1.05);
+  background-color: #003568;
+  color: white;
+  border-radius: 5px;
+}
+
 .arrow {
   color: #003568;
   font-size: 25px;
@@ -3374,6 +3398,23 @@ iframe {
   padding-left: 75px;
   margin-bottom: 20px;
   font-size: 25px;
+}
+
+.edit_car{
+  width: 40%;
+  margin-left: 3%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit_car h2{
+  margin: 0%;
+  padding: 0%;
 }
 
 .nuevas_carreras {
