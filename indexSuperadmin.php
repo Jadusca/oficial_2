@@ -33,11 +33,11 @@
             <h1>Centro de información <br> "Antonio Mediz Bolio"</h1>
     </section>
     <section class="contprincipal ancho">
-        <div class="bienvenida">
+        <article class="bienvenida">
             <p>Bienvenido al Repositorio Institucional de Acceso Abierto del Instituto Tecnológico de Mérida,
                 que almacena y organiza la documentación y producción de índole científica y académica con el
                 propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
-        </div>
+        </article>
         <br><br>
         <section class="direccionesprincipales">
             <div>

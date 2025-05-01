@@ -34,8 +34,8 @@ if (!$res) {
     die("Error en SELECT: " . $conectar->error . "<br>Consulta: $query");
 }
 ?>
-
-<table border="1">
+<br>
+<table class="tab_mod_1">
     <tr>
         <th>Título</th><th>Autor</th><th>Sabático</th><th>Categoría de sabático</th><th>Estado</th><th>Documento</th><th>Oficio</th>
     </tr>
@@ -46,8 +46,11 @@ if (!$res) {
         <td><?= $row['nombre_sabatico'] ?></td>
         <td><?= $row['nombre_categoria'] ?></td>
         <td><?= $row['nombre_estado'] ?></td>
-        <td><a href="ver_documento.php?archivo=<?= $row['documento'] ?>" target="_blank">Ver</a></td>
-        <td><?= $row['oficio'] ? "<a href='ver_oficio.php?archivo={$row['oficio']}' target='_blank'>Ver</a>" : "No disponible" ?></td>
+        <td class='line_pdf'><div class="pdf_busqueda_1">
+        <a href="ver_documento.php?archivo=<?= $row['documento'] ?>" target="_blank"><i
+        class='fa-solid fa-file-pdf'></i></a>
+        </div></td>
+        <td class='line_pdf'><?= $row['oficio'] ? "<div class='pdf_busqueda_1'><a href='ver_oficio.php?archivo={$row['oficio']}' target='_blank'><i class='fa-solid fa-file-zipper'></i></a></div>" : "No disponible" ?></td>
     </tr>
     <?php endwhile; ?>
 </table>

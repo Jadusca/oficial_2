@@ -202,7 +202,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     <br><br>
     <div id="lic" class="tab active">
         <h2 class="tit_doc_lic">Documentos de Licenciatura</h2>
-        <table class="tabla" border="1">
+        <table class="tabla">
             <tr>
                 <th class="tit_def">Título</th>
                 <th class="tit_def">Autor</th>

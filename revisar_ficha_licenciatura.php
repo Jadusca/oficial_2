@@ -7,42 +7,12 @@
     <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script src="responsiveslides.min.js"></script>
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border-radius: 8px;
-            width: 60%;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <!-- Modal -->
 <div id="resumenModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="cerrarModal()">&times;</span>
-        <h3>Resumen</h3>
+        <h3 class="tit_doc_lic_resumen">Resumen</h3>
         <p id="contenidoResumen"></p>
     </div>
 </div>

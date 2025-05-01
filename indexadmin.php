@@ -42,11 +42,12 @@
                 que almacena y organiza la documentación y producción de índole científica y académica con el
                 propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
         </article>
-        <article class="direccionesprincipales">
+        <br><br>
+        <section class="direccionesprincipales">
             <a class='hvr-sweep-to-right' href='consulta_documentosAdmin.php'>Catalogo</a>
             <a class='hvr-sweep-to-right' href='subir_archivosAdmin.php'>Subir archivos</a>
             <a class='hvr-sweep-to-right' href='ver_visitasAdmin.php'>Reporte de visitas</a>
-        </article>
+        </section>
     </section>
     <br><br>
     <?php

@@ -37,14 +37,6 @@
             <h1>Centro de información <br> "Antonio Mediz Bolio"</h1>
     </section> -->
     <section class="contprincipal ancho">
-        <!-- <div class="bienvenida">
-            <p>Bienvenido al módulo de gestión de documentos académicos.
-                Aquí podrás cargar, organizar y administrar los archivos correspondientes a Licenciaturas, Posgrados y
-                Sabáticos.
-                Asegúrate de completar todos los campos requeridos y de subir los documentos en formato PDF. Cada
-                archivo pasará por un proceso de revisión antes de ser publicado oficialmente.
-                Gracias por contribuir a mantener actualizada nuestra plataforma académica.</p>
-        </div> -->
         <section class="opc_catalogo">
             <?php
             echo "<a href='formulario_ficha_carrera.php'>

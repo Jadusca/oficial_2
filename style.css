@@ -3129,6 +3129,19 @@ iframe {
   transition: all 0.5s;
 }
 
+.line_pdf {
+  align-items: center;
+}
+
+.pdf_busqueda_1 {
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.pdf_busqueda_1:hover {
+  transform: scale(1.2);
+}
+
 .pdf_busqueda_check {
   text-align: center;
   transition: all 0.5s;
@@ -3152,6 +3165,14 @@ iframe {
 }
 
 .pdf_busqueda a {
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: white;
+  color: #001d38;
+  font-size: 30px;
+}
+
+.pdf_busqueda_1 a {
   border-radius: 10px;
   text-decoration: none;
   background-color: white;
@@ -3283,6 +3304,12 @@ iframe {
 .tit_doc_lic {
   padding: 20px !important;
   font-size: 25px;
+}
+
+.tit_doc_lic_resumen {
+  padding: 20px !important;
+  font-size: 25px;
+  color: #001d38;
 }
 
 .tabla {
@@ -3488,6 +3515,17 @@ iframe {
   font-family: helvetica;
 }
 
+.nuevas_carreras button {
+  border: 3px #001d38 solid;
+  border-radius: 10px;
+  width: 56%;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  color: #001d38;
+  font-family: helvetica;
+}
+
 .nuevas_carreras select {
   border: 3px #001d38 solid;
   border-radius: 10px;
@@ -3537,6 +3575,23 @@ iframe {
 }
 
 .mod_car:hover {
+  background-color: white !important;
+  color: #001d38 !important;
+  cursor: pointer;
+}
+
+.mod_car_1 {
+  margin-left: 6%;
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 10px 25px;
+  background-color: #001d38 !important;
+  color: white !important;
+  transition: all 0.5s linear;
+}
+
+.mod_car_1:hover {
   background-color: white !important;
   color: #001d38 !important;
   cursor: pointer;
@@ -3613,4 +3668,73 @@ td {
 .tabla-contenedor {
   overflow-x: auto;
   width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.modal-content p {
+  padding: 20px;
+  text-align: justify;
+  border: 2px #003568 solid;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.modal-content h3 {
+  background-color: #001d38;
+  padding: 10px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  border-radius: 10px;
+  color: white !important;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.docs_aprobados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.docs_aprobados input {
+  margin-top: 40px;
+  border: 3px #003568 solid;
+  font-size: 18px;
+  padding: 10px !important;
+  border-radius: 15px;
+}
+
+.graphic{
+  border: 3px #003568 solid;
+  width: 90%;
+  height: 600px !important;
+  margin: auto;
+  border-radius: 10px;
 }
