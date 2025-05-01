@@ -11,6 +11,7 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subir Ficha de Posgrado</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -23,7 +24,7 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
 <body>
 
     <?php
-    include "headerSuperadmin.php";
+    include "headeradmin.php";
     ?>
 
     <div class="menu1">
@@ -33,7 +34,7 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
     <br><br>
 
     <h2 class="tit_lic">Subir documento de posgrado</h2>
-    <form class="form_lic" action="procesar_ficha_posgrado.php" method="POST" enctype="multipart/form-data">
+    <form class="form_lic" action="procesar_ficha_posgrado_admin.php" method="POST" enctype="multipart/form-data">
         <label>Título:</label><br>
         <input type="text" name="titulo" placeholder="Introduzca el título" required></input><br><br>
 

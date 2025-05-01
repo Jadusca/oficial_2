@@ -7,9 +7,9 @@ $categorias = $conectar->query("SELECT * FROM categoria_sabatico");
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subir Ficha Sabático</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -22,7 +22,7 @@ $categorias = $conectar->query("SELECT * FROM categoria_sabatico");
 <body>
 
     <?php
-    include "headerSuperadmin.php";
+    include "headeradmin.php";
     ?>
 
     <div class="menu1">
@@ -31,7 +31,7 @@ $categorias = $conectar->query("SELECT * FROM categoria_sabatico");
 
     <br><br>
     <h2 class="tit_lic">Subir documento sabático</h2>
-    <form class="form_lic" action="procesar_ficha_sabatico.php" method="POST" enctype="multipart/form-data">
+    <form class="form_lic" action="procesar_ficha_sabatico_admin.php" method="POST" enctype="multipart/form-data">
         <label>Título:</label><br>
         <input type="text" name="titulo" placeholder="Introduzca el título" required></in><br><br>
 
