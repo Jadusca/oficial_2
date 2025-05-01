@@ -1,3 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisar sabáticos</title>
+    <style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 60%;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<!-- Modal -->
+<div id="resumenModal" class="modal">
+<div class="modal-content">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <h3>Resumen</h3>
+    <p id="contenidoResumen"></p>
+</div>
+</div>
+
+<script>
+function mostrarResumen(texto) {
+    document.getElementById("contenidoResumen").innerText = texto;
+    document.getElementById("resumenModal").style.display = "block";
+}
+
+function cerrarModal() {
+    document.getElementById("resumenModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById("resumenModal");
+    if (event.target == modal) {
+        cerrarModal();
+    }
+}
+</script>
+<body>
+
 <?php
 require 'conexion.php';
 
@@ -32,7 +97,7 @@ $resultado = $conectar->query($query);
         <td><?php echo $row['autor']; ?></td>
         <td><?php echo $row['nombre_sabatico']; ?></td>
         <td><?php echo $row['nombre_categoria']; ?></td>
-        <td><?php echo $row['resumen']; ?></td>
+        <td><button onclick="mostrarResumen(`<?php echo htmlspecialchars($row['resumen'], ENT_QUOTES); ?>`)">Ver resumen</button></td>
         <td><?php echo $row['fecha']; ?></td>
         <td><?php echo $row['palabras_clave']; ?></td>
         <td><?php echo $row['paginas']; ?></td>
@@ -47,3 +112,6 @@ $resultado = $conectar->query($query);
     </tr>
     <?php endwhile; ?>
 </table>
+
+</body>
+</html>
