@@ -10,6 +10,7 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos de Posgrados</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">

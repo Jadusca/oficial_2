@@ -12,6 +12,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos por Carrera</title>
     <script src="funciones.js"></script>
     <link rel="stylesheet" href="style.css">

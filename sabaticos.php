@@ -11,6 +11,7 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos Sabáticos</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
