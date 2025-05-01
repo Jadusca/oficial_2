@@ -74,25 +74,26 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
 
     <?php
     if ($id_periodo && $id_carrera && $id_tipo) {
-    $estado_resultado = $conectar->query("SELECT id_estado FROM estado_revision WHERE nombre_estado = 'Aprobado' LIMIT 1");
-    $estado_aprobado = $estado_resultado->fetch_assoc()['id_estado'];
+        $estado_resultado = $conectar->query("SELECT id_estado FROM estado_revision WHERE nombre_estado = 'Aprobado' LIMIT 1");
+        $estado_aprobado = $estado_resultado->fetch_assoc()['id_estado'];
 
-    $por_pagina = 20;
-    $pagina = isset($_GET['pagina']) ? intval($_GET['pagina']) : 1;
-    if ($pagina < 1) $pagina = 1;
-    $inicio = ($pagina - 1) * $por_pagina;
+        $por_pagina = 20;
+        $pagina = isset($_GET['pagina']) ? intval($_GET['pagina']) : 1;
+        if ($pagina < 1)
+            $pagina = 1;
+        $inicio = ($pagina - 1) * $por_pagina;
 
-    // Total de documentos aprobados
-    $total_resultado = $conectar->query("SELECT COUNT(*) AS total
+        // Total de documentos aprobados
+        $total_resultado = $conectar->query("SELECT COUNT(*) AS total
         FROM ficha_carreras
         WHERE carreras = $id_carrera
         AND tipo_titulacion_carrera = $id_tipo
         AND estado_revision = $estado_aprobado");
-    $total_filas = $total_resultado->fetch_assoc()['total'];
-    $total_paginas = ceil($total_filas / $por_pagina);
+        $total_filas = $total_resultado->fetch_assoc()['total'];
+        $total_paginas = ceil($total_filas / $por_pagina);
 
-    // Documentos paginados
-    $docs = $conectar->query("SELECT f.*, c.nombre_carrera, t.nombre_titulacion
+        // Documentos paginados
+        $docs = $conectar->query("SELECT f.*, c.nombre_carrera, t.nombre_titulacion
         FROM ficha_carreras f
         JOIN carreras c ON f.carreras = c.id_carreras
         JOIN tipo_titulacion_carrera t ON f.tipo_titulacion_carrera = t.id_tipo_titulacion
@@ -101,43 +102,43 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
         AND f.estado_revision = $estado_aprobado
         LIMIT $inicio, $por_pagina");
 
-    echo "<div class='echo_periodo'><a href='?periodo=$id_periodo&carrera=$id_carrera'><i class='fa-solid fa-arrow-left'></i></a></div>";
-    echo "<h2 class='documentos_disponibles'>Documentos disponibles:</h2>";
+        echo "<div class='echo_periodo'><a href='?periodo=$id_periodo&carrera=$id_carrera'><i class='fa-solid fa-arrow-left'></i></a></div>";
+        echo "<h2 class='documentos_disponibles'>Documentos disponibles:</h2>";
 
-    if ($docs->num_rows > 0) {
-        while ($doc = $docs->fetch_assoc()) {
-            echo "<div class='doc_disp'>
+        if ($docs->num_rows > 0) {
+            while ($doc = $docs->fetch_assoc()) {
+                echo "<div class='doc_disp'>
                 <div class='titulo_autor'>
                     <strong>{$doc['titulo']}</strong><br> {$doc['autor']}
                 </div><br>
                 <div class='nombre_carrera'><em>{$doc['nombre_carrera']} | {$doc['nombre_titulacion']}</em></div><br>";
-            $nombreArchivo = rawurlencode(basename($doc['documento']));
-            $ruta = "../../documentos/$nombreArchivo";
-            echo "<a class='pdf' href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i> Ver documento</a>";
-            echo "<a class='view_ficha' href='javascript:void(0)' onclick='verFicha({$doc['id_ficha_carrera']})'><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</a>
+                $nombreArchivo = rawurlencode(basename($doc['documento']));
+                $ruta = "../../documentos/$nombreArchivo";
+                echo "<a class='pdf' href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i> Ver documento</a>";
+                echo "<a class='view_ficha' href='javascript:void(0)' onclick='verFicha({$doc['id_ficha_carrera']})'><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</a>
             </div>";
-        }
+            }
 
-        // Paginación
-        echo "<div class='paginacion'>";
-        if ($pagina > 1) {
-            $prev = $pagina - 1;
-            echo "<a class='pagina' href='?periodo=$id_periodo&carrera=$id_carrera&tipo=$id_tipo&pagina=$prev'>&laquo; Anterior</a>";
-        }
+            // Paginación
+            echo "<div class='paginacion'>";
+            if ($pagina > 1) {
+                $prev = $pagina - 1;
+                echo "<a class='pagina' href='?periodo=$id_periodo&carrera=$id_carrera&tipo=$id_tipo&pagina=$prev'>&laquo; Anterior</a>";
+            }
 
-        for ($i = 1; $i <= $total_paginas; $i++) {
-            $clase = ($i == $pagina) ? "pagina-activa" : "";
-            echo "<a class='pagina $clase' href='?periodo=$id_periodo&carrera=$id_carrera&tipo=$id_tipo&pagina=$i'>$i</a>";
-        }
+            for ($i = 1; $i <= $total_paginas; $i++) {
+                $clase = ($i == $pagina) ? "pagina-activa" : "";
+                echo "<a class='pagina $clase' href='?periodo=$id_periodo&carrera=$id_carrera&tipo=$id_tipo&pagina=$i'>$i</a>";
+            }
 
-        if ($pagina < $total_paginas) {
-            $next = $pagina + 1;
-            echo "<a class='pagina' href='?periodo=$id_periodo&carrera=$id_carrera&tipo=$id_tipo&pagina=$next'>Siguiente &raquo;</a>";
+            if ($pagina < $total_paginas) {
+                $next = $pagina + 1;
+                echo "<a class='pagina' href='?periodo=$id_periodo&carrera=$id_carrera&tipo=$id_tipo&pagina=$next'>Siguiente &raquo;</a>";
+            }
+            echo "</div>";
+        } else {
+            echo "<div class='mensaje'>No hay documentos aprobados para esta combinación.</div>";
         }
-        echo "</div>";
-    } else {
-        echo "<div class='mensaje'>No hay documentos aprobados para esta combinación.</div>";
-    }
 
     } elseif ($id_periodo && $id_carrera) {
         // Obtener nombre de la carrera
@@ -157,7 +158,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
         while ($tipo = $tipos->fetch_assoc()) {
             if ($contador % 2 == 0)
                 echo "<div class='opciones_duo'>"; // inicia fila
-
+    
             $idTipo = $tipo['id_tipo_titulacion'];
             $nombre = $tipo['nombre_titulacion'];
             $descripcion = $tipo['descripcion_titulacion'];

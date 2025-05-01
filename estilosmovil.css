@@ -121,6 +121,11 @@
     width: 100% !important;
   }
 
+  .buscador button {
+    margin-left: 0% !important;
+    width: 200px !important;
+  }
+
   .rslides li {
     width: 100%;
     height: 180px;
@@ -229,6 +234,8 @@
 
   .final {
     width: 100% !important;
+    display: flex;
+    flex-direction: column;
   }
 
   .tec {
@@ -274,38 +281,26 @@
     width: 80%;
   }
 
+  .periodos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+
   .partes {
     margin: auto;
     margin-top: 50px;
     width: 90%;
-    display: grid;
-    grid-template-areas: "periodo_uno" "periodo_dos" "periodo_tres" "periodo_cuatro";
-    grid-gap: 15px;
-  }
-
-  .periodo_uno {
-    grid-area: periodo_uno;
-  }
-
-  .periodo_dos {
-    grid-area: periodo_dos;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .partes1 {
     margin: auto;
     margin-top: -110px;
     width: 90%;
-    display: grid;
-    grid-template-areas: "periodo_tres" "periodo_cuatro";
-    grid-gap: 15px;
-  }
-
-  .periodo_tres {
-    grid-area: periodo_tres;
-  }
-
-  .periodo_cuatro {
-    grid-area: periodo_cuatro;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   /*CSS del Menu Administrativo*/
@@ -1658,5 +1653,25 @@
 
   .inputUS{
     margin-left: -15% !important;
+  }
+
+  .tit_panel_consulta{
+    border: 1px red solid;
+    font-size: 24px;
+    width: 70%;
+  }
+
+  .botones{
+    border: 1px red solid;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boton_doc {
+    font-size: 20px;
+    padding: 10px 15px;
   }
 }

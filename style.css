@@ -128,7 +128,7 @@ body {
   width: 150%;
   height: 30px;
   padding: 20px;
-  margin-left: 85px;
+  margin-left: 90% !important;
   background-color: #003568;
   border: 2px#003568 solid;
   border-radius: 15px;
@@ -2944,6 +2944,7 @@ iframe {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 0% !important;
 }
 
 .partes a {
@@ -2953,6 +2954,23 @@ iframe {
 }
 
 .partes a:hover {
+  transform: scale(1.1);
+}
+
+.partes1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0% !important;
+}
+
+.partes1 a {
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.partes1 a:hover {
   transform: scale(1.1);
 }
 
