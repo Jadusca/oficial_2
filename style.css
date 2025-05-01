@@ -3501,7 +3501,7 @@ iframe {
 
 .tab_mod {
   margin: auto;
-  width: 90%;
+  width: 90% !important;
 }
 
 .tab_mod
@@ -3530,4 +3530,44 @@ td {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 15%;
+}
+
+.actions_1{
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions_1 div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab_mod_1 {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tab_mod_1
+th,
+td {
+  padding: 8px;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.tab_mod_1 th {
+  background-color: #003568 !important;
+  color: white !important;
+}
+
+/* Opcional: permite scroll horizontal si aún excede */
+.tabla-contenedor {
+  overflow-x: auto;
+  width: 100%;
 }
