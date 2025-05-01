@@ -52,6 +52,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -191,41 +192,42 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     </div>
 
     <form class="clasificaciones" method="GET">
-        <label class="xd">Autor: <input type="text" name="autor"
+        <label>Autor: <input type="text" name="autor"
                 value="<?= htmlspecialchars($_GET['autor'] ?? '') ?>"></label>
         <label>Palabra clave: <input type="text" name="palabras_clave"
                 value="<?= htmlspecialchars($_GET['palabras_clave'] ?? '') ?>"></label>
-        <label>Fecha: <input type="date" name="fecha" value="<?= htmlspecialchars($_GET['fecha'] ?? '') ?>"></label>
+        <label class="date">Fecha: <input type="date" name="fecha" value="<?= htmlspecialchars($_GET['fecha'] ?? '') ?>"></label>
         <input class="busqueda_archivos" type="submit" value="Buscar">
     </form>
 
     <br><br>
     <div id="lic" class="tab active">
         <h2 class="tit_doc_lic">Documentos de Licenciatura</h2>
-        <table class="tabla">
-            <tr>
-                <th class="tit_def">Título</th>
-                <th class="tit_def">Autor</th>
-                <th class="tit_def">Fecha</th>
-                <th class="tit_def">Carrera</th>
-                <th class="tit_def">Titulación</th>
-                <th class="tit_def">Documento</th>
-                <th class="tit_def">Ficha</th>
-            </tr>
-            <?php
-            $joins = "
+        <div class="tabla-responsive">
+            <table class="tabla">
+                <tr>
+                    <th class="tit_def">Título</th>
+                    <th class="tit_def">Autor</th>
+                    <th class="tit_def">Fecha</th>
+                    <th class="tit_def">Carrera</th>
+                    <th class="tit_def">Titulación</th>
+                    <th class="tit_def">Documento</th>
+                    <th class="tit_def">Ficha</th>
+                </tr>
+                <?php
+                $joins = "
             JOIN tipo_titulacion_carrera ON ficha_carreras.tipo_titulacion_carrera = tipo_titulacion_carrera.id_tipo_titulacion
             JOIN carreras ON ficha_carreras.carreras = carreras.id_carreras";
-            $campos_extra = ", tipo_titulacion_carrera.nombre_titulacion, carreras.nombre_carrera";
-            $result = consultar("ficha_carreras", $joins, $campos_extra);
-            while ($row = $result->fetch_assoc()) {
-                $row['Tipo Titulación'] = $row['nombre_titulacion'];
-                $row['Carrera'] = $row['nombre_carrera'];
+                $campos_extra = ", tipo_titulacion_carrera.nombre_titulacion, carreras.nombre_carrera";
+                $result = consultar("ficha_carreras", $joins, $campos_extra);
+                while ($row = $result->fetch_assoc()) {
+                    $row['Tipo Titulación'] = $row['nombre_titulacion'];
+                    $row['Carrera'] = $row['nombre_carrera'];
 
-                $nombreArchivo = rawurlencode(basename($row['documento']));
-                $ruta = "../../documentos/$nombreArchivo";
+                    $nombreArchivo = rawurlencode(basename($row['documento']));
+                    $ruta = "../../documentos/$nombreArchivo";
 
-                echo "<tr class='tit_doc_busq'>
+                    echo "<tr class='tit_doc_busq'>
                     <td>{$row['titulo']}</td>
                     <td>{$row['autor']}</td>
                     <td class='prueba'>{$row['fecha']}</td>
@@ -234,9 +236,10 @@ function consultar($tabla, $joins = "", $campos_extra = "")
                     <td><div class='pdf_busqueda'><a href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i></a></div></td>
                     <td><button onclick='mostrarDetalle(" . json_encode($row, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ")'><i class='fa-solid fa-magnifying-glass'></i></button></td>
                 </tr>";
-            }
-            ?>
-        </table>
+                }
+                ?>
+            </table>
+        </div>
     </div>
 
     <div id="pos" class="tab">

@@ -3126,6 +3126,10 @@ iframe {
   transition: all 0.5s linear;
 }
 
+.espacio{
+  display: none;
+}
+
 .view_ficha:hover {
   border: 3px #001d38 solid;
   background-color: white;
@@ -3294,7 +3298,7 @@ iframe {
   background-color: #ececec;
   color: #001d38 !important;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 19px;
   text-align: center;
   padding: 20px !important;
 }

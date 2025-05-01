@@ -30,11 +30,9 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
         echo '<div class="periodos_flecha"><a href="index.php" class="periodos"><i class="fa-solid fa-arrow-left"></i></a>
     </div>';
         echo '<section class="carreras ancho">
-            <div class="titulocar">
-                <h1>Posgrados</h1>
-            </div>
+            
         </section>
-        <div class="Opciones">';
+        <div class="Opciones Opciones1">';
 
         $posgrados = $conectar->query("SELECT * FROM posgrados");
         $count = 0;
@@ -59,11 +57,8 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
     } elseif ($id_posgrado && !$id_tipo) {
         echo "<div class='echo_periodo';'><a href='posgrados.php'><i class='fa-solid fa-arrow-left'></i></a></div>";
         echo '<section class="carreras ancho">
-            <div class="titulocar">
-                <h1>Tipos de Titulación</h1>
-            </div>
         </section>
-        <div class="Opciones">';
+        <div class="Opciones Opciones1">';
 
         $tipos = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
         $count = 0;
@@ -121,12 +116,13 @@ $id_tipo = isset($_GET['tipo']) ? intval($_GET['tipo']) : 0;
                         <p>{$doc['autor']}</p>
                     </div><br>
                     <div class='nombre_carrera'><em>{$doc['nombre_posgrado']} | {$doc['nombre_titulacion_pos']}</em></div><br>
+                    <div class='acciones_doc'>
                     <button class='pdf' onclick=\"window.open('pdf/web/viewer.html?file=" . urlencode("../../documentos/" . rawurlencode(basename($doc['documento']))) . "', '_blank')\">
                         <i class='fa-solid fa-file-invoice'></i> Ver documento
                     </button>
                     <button class='view_ficha' onclick=\"mostrarFicha(" . htmlspecialchars(json_encode($doc), ENT_QUOTES, 'UTF-8') . ")\">
                         <i class='fa-solid fa-magnifying-glass'></i> Ver ficha
-                    </button>
+                    </button></div>
                 </div>";
             }
 

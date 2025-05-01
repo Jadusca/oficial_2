@@ -233,6 +233,7 @@
   }
 
   .final {
+    margin: 0%;
     width: 100% !important;
     display: flex;
     flex-direction: column;
@@ -240,7 +241,7 @@
 
   .tec {
     margin: auto;
-    width: 100%;
+    width: 100% !important;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -285,19 +286,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }  
+  }
+
+  .periodos_flecha {
+    margin-left: -105%;
+  }
 
   .partes {
+    padding-left: 11px;
     margin: auto;
     margin-top: 50px;
     width: 90%;
     display: flex !important;
     flex-direction: column !important;
+    gap: 20px;
   }
 
   .partes1 {
     margin: auto;
-    margin-top: -110px;
+    margin-top: -20% !important;
     width: 90%;
     display: flex !important;
     flex-direction: column !important;
@@ -633,13 +640,10 @@
     margin-left: 2.5% !important;
   }
   .carreras {
+    display: block;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 220px;
     width: 350px;
-  }
-  .logocar figure img {
-    top: -90px !important;
-    left: 90px;
   }
   .cardcarreras {
     padding-bottom: 120px !important;
@@ -648,9 +652,11 @@
     margin-bottom: -190px;
   }
   .cardcarreras h1 {
-    width: 98%;
     text-align: center;
-    margin-left: -21%;
+    font-size: 25px;
+    z-index: 10;
+    top: 44%;
+    width: 100%;
   }
   .cardcarreras a {
     font-size: 20px;
@@ -751,8 +757,8 @@
   }
 
   .logocar figure img {
-    top: -75px;
-    left: 33% !important;
+    top: -70px;
+    left: 30% !important;
   }
 
   .logocarsis figure img {
@@ -767,6 +773,13 @@
   }
 
   .Opciones {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .Opciones1 {
+    margin-top: -230px !important;
     display: flex;
     width: 90%;
     margin: auto;
@@ -1043,7 +1056,7 @@
     margin-left: 10px;
   }
 
-  .info1 a{
+  .info1 a {
     width: 30%;
     display: flex;
     flex-direction: row;
@@ -1066,7 +1079,7 @@
     display: flex !important;
     flex-direction: column !important;
   }
-  
+
   .botonesfinalescompleto a {
     margin-right: 0px;
     font-size: 14px;
@@ -1081,7 +1094,7 @@
     display: flex !important;
     flex-direction: column !important;
   }
-  
+
   .botonesfinalescompleto1 a {
     margin-right: 0px;
     font-size: 14px;
@@ -1369,7 +1382,7 @@
     width: 100px;
   }
 
-  .formNuevoUsuario p{
+  .formNuevoUsuario p {
     margin-left: -15%;
   }
 
@@ -1536,7 +1549,7 @@
     margin-left: -15%;
   }
 
-  .lineaForm p{
+  .lineaForm p {
     margin-left: 0% !important;
   }
 
@@ -1548,15 +1561,15 @@
     margin-left: -0% !important;
   }
 
-  .tituloapartadoUs_email{
+  .tituloapartadoUs_email {
     margin-left: -15% !important;
   }
 
-  .inputAU_numero{
+  .inputAU_numero {
     margin-left: -15% !important;
   }
 
-  .describirforms .seccionesdescribir{
+  .describirforms .seccionesdescribir {
     margin-left: 1%;
     width: 100% !important;
   }
@@ -1568,11 +1581,11 @@
     flex-direction: column !important;
   }
 
-  .seccionesdescribir p{
+  .seccionesdescribir p {
     margin-left: 0% !important;
   }
 
-  .seccionesdescribir h3{
+  .seccionesdescribir h3 {
     /* border: 1px red solid !important;
     margin: auto;
     width: 100% !important; */
@@ -1614,55 +1627,56 @@
     margin-left: -15% !important;
   }
 
-  .selectAU_biblio{
+  .selectAU_biblio {
     margin-left: -15% !important;
   }
 
-  .btnCancelarAdmin{
+  .btnCancelarAdmin {
     order: 1;
     width: 100% !important;
   }
 
-  .btnSiguienteAdmin{
+  .btnSiguienteAdmin {
     order: -1;
     margin-bottom: 10px;
     width: 100% !important;
   }
 
-  .seccionAgregarU h1{
+  .seccionAgregarU h1 {
     font-size: 20px !important;
   }
 
-  .inputAU{
+  .inputAU {
     margin-left: 0% !important;
   }
 
-  .name_usuario{
+  .name_usuario {
     width: 70% !important;
     margin: auto;
     font-size: 14px;
   }
 
-  .inputPS{
+  .inputPS {
     width: 100% !important;
   }
 
-  .usuario{
+  .usuario {
     margin-left: -15% !important;
   }
 
-  .inputUS{
+  .inputUS {
     margin-left: -15% !important;
   }
 
-  .tit_panel_consulta{
-    border: 1px red solid;
+  .tit_panel_consulta {
+    margin: auto;
+    padding: 15px;
+    text-align: center;
     font-size: 24px;
-    width: 70%;
+    width: 90%;
   }
 
-  .botones{
-    border: 1px red solid;
+  .botones {
     width: 90%;
     margin: auto;
     display: flex;
@@ -1671,7 +1685,117 @@
   }
 
   .boton_doc {
-    font-size: 20px;
+    font-size: 24px;
+    width: 100%;
     padding: 10px 15px;
+  }
+
+  .tit_doc_lic {
+    width: 90%;
+    margin: auto;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabla {
+    width: 100%;
+    min-width: 700px; /* ajusta según lo necesario */
+    border-collapse: collapse;
+  }
+
+  .tit_doc_busq td {
+    font-size: 15px;
+    padding: 5px !important;
+  }
+
+  #modalFicha {
+    width: 100%;
+  }
+
+  #modal-overlay {
+    width: 100%;
+  }
+
+  .ficha {
+    width: 100% !important;
+    height: 60%;
+  }
+
+  .clasificaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .clasificaciones input {
+    width: 51% !important;
+    font-size: 18px;
+  }
+
+  .clasificaciones label {
+    margin-left: 2%;
+    font-size: 18px;
+  }
+
+  .date {
+    margin: auto;
+    margin-right: 20px;
+    margin-left: -10% !important;
+    font-size: 20px;
+    color: #001d38;
+    font-weight: bold;
+  }
+
+  .mensaje_movil {
+    margin-top: 60px !important;
+  }
+
+  .titulo_autor {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .nombre_carrera {
+    font-size: 17px;
+    margin-top: 0px;
+  }
+
+  .ficha h3 {
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .acciones_doc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pdf {
+    width: 100% !important;
+    margin: 0%;
+    text-align: justify;
+  }
+
+  .view_ficha {
+    width: 100% !important;
+    margin: 0%;
+    text-align: justify;
+  }
+
+  .mensaje {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 0%;
   }
 }
