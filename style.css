@@ -1195,7 +1195,7 @@ iframe {
   color: black;
 }
 
-.direccionesprincipales div{
+.direccionesprincipales div {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -3129,7 +3129,25 @@ iframe {
   transition: all 0.5s;
 }
 
+.pdf_busqueda_check {
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.pdf_busqueda_trash {
+  text-align: center;
+  transition: all 0.5s;
+}
+
 .pdf_busqueda:hover {
+  transform: scale(1.2);
+}
+
+.pdf_busqueda_check:hover {
+  transform: scale(1.2);
+}
+
+.pdf_busqueda_trash:hover {
   transform: scale(1.2);
 }
 
@@ -3138,7 +3156,32 @@ iframe {
   text-decoration: none;
   background-color: white;
   color: #001d38;
-  font-size: 27px;
+  font-size: 30px;
+}
+
+.pdf_busqueda_check a {
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: white;
+  color: green;
+  font-size: 30px;
+}
+
+.pdf_busqueda_trash a {
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: white;
+  color: red;
+  font-size: 30px;
+}
+
+.pdf_busqueda button {
+  border: none !important;
+  text-decoration: none;
+  background-color: white;
+  color: #001d38;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .tit_panel_consulta {
@@ -3401,7 +3444,7 @@ iframe {
   font-size: 25px;
 }
 
-.edit_car{
+.edit_car {
   width: 40%;
   margin-left: 3%;
   margin-top: 20px;
@@ -3413,7 +3456,7 @@ iframe {
   gap: 10px;
 }
 
-.edit_car h2{
+.edit_car h2 {
   margin: 0%;
   padding: 0%;
 }
@@ -3475,7 +3518,7 @@ iframe {
   align-items: center;
 }
 
-.nuevas_carreras img{
+.nuevas_carreras img {
   border: 3px #001d38 solid;
   width: 30%;
   height: 30%;
@@ -3504,8 +3547,7 @@ iframe {
   width: 90% !important;
 }
 
-.tab_mod
-th,
+.tab_mod th,
 td {
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -3517,13 +3559,13 @@ td {
   color: white !important;
 }
 
-.tab_mod img{
+.tab_mod img {
   border: 3px #001d38 solid;
   border-radius: 100%;
   width: 90px;
 }
 
-.actions{
+.actions {
   border: none !important;
   display: flex;
   flex-direction: row;
@@ -3532,15 +3574,15 @@ td {
   margin-top: 15%;
 }
 
-.actions_1{
+.actions_1 {
   border: none !important;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.icon_action{
-  border: 1px red solid;
+.icon_action {
+  margin-bottom: 15px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -3555,8 +3597,7 @@ td {
   table-layout: fixed;
 }
 
-.tab_mod_1
-th,
+.tab_mod_1 th,
 td {
   padding: 8px;
   word-wrap: break-word;
