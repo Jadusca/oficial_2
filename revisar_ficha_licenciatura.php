@@ -66,22 +66,20 @@ $resultado = $conectar->query($query);
                 <td><?php echo $row['nombre_estado']; ?></td>
                 <td>
                     <div class="actions_1">
-                        <div>
+                        <div class="icon_action">
                             <div class="pdf_busqueda">
-                                <a href="ver_documento.php?archivo=<?php echo $row['documento']; ?>" target="_blank">Ver
-                                    documento</a>
+                                <a href="ver_documento.php?archivo=<?php echo $row['documento']; ?>" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
                             </div>
                             <div class="pdf_busqueda">
-                                <a href="ver_oficio.php?archivo=<?php echo $row['oficio']; ?>" target="_blank">Ver
-                                    oficio</a>
+                                <a href="ver_oficio.php?archivo=<?php echo $row['oficio']; ?>" target="_blank"><i class="fa-solid fa-file-zipper"></i></a>
                             </div>
                         </div>
-                        <div>
+                        <div class="icon_action">
                             <div class="pdf_busqueda">
-                                <a href="aprobar.php?id=<?php echo $row['id_ficha_carrera']; ?>&tipo=lic">Aprobar</a>
+                                <a href="aprobar.php?id=<?php echo $row['id_ficha_carrera']; ?>&tipo=lic"><i class="fa-solid fa-square-check"></i></a>
                             </div>
                             <div class="pdf_busqueda">
-                                <a href="rechazar.php?id=<?php echo $row['id_ficha_carrera']; ?>&tipo=lic">Rechazar</a>
+                                <a href="rechazar.php?id=<?php echo $row['id_ficha_carrera']; ?>&tipo=lic"><i class="fa-solid fa-rectangle-xmark"></i></a>
                             </div>
                         </div>
                     </div>
