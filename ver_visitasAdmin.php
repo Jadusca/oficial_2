@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visitas por Día</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -18,7 +19,7 @@
 <body>
 
     <?php
-    include "headerSuperadmin.php";
+    include "headeradmin.php";
     ?>
 
     <div class="edit_car">
@@ -85,6 +86,7 @@
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = 'generar_reporte_pdf.php';
+            form.target = '_blank';
 
             const inputDesde = document.createElement('input');
             inputDesde.type = 'hidden';

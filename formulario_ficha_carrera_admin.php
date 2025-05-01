@@ -8,9 +8,9 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subir Ficha de Carrera</title>
     <script>
         document.querySelector("form").addEventListener("submit", function (e) {
@@ -62,7 +62,7 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
 <body>
 
     <?php
-    include "headerSuperadmin.php";
+    include "headeradmin.php";
     ?>
 
     <div class="menu1">
@@ -72,7 +72,7 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     <br><br>
 
     <h2 class="tit_lic">Subir documento de licenciatura</h2>
-    <form class="form_lic" action="procesar_ficha_carrera.php" method="POST" enctype="multipart/form-data">
+    <form class="form_lic" action="procesar_ficha_carrera_admin.php" method="POST" enctype="multipart/form-data">
         <label>Título:</label><br>
         <input type="text" name="titulo" placeholder="Introduzca el título" required></input><br><br>
 

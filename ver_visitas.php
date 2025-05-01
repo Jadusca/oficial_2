@@ -84,6 +84,7 @@
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = 'generar_reporte_pdf.php';
+            form.target = '_blank';
 
             const inputDesde = document.createElement('input');
             inputDesde.type = 'hidden';
