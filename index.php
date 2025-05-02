@@ -72,25 +72,19 @@
             <div class="recuadro">
                 <i class="fa-solid fa-laptop-file"></i>
                 <h2>Licenciaturas</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.</p>
+                <p>En esta sección se encuentra la producción académica generada por estudiantes de nivel licenciatura del Instituto Tecnológico de Mérida. Incluye trabajos recepcionales, tesis, memorias y proyectos finales desarrollados como parte del proceso de titulación. Su objetivo es preservar, difundir y dar visibilidad al conocimiento generado durante la formación profesional.</p>
                 <a class="hvr-sweep-to-right" href="licenciaturas.php">Acceder</a>
             </div>
             <div class="recuadro">
                 <i class="fa-solid fa-book"></i>
                 <h2>Posgrados</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.</p>
+                <p>Esta área alberga documentos académicos pertenecientes a programas de posgrado (maestrías y doctorados). Contiene tesis, investigaciones aplicadas y otros trabajos científicos realizados por estudiantes de estudios avanzados. Estos documentos reflejan el alto nivel de especialización y aportes significativos a distintas áreas del conocimiento.</p>
                 <a class="hvr-sweep-to-right" href="posgrados.php">Acceder</a>
             </div>
             <div class="recuadro">
                 <i class="fa-solid fa-book-open-reader"></i>
                 <h2>Sabáticos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.</p>
+                <p>Aquí se recopilan los informes y productos derivados de los periodos sabáticos otorgados a profesores e investigadores del Instituto. Estos documentos reflejan investigaciones, desarrollos académicos y proyectos realizados durante su tiempo de sabático, contribuyendo al fortalecimiento de la docencia, la investigación y la vinculación institucional.</p>
                 <a class="hvr-sweep-to-right" href="sabaticos.php">Acceder</a>
             </div>
         </div>
