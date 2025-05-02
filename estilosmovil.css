@@ -365,7 +365,7 @@
   }
 
   .info2 {
-    margin-left: 12% !important;
+    margin-left: 16% !important;
   }
 
   .info2 h1 {
@@ -1811,6 +1811,8 @@
 
   .graphic {
     height: 200px !important;
+    width: 90%;
+    margin: auto;
   }
 
   .nuevas_carreras {
