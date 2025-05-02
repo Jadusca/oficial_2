@@ -82,6 +82,7 @@
                 <div class="agregarNU">
                     <a id="btnAU" href="agregarUsuario.php">Agregar Nuevo Usuario</a>
                 </div>
+                <br><br>
             </div>
             <!-- <div class="tablaadmin" id="menuadmin">
                 <p>Opciones</p>

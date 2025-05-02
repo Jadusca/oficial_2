@@ -80,6 +80,7 @@
                 <div class="agregarNU">
                     <a id="btnAU" href="agregarSuperUsuario.php">Agregar Nuevo Super Usuario</a>
                 </div>
+                <br><br>
             </div>
             <!-- <div class="tablaadmin" id="menuadmin">
                 <p>Opciones</p>

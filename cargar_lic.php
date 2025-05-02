@@ -38,7 +38,8 @@ if (!$res) {
 
 // Imprimir tabla
 echo "<br>";
-echo "<table class='tab_mod_1'>
+echo "<div class='tabla-responsive'>";
+echo "<table class='tab_mod'>
 <tr>
     <th>Título</th><th>Autor</th><th>Licenciatura</th><th>Titulación</th><th>Estado</th><th>Documento</th><th>Oficio</th>
 </tr>";
@@ -50,11 +51,12 @@ while ($row = $res->fetch_assoc()) {
         <td>{$row['nombre_titulacion']}</td>
         <td>{$row['nombre_estado']}</td>
         <td class='line_pdf'><div class='pdf_busqueda_1'><a href='ver_documento.php?archivo={$row['documento']}' target='_blank'><i class='fa-solid fa-file-pdf'></i></a></div></td>
-        <td class='line_pdf'>" . ($row['oficio'] ? "<div class='pdf_busqueda_1'><a href='ver_oficio.php?archivo={$row['oficio']}' target='_blank'><i
-                                    class='fa-solid fa-file-zipper'></i></a></div>" : "No disponible") . "</td>
+        <td class='line_pdf'>" . ($row['oficio'] ? "<div class='pdf_busqueda_1'><a href='ver_oficio.php?archivo={$row['oficio']}' target='_blank'><i class='fa-solid fa-file-zipper'></i></a></div>" : "No disponible") . "</td>
     </tr>";
 }
 echo "</table>";
+echo "</div>";
+;
 
 // Paginación con estilos
 echo "<div class='paginacion'>";

@@ -9,6 +9,7 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Carreras</title>
     <!-- <style>
 
@@ -81,43 +82,45 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     </form>
 
     <h2 class="tit_mod_car">Lista de carreras</h2>
-    <table class="tab_mod">
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Año</th>
-            <th>Periodo</th>
-            <th>Logo</th>
-            <th>Acciones</th>
-        </tr>
-        <?php
-        $carrerasFull = $conectar->query("SELECT c.*, p.anio_periodo FROM carreras c LEFT JOIN periodo_carrera p ON c.periodo_carrera = p.id_periodo_carrera");
-        while ($row = $carrerasFull->fetch_assoc()):
-            ?>
+    <div class="tabla-responsive">
+        <table class="tab_mod">
             <tr>
-                <td><?= $row['id_carreras'] ?></td>
-                <td><?= htmlspecialchars($row['nombre_carrera']) ?></td>
-                <td><?= htmlspecialchars($row['anio_carrera']) ?></td>
-                <td><?= htmlspecialchars($row['anio_periodo'] ?? 'Sin asignar') ?></td>
-                <td>
-                    <?php if (!empty($row['logo_carrera'])): ?>
-                        <img src="logos/<?= htmlspecialchars($row['logo_carrera']) ?>" width="60">
-                    <?php else: ?>
-                        <em>Sin logo</em>
-                    <?php endif; ?>
-                </td>
-                <td>
-                    <div class="actions">
-                        <div class='pdf_busqueda'><a href="editar_carrera.php?id=<?= $row['id_carreras'] ?>"><i
-                                    class="fa-solid fa-pen-to-square"></i></a></div>
-                        <div class='pdf_busqueda'><a href="eliminar_carrera.php?id=<?= $row['id_carreras'] ?>"
-                                onclick="return confirm('¿Estás seguro de que deseas eliminar esta carrera?')"><i
-                                    class="fa-solid fa-trash-can"></i></a></div>
-                    </div>
-                </td>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Año</th>
+                <th>Periodo</th>
+                <th>Logo</th>
+                <th>Acciones</th>
             </tr>
-        <?php endwhile; ?>
-    </table>
+            <?php
+            $carrerasFull = $conectar->query("SELECT c.*, p.anio_periodo FROM carreras c LEFT JOIN periodo_carrera p ON c.periodo_carrera = p.id_periodo_carrera");
+            while ($row = $carrerasFull->fetch_assoc()):
+                ?>
+                <tr>
+                    <td><?= $row['id_carreras'] ?></td>
+                    <td><?= htmlspecialchars($row['nombre_carrera']) ?></td>
+                    <td><?= htmlspecialchars($row['anio_carrera']) ?></td>
+                    <td><?= htmlspecialchars($row['anio_periodo'] ?? 'Sin asignar') ?></td>
+                    <td>
+                        <?php if (!empty($row['logo_carrera'])): ?>
+                            <img src="logos/<?= htmlspecialchars($row['logo_carrera']) ?>" width="60">
+                        <?php else: ?>
+                            <em>Sin logo</em>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        <div class="actions">
+                            <div class='pdf_busqueda'><a href="editar_carrera.php?id=<?= $row['id_carreras'] ?>"><i
+                                        class="fa-solid fa-pen-to-square"></i></a></div>
+                            <div class='pdf_busqueda'><a href="eliminar_carrera.php?id=<?= $row['id_carreras'] ?>"
+                                    onclick="return confirm('¿Estás seguro de que deseas eliminar esta carrera?')"><i
+                                        class="fa-solid fa-trash-can"></i></a></div>
+                        </div>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </div>
 
     <br><br>
 

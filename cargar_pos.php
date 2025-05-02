@@ -41,7 +41,8 @@ if (!$res) {
 }
 ?>
 <br>
-<table class="tab_mod_1">
+<div class="tabla-responsive">
+<table class="tab_mod">
     <tr>
         <th>Título</th>
         <th>Autor</th>
@@ -70,6 +71,7 @@ if (!$res) {
         </tr>
     <?php endwhile; ?>
 </table>
+</div>
 
 <!-- Paginación con estilos -->
 <div class="paginacion">

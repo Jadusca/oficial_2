@@ -66,69 +66,71 @@
     ?>
 
     <section class="tabla-contenedor">
-        <table class="tab_mod_1">
-            <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Posgrado</th>
-                <th>Titulación</th>
-                <th>Asesor Interno</th>
-                <th>Asesor Externo</th>
-                <th>Resumen</th>
-                <th>Fecha</th>
-                <th>Palabras claves</th>
-                <th>Páginas</th>
-                <th>Dimensiones</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-            </tr>
-            <?php while ($row = $resultado->fetch_assoc()): ?>
+        <div class="tabla-responsive">
+            <table class="tab_mod">
                 <tr>
-                    <td><?php echo $row['titulo']; ?></td>
-                    <td><?php echo $row['autor']; ?></td>
-                    <td><?php echo $row['nombre_posgrado']; ?></td>
-                    <td><?php echo $row['nombre_titulacion_pos']; ?></td>
-                    <td><?php echo $row['asesor_interno']; ?></td>
-                    <td><?php echo $row['asesor_externo']; ?></td>
-                    <td>
-                        <div class="pdf_busqueda">
-                            <button
-                                onclick="mostrarResumen(`<?php echo htmlspecialchars($row['resumen'], ENT_QUOTES); ?>`)"><i
-                                    class="fa-solid fa-file-contract"></i></button>
-                        </div>
-                    </td>
-                    <td><?php echo $row['fecha']; ?></td>
-                    <td><?php echo $row['palabras_clave']; ?></td>
-                    <td><?php echo $row['paginas']; ?></td>
-                    <td><?php echo $row['dimensiones']; ?></td>
-                    <td><?php echo $row['nombre_estado']; ?></td>
-                    <td>
-                        <div class="actions_1">
-                            <div class="icon_action">
-                                <div class="pdf_busqueda">
-                                    <a href="ver_documento.php?archivo=<?php echo $row['documento']; ?>" target="_blank"><i
-                                            class="fa-solid fa-file-pdf"></i></a>
-                                </div>
-                                <div class="pdf_busqueda">
-                                    <a href="ver_oficio.php?archivo=<?php echo $row['oficio']; ?>" target="_blank"><i
-                                            class="fa-solid fa-file-zipper"></i></a>
-                                </div>
-                            </div>
-                            <div class="icon_action">
-                                <div class="pdf_busqueda_check">
-                                    <a href="aprobar.php?id=<?php echo $row['id_ficha_posgrado']; ?>&tipo=pos"><i
-                                            class="fa-solid fa-square-check"></i></a>
-                                </div>
-                                <div class="pdf_busqueda_trash">
-                                    <a href="rechazar.php?id=<?php echo $row['id_ficha_posgrado']; ?>&tipo=pos"><i
-                                            class="fa-solid fa-rectangle-xmark"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Posgrado</th>
+                    <th>Titulación</th>
+                    <th>Asesor Interno</th>
+                    <th>Asesor Externo</th>
+                    <th>Resumen</th>
+                    <th>Fecha</th>
+                    <th>Palabras claves</th>
+                    <th>Páginas</th>
+                    <th>Dimensiones</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
-            <?php endwhile; ?>
-        </table>
+                <?php while ($row = $resultado->fetch_assoc()): ?>
+                    <tr>
+                        <td><?php echo $row['titulo']; ?></td>
+                        <td><?php echo $row['autor']; ?></td>
+                        <td><?php echo $row['nombre_posgrado']; ?></td>
+                        <td><?php echo $row['nombre_titulacion_pos']; ?></td>
+                        <td><?php echo $row['asesor_interno']; ?></td>
+                        <td><?php echo $row['asesor_externo']; ?></td>
+                        <td>
+                            <div class="pdf_busqueda">
+                                <button
+                                    onclick="mostrarResumen(`<?php echo htmlspecialchars($row['resumen'], ENT_QUOTES); ?>`)"><i
+                                        class="fa-solid fa-file-contract"></i></button>
+                            </div>
+                        </td>
+                        <td><?php echo $row['fecha']; ?></td>
+                        <td><?php echo $row['palabras_clave']; ?></td>
+                        <td><?php echo $row['paginas']; ?></td>
+                        <td><?php echo $row['dimensiones']; ?></td>
+                        <td><?php echo $row['nombre_estado']; ?></td>
+                        <td>
+                            <div class="actions_1">
+                                <div class="icon_action">
+                                    <div class="pdf_busqueda">
+                                        <a href="ver_documento.php?archivo=<?php echo $row['documento']; ?>"
+                                            target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </div>
+                                    <div class="pdf_busqueda">
+                                        <a href="ver_oficio.php?archivo=<?php echo $row['oficio']; ?>" target="_blank"><i
+                                                class="fa-solid fa-file-zipper"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon_action">
+                                    <div class="pdf_busqueda_check">
+                                        <a href="aprobar.php?id=<?php echo $row['id_ficha_posgrado']; ?>&tipo=pos"><i
+                                                class="fa-solid fa-square-check"></i></a>
+                                    </div>
+                                    <div class="pdf_busqueda_trash">
+                                        <a href="rechazar.php?id=<?php echo $row['id_ficha_posgrado']; ?>&tipo=pos"><i
+                                                class="fa-solid fa-rectangle-xmark"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                <?php endwhile; ?>
+            </table>
+        </div>
     </section>
     <br><br>
 
