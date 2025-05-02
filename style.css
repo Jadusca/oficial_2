@@ -302,7 +302,7 @@ body {
   border: 1px solid black;
   background-color: white;
   max-width: 400px;
-  height: 200px;
+  height: auto !important;
   padding: 15px;
   border-radius: 5px;
   display: flex;
@@ -320,6 +320,14 @@ body {
   position: absolute;
   top: -50px;
   left: 150;
+}
+
+.recuadro h2{
+  margin-top: 20px;
+}
+
+.recuadro p{
+  margin-bottom: 20px;
 }
 
 .recuadro a {
