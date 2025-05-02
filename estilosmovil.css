@@ -271,8 +271,8 @@
   }
 
   .menu1 a {
-    font-size: 17px !important;
-    margin-left: 0% !important;
+    font-size: 27px !important;
+    margin-left: 2% !important;
   }
 
   .cat_admin {
@@ -1724,7 +1724,8 @@
 
   .ficha {
     width: 100% !important;
-    height: 60%;
+    text-align: left;
+    height: 80%;
   }
 
   .clasificaciones {
@@ -1797,5 +1798,108 @@
     margin: auto;
     text-align: center;
     padding: 0%;
+  }
+
+  .tit_lic {
+    width: 90%;
+    line-height: 33px;
+  }
+
+  .form_lic {
+    width: 90%;
+  }
+
+  .graphic {
+    height: 200px !important;
+  }
+
+  .nuevas_carreras {
+    width: 90%;
+    margin: auto;
+  }
+
+  .nuevas_carreras input {
+    width: 76%;
+    font-size: 15px;
+  }
+
+  .nuevas_carreras label {
+    line-height: 26px;
+    font-size: 15px;
+  }
+
+  .direccionesprincipales {
+    /* border: 1px red solid; */
+  }
+
+  .direccionesprincipales div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .direccionesprincipales a {
+    width: 100%;
+  }
+
+  .tit_mod_car {
+    font-size: 22px;
+  }
+
+  .tit_mod_car1{
+    padding: 0% !important;
+    width: 80%;
+    margin-left: 25px;
+  }
+
+  .edit_car {
+    width: 90%;
+  }
+
+  .image_movil{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .image_movil label{
+    width: 100% !important;
+  }
+
+  .image_movil input{
+    margin-left: -28%;
+  }
+
+  .tit_doc_lic_resumen{
+    border: 1px red solid;
+    font-size: 18px;
+  }
+
+  .modal-content{
+    border: 2px red solid;
+    width: 90%;
+  }
+
+  .tabs{
+    width: 90% !important;
+    margin: auto;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tabs div{
+    width: 100%;
+  }
+
+  .docs_aprobados input{
+    margin: auto;
+    width: 90% !important;
+  }
+  
+  .enviar_doc{
+    width: auto !important;
   }
 }

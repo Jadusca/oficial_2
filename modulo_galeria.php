@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Galería</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -25,7 +26,7 @@
         <h2 class="tit_mod_car">Agregar nueva categoría de sabático</h2>
     </div>
 
-    <h2 class="tit_mod_car">Actualizar galería (6 imágenes)</h2>
+    <h2 class="tit_mod_car tit_mod_car1">Actualizar galería (6 imágenes)</h2>
 
     <form class="nuevas_carreras" action="guardar_galeria.php" method="POST" enctype="multipart/form-data">
         <?php for ($i = 1; $i <= 6; $i++): ?>
@@ -43,6 +44,8 @@
     <?php
     include "footer.php";
     ?>
+
+    <script src="funciones.js"></script>
 
 </body>
 

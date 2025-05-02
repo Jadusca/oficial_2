@@ -11,6 +11,7 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Clave para estilos móviles -->
     <title>Subir Ficha de Posgrado</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -22,9 +23,7 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
 
 <body>
 
-    <?php
-    include "headerSuperadmin.php";
-    ?>
+    <?php include "headerSuperadmin.php"; ?>
 
     <div class="menu1">
         <a class="arrow" href="Subir_archivos.php"><i class="fa-solid fa-arrow-left"></i></a>
@@ -35,7 +34,7 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
     <h2 class="tit_lic">Subir documento de posgrado</h2>
     <form class="form_lic" action="procesar_ficha_posgrado.php" method="POST" enctype="multipart/form-data">
         <label>Título:</label><br>
-        <input type="text" name="titulo" placeholder="Introduzca el título" required></input><br><br>
+        <input type="text" name="titulo" placeholder="Introduzca el título" required><br><br>
 
         <label>Autor:</label><br>
         <input type="text" name="autor"
@@ -53,8 +52,7 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
             required><br><br>
 
         <label>Palabras clave:</label><br>
-        <input type="text" name="palabras_clave" placeholder="Introduzca las palabras claves del documento."
-            required><br><br>
+        <input type="text" name="palabras_clave" placeholder="Introduzca las palabras claves del documento." required><br><br>
 
         <label>Resumen:</label><br>
         <textarea name="resumen" placeholder="Introduzca el resumen del documento" required></textarea><br><br>
@@ -95,10 +93,12 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
 
         <input class="enviar_doc" type="submit" value="Subir documento">
     </form>
+
     <br><br>
-    <?php
-    include "footer.php";
-    ?>
+    <?php include "footer.php"; ?>
+
+    <script src="./funciones.js"></script>
+
 </body>
 
 </html>

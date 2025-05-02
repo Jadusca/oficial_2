@@ -11,59 +11,60 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Esta línea es clave -->
     <title>Subir Ficha de Carrera</title>
+
+    <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> <!-- Estilo base -->
+    <link rel="stylesheet" href="estilosmovil.css"> <!-- Estilo móvil -->
+    <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="responsiveslides.min.js"></script>
+
     <script>
-        document.querySelector("form").addEventListener("submit", function (e) {
-            const documentoInput = document.querySelector('input[name="documento"]');
-            const oficioInput = document.querySelector('input[name="oficio"]');
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("form").addEventListener("submit", function (e) {
+                const documentoInput = document.querySelector('input[name="documento"]');
+                const oficioInput = document.querySelector('input[name="oficio"]');
 
-            const documentoFile = documentoInput.files[0];
-            const oficioFile = oficioInput.files[0];
+                const documentoFile = documentoInput.files[0];
+                const oficioFile = oficioInput.files[0];
 
-            // Verificar si se seleccionó ambos archivos
-            if (!documentoFile) {
-                alert("Por favor, selecciona un documento PDF.");
-                documentoInput.focus();
-                e.preventDefault();
-                return;
-            }
+                if (!documentoFile) {
+                    alert("Por favor, selecciona un documento PDF.");
+                    documentoInput.focus();
+                    e.preventDefault();
+                    return;
+                }
 
-            if (!oficioFile) {
-                alert("Por favor, selecciona un archivo PDF de oficio.");
-                oficioInput.focus();
-                e.preventDefault();
-                return;
-            }
+                if (!oficioFile) {
+                    alert("Por favor, selecciona un archivo PDF de oficio.");
+                    oficioInput.focus();
+                    e.preventDefault();
+                    return;
+                }
 
-            // Verificar que sean archivos PDF
-            if (documentoFile.type !== "application/pdf") {
-                alert("El documento debe ser un archivo PDF.");
-                documentoInput.focus();
-                e.preventDefault();
-                return;
-            }
+                if (documentoFile.type !== "application/pdf") {
+                    alert("El documento debe ser un archivo PDF.");
+                    documentoInput.focus();
+                    e.preventDefault();
+                    return;
+                }
 
-            if (oficioFile.type !== "application/pdf") {
-                alert("El oficio debe ser un archivo PDF.");
-                oficioInput.focus();
-                e.preventDefault();
-                return;
-            }
+                if (oficioFile.type !== "application/pdf") {
+                    alert("El oficio debe ser un archivo PDF.");
+                    oficioInput.focus();
+                    e.preventDefault();
+                    return;
+                }
+            });
         });
     </script>
-    <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="estilosmovil.css">
-    <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-    <script src="responsiveslides.min.js"></script>
 </head>
 
 <body>
 
-    <?php
-    include "headerSuperadmin.php";
-    ?>
+    <?php include "headerSuperadmin.php"; ?>
 
     <div class="menu1">
         <a class="arrow" href="Subir_archivos.php"><i class="fa-solid fa-arrow-left"></i></a>
@@ -72,28 +73,22 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     <br><br>
 
     <h2 class="tit_lic">Subir documento de licenciatura</h2>
+
     <form class="form_lic" action="procesar_ficha_carrera.php" method="POST" enctype="multipart/form-data">
         <label>Título:</label><br>
-        <input type="text" name="titulo" placeholder="Introduzca el título" required></input><br><br>
+        <input type="text" name="titulo" placeholder="Introduzca el título" required><br><br>
 
         <label>Autor:</label><br>
-        <input type="text" name="autor"
-            placeholder="Introduzca el nombre del autor(es) (Formato: Apellidos, Nombres. Ej. Pérez Domínguez, José Alberto)"
-            required><br><br>
+        <input type="text" name="autor" placeholder="Introduzca el nombre del autor(es) (Formato: Apellidos, Nombres. Ej. Pérez Domínguez, José Alberto)" required><br><br>
 
         <label>Asesor Interno:</label><br>
-        <input type="text" name="asesor_interno"
-            placeholder="Introduzca el nombre del asesor interno (Formato: Apellidos, Nombres. Ej. Pérez Domínguez, José Alberto)"
-            required><br><br>
+        <input type="text" name="asesor_interno" placeholder="Introduzca el nombre del asesor interno (Formato: Apellidos, Nombres. Ej. Pérez Domínguez, José Alberto)" required><br><br>
 
         <label>Asesor Externo:</label><br>
-        <input type="text" name="asesor_externo"
-            placeholder="Introduzca el nombre del asesor externo (Formato: Apellidos, Nombres. Ej. Pérez Domínguez, José Alberto)"
-            required><br><br>
+        <input type="text" name="asesor_externo" placeholder="Introduzca el nombre del asesor externo (Formato: Apellidos, Nombres. Ej. Pérez Domínguez, José Alberto)" required><br><br>
 
         <label>Palabras clave:</label><br>
-        <input type="text" name="palabras_clave" placeholder="Introduzca las palabras claves del documento."
-            required><br><br>
+        <input type="text" name="palabras_clave" placeholder="Introduzca las palabras claves del documento." required><br><br>
 
         <label>Resumen:</label><br>
         <textarea name="resumen" placeholder="Introduzca el resumen del documento" required></textarea><br><br>
@@ -105,8 +100,7 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
         <input type="text" name="paginas" placeholder="Introduce UNICAMENTE el número de páginas" required><br><br>
 
         <label>Dimensiones:</label><br>
-        <input type="text" name="dimensiones" placeholder="Introduce las dimensiones del documento, ejemplo (50 x 50)"
-            required><br><br>
+        <input type="text" name="dimensiones" placeholder="Introduce las dimensiones del documento, ejemplo (50 x 50)" required><br><br>
 
         <label>Periodo:</label><br>
         <select name="periodo_id" id="periodo_id" required>
@@ -140,8 +134,9 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     <script>
         document.getElementById('periodo_id').addEventListener('change', function () {
             const periodoId = this.value;
-            const tipoTitulacionSelect = document.getElementById('tipo_titulacion_id');
 
+            // Obtener titulaciones
+            const tipoTitulacionSelect = document.getElementById('tipo_titulacion_id');
             tipoTitulacionSelect.innerHTML = '<option>Cargando...</option>';
 
             fetch('obtener_titulaciones_por_periodo.php?periodo_id=' + periodoId)
@@ -159,27 +154,24 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
                     tipoTitulacionSelect.innerHTML = '<option>Error al cargar</option>';
                     console.error(error);
                 });
-        });
 
-        document.getElementById('periodo_id').addEventListener('change', function () {
-            const periodoId = this.value;
-            const CarreraSelect = document.getElementById('carrera_id');
-
-            CarreraSelect.innerHTML = '<option>Cargando...</option>';
+            // Obtener carreras
+            const carreraSelect = document.getElementById('carrera_id');
+            carreraSelect.innerHTML = '<option>Cargando...</option>';
 
             fetch('obtener_carreras_por_periodo.php?periodo_id=' + periodoId)
                 .then(response => response.json())
                 .then(data => {
-                    CarreraSelect.innerHTML = '<option value="">Selecciona una carrera</option>';
+                    carreraSelect.innerHTML = '<option value="">Selecciona una carrera</option>';
                     data.forEach(carrera => {
                         const option = document.createElement('option');
                         option.value = carrera.id_carreras;
                         option.textContent = carrera.nombre_carrera;
-                        CarreraSelect.appendChild(option);
+                        carreraSelect.appendChild(option);
                     });
                 })
                 .catch(error => {
-                    CarreraSelect.innerHTML = '<option>Error al cargar</option>';
+                    carreraSelect.innerHTML = '<option>Error al cargar</option>';
                     console.error(error);
                 });
         });
@@ -187,9 +179,9 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
 
     <br><br>
 
-    <?php
-    include "footer.php";
-    ?>
+    <?php include "footer.php"; ?>
+
+    <script src="./funciones.js"></script>
 
 </body>
 

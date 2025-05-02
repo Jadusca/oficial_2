@@ -16,6 +16,7 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Carrera</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -72,7 +73,7 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
             <?php endif; ?>
         </section><br>
 
-        <section>
+        <section class="image_movil">
             <label>Nuevo logo (opcional):</label><br>
             <input class="image" type="file" name="logo_carrera" accept="image/*">
         </section><br><br>

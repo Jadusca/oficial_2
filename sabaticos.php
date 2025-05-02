@@ -14,9 +14,12 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos Sabáticos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilosmovil.css">
     <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
     <style>
-        h2 { color: #333; }
+        h2 {
+            color: #333;
+        }
 
         .card {
             border: 1px solid #ddd;
@@ -35,11 +38,18 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
             margin-right: 5px;
         }
 
-        .btn:hover { background-color: #0056b3; }
+        .btn:hover {
+            background-color: #0056b3;
+        }
 
-        a { text-decoration: none; color: #007BFF; }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
 
-        a:hover { text-decoration: underline; }
+        a:hover {
+            text-decoration: underline;
+        }
 
         .modal {
             display: none;
@@ -63,7 +73,7 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
             width: 90%;
             max-height: 80vh;
             overflow-y: auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .close {
@@ -75,40 +85,45 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
         }
 
         .close:hover,
-        .close:focus { color: #000; text-decoration: none; }
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+        }
 
-        body.modal-open { overflow: hidden; }
+        body.modal-open {
+            overflow: hidden;
+        }
 
         .paginacion {
-          text-align: center;
-          margin: 40px auto 20px auto;
-          padding-bottom: 20px;
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 6px;
+            text-align: center;
+            margin: 40px auto 20px auto;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px;
         }
 
         .paginacion .pagina {
-          display: inline-block;
-          padding: 6px 14px;
-          background-color: #f0f0f0;
-          color: #333;
-          text-decoration: none;
-          border-radius: 5px;
-          font-weight: 500;
-          transition: all 0.2s ease-in-out;
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
         }
 
         .paginacion .pagina:hover {
-          background-color: #ccc;
-          color: black;
+            background-color: #ccc;
+            color: black;
         }
 
         .paginacion .pagina-activa {
-          background-color: #003568;
-          color: white;
-          font-weight: bold;
+            background-color: #003568;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -157,8 +172,9 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
                     <div class='titulo_autor'><strong>{$doc['titulo']}</strong><br>
                     <p>{$doc['autor']}</p></div><br>
                     <div class='nombre_carrera'><em>{$doc['nombre_sabatico']} | {$doc['nombre_categoria']}</em></div><br>
+                    <div class='acciones_doc'>
                     <button class='pdf' onclick=\"window.open('pdf/web/viewer.html?file=" . urlencode("../../documentos/" . rawurlencode(basename($doc['documento']))) . "', '_blank')\"><i class='fa-solid fa-file-invoice'></i> Ver documento</button>
-                    <button class='view_ficha' onclick=\"mostrarFicha(" . htmlspecialchars(json_encode($doc), ENT_QUOTES, 'UTF-8') . ")\"><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</button>
+                    <button class='view_ficha' onclick=\"mostrarFicha(" . htmlspecialchars(json_encode($doc), ENT_QUOTES, 'UTF-8') . ")\"><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</button></div>
                 </div>";
             }
 
@@ -248,8 +264,8 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
     </div>
 
     <script>
-    function mostrarFicha(doc) {
-        let html = `
+        function mostrarFicha(doc) {
+            let html = `
             <div class="ficha">
                 <h3>${doc.titulo}</h3>
                 <p><strong>Autor:</strong> ${doc.autor}</p>
@@ -260,17 +276,17 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
                 <p><strong>Dimensiones:</strong> ${doc.dimensiones}</p>
             </div>
         `;
-        document.getElementById('contenidoModal').innerHTML = html;
-        document.getElementById('modalFicha').style.display = 'block';
-        document.body.classList.add('modal-open');
-    }
-
-    function cerrarModal(event) {
-        if (!event || event.target.classList.contains('modal')) {
-            document.getElementById('modalFicha').style.display = 'none';
-            document.body.classList.remove('modal-open');
+            document.getElementById('contenidoModal').innerHTML = html;
+            document.getElementById('modalFicha').style.display = 'block';
+            document.body.classList.add('modal-open');
         }
-    }
+
+        function cerrarModal(event) {
+            if (!event || event.target.classList.contains('modal')) {
+                document.getElementById('modalFicha').style.display = 'none';
+                document.body.classList.remove('modal-open');
+            }
+        }
     </script>
 
     <br><br>

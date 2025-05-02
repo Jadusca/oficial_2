@@ -11,6 +11,7 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Tipo de Titulación (Carrera)</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -59,36 +60,38 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     </form>
 
     <h2 class="tit_mod_car">Lista de titulaciones</h2>
-    <table class="tab_mod">
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Periodo</th>
-            <th>Acciones</th>
-        </tr>
-        <?php while ($row = $titulaciones->fetch_assoc()): ?>
+    <div class="tabla-responsive">
+        <table class="tab_mod">
             <tr>
-                <td><?= $row['id_tipo_titulacion'] ?></td>
-                <td><?= htmlspecialchars($row['nombre_titulacion']) ?></td>
-                <td><?= htmlspecialchars($row['descripcion_titulacion']) ?></td>
-                <td><?= htmlspecialchars($row['anio_periodo']) ?></td>
-                <td>
-                    <div class="actions">
-                    <div class="pdf_busqueda">
-                    <a href="editar_tipo_titulacion_carrera.php?id=<?= $row['id_tipo_titulacion'] ?>"><i
-                    class="fa-solid fa-pen-to-square"></i></a>
-                    </div>
-                    <div class="pdf_busqueda">
-                    <a href="eliminar_tipo_titulacion_carrera.php?id=<?= $row['id_tipo_titulacion'] ?>"
-                    onclick="return confirm('¿Deseas eliminar esta titulación?')"><i
-                    class="fa-solid fa-trash-can"></i></a>
-                    </div>
-                    </div>
-                </td>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Periodo</th>
+                <th>Acciones</th>
             </tr>
-        <?php endwhile; ?>
-    </table>
+            <?php while ($row = $titulaciones->fetch_assoc()): ?>
+                <tr>
+                    <td><?= $row['id_tipo_titulacion'] ?></td>
+                    <td><?= htmlspecialchars($row['nombre_titulacion']) ?></td>
+                    <td><?= htmlspecialchars($row['descripcion_titulacion']) ?></td>
+                    <td><?= htmlspecialchars($row['anio_periodo']) ?></td>
+                    <td>
+                        <div class="actions">
+                            <div class="pdf_busqueda">
+                                <a href="editar_tipo_titulacion_carrera.php?id=<?= $row['id_tipo_titulacion'] ?>"><i
+                                        class="fa-solid fa-pen-to-square"></i></a>
+                            </div>
+                            <div class="pdf_busqueda">
+                                <a href="eliminar_tipo_titulacion_carrera.php?id=<?= $row['id_tipo_titulacion'] ?>"
+                                    onclick="return confirm('¿Deseas eliminar esta titulación?')"><i
+                                        class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </div>
 </body>
 
 </html>
