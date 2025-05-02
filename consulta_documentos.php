@@ -192,12 +192,8 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     </div>
 
     <form class="clasificaciones" method="GET">
-<<<<<<< HEAD
         <label>Titulo: <input type="text" name="titulo"
                 value="<?= htmlspecialchars($_GET['titulo'] ?? '') ?>"></label>
-=======
-        <label>Autor: <input type="text" name="autor" value="<?= htmlspecialchars($_GET['autor'] ?? '') ?>"></label>
->>>>>>> d3347b2e87bb2371c03c1ce859f146969628dad0
         <label>Palabra clave: <input type="text" name="palabras_clave"
                 value="<?= htmlspecialchars($_GET['palabras_clave'] ?? '') ?>"></label>
         <label class="date">Fecha: <input type="date" name="fecha"
