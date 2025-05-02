@@ -314,9 +314,9 @@
 
   .menu_admin {
     display: block !important;
-    border: 1px solid #003568;
+    border: 1px solid #1B396A;
     font-size: 20px;
-    color: #003568;
+    color: #1B396A;
     padding: 5px 10px;
     border-radius: 5px;
   }
@@ -345,7 +345,7 @@
   }
   .cerrarsesionad2 a {
     text-decoration: none;
-    color: #003568;
+    color: #1B396A;
     width: 100%;
     text-align: right;
     font-size: 20px;
@@ -596,7 +596,7 @@
   }
   .titulologo h2 {
     margin-bottom: 5px;
-    color: #003568;
+    color: #1B396A;
     font-size: 18px;
   }
   .residencias {
@@ -624,7 +624,7 @@
     width: 90% !important;
     padding: 10px 0;
     text-align: center;
-    background-color: #003568;
+    background-color: #1B396A;
     color: white;
     margin-top: 20px;
   }
@@ -634,7 +634,7 @@
     width: 25% !important;
     padding: 10px 0;
     text-align: center;
-    background-color: #003568;
+    background-color: #1B396A;
     color: white;
     margin-top: 20px;
     margin-left: 2.5% !important;
@@ -1108,11 +1108,11 @@
   }
   .contfile i {
     font-size: 45px;
-    color: #003568;
+    color: #1B396A;
   }
   .contfile h2 {
     font-size: 30px;
-    color: #003568;
+    color: #1B396A;
   }
 
   /* CSS Completo para Documentos Administrativos en Movil*/
@@ -1233,7 +1233,7 @@
     cursor: pointer;
   }
   .wrapper .sidebar {
-    background-color: #20202096;
+    background-color: black;
     position: fixed;
     top: 0;
     right: 0;
@@ -1259,14 +1259,14 @@
     left: 10px;
     font-size: 20px;
     border-radius: 5px;
-    border: 1px solid blue;
+    border: 1px solid #1B396A;
     background-color: white;
   }
   .menuopciones2 p {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 10px 15px;
-    background-color: #003568;
+    background-color: #1B396A;
     color: white;
     width: 353px;
   }
@@ -1340,7 +1340,7 @@
   /*Flecha Subir*/
   .flecha {
     position: fixed;
-    background-color: #003668cb;
+    background-color: #1B396A;
     padding: 5px 10px;
     border-radius: 5px;
     color: white;
@@ -1427,15 +1427,15 @@
 
   .nombre_Usuario {
     display: block !important;
-    border: 1px solid #003568;
+    border: 1px solid #1B396A;
     font-size: 20px;
-    color: #003568;
+    color: #1B396A;
     padding: 5px 10px;
     border-radius: 5px;
   }
 
   .redireccionadmin2 {
-    border: 3px #003568 solid;
+    border: 3px #1B396A solid;
     padding: 15px;
     border-radius: 10px;
     display: flex;
@@ -1750,7 +1750,7 @@
     margin-right: 20px;
     margin-left: -10% !important;
     font-size: 20px;
-    color: #001d38;
+    color: #1B396A;
     font-weight: bold;
   }
 

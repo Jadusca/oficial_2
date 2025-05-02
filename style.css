@@ -129,8 +129,8 @@ body {
   height: 30px;
   padding: 20px;
   margin-left: 90% !important;
-  background-color: #003568;
-  border: 2px#003568 solid;
+  background-color: #1B396A;
+  border: 2px #1B396A solid;
   border-radius: 15px;
   color: white;
   cursor: pointer;
@@ -159,7 +159,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 130px;
-  color: #003568;
+  color: #1B396A;
   transition: all 0.5s;
 }
 
@@ -170,13 +170,13 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 130px;
-  color: #003568;
+  color: #1B396A;
   transition: all 0.5s;
 }
 
 .cabecera a {
   text-decoration: none;
-  color: #003568;
+  color: #1B396A;
   transition: all 0.5s;
 }
 
@@ -254,7 +254,7 @@ body {
 .contenidoslider p {
   margin-top: 50px;
   padding: 20px;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   border-radius: 5px;
   font-size: 20px;
@@ -279,7 +279,7 @@ body {
 .titulos {
   margin-left: 30px;
   font-size: 30px;
-  color: #003568;
+  color: #1B396A;
 }
 
 .hrs {
@@ -399,7 +399,7 @@ body {
 .recuadros2 a {
   text-decoration: none;
   font-size: 20px;
-  color: #003568;
+  color: #1B396A;
   margin-top: 100px;
   transition: all 0.5s;
 }
@@ -519,7 +519,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   padding: 50px 0;
   flex-wrap: wrap;
@@ -581,7 +581,7 @@ iframe {
 
 .titulologo h2 {
   margin-bottom: 15px;
-  color: #003568;
+  color: #1B396A;
   font-size: 30px;
 }
 
@@ -607,7 +607,7 @@ iframe {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 10px 15px;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
 }
 
@@ -641,7 +641,7 @@ iframe {
   font-size: 30px;
   border-radius: 5px;
   padding: 10px 15px;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
 }
 
@@ -664,7 +664,7 @@ iframe {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 20px 25px;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
 }
 
@@ -857,8 +857,8 @@ iframe {
 }
 
 .blue {
-  border: 1px #003568 solid;
-  background-color: #003568;
+  border: 1px #1B396A solid;
+  background-color: #1B396A;
   color: white;
   margin-left: 350px;
   font-size: 30px;
@@ -867,8 +867,8 @@ iframe {
 }
 
 .blueh1 {
-  border: 1px #003568 solid;
-  background-color: #003568;
+  border: 1px #1B396A solid;
+  background-color: #1B396A;
   color: white;
   margin: auto;
   font-size: 30px;
@@ -921,8 +921,8 @@ iframe {
 }
 
 .formulariobiblio input[type="submit"] {
-  background-color: #003568;
-  border: 1px solid #003568;
+  background-color: #1B396A;
+  border: 1px solid #1B396A;
   color: white;
 }
 
@@ -1031,7 +1031,7 @@ iframe {
 
 .tituloazul {
   text-decoration: none;
-  color: #003568;
+  color: #1B396A;
 }
 
 .botonsig {
@@ -1040,10 +1040,10 @@ iframe {
 }
 
 .botonsig button {
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   padding: 10px 15px;
-  border: 1px solid #003568;
+  border: 1px solid #1B396A;
   border-radius: 5px;
   margin-bottom: 20px;
 }
@@ -1088,7 +1088,7 @@ iframe {
 
 .cerrarsesionad a {
   text-decoration: none;
-  color: #003568;
+  color: #1B396A;
   width: 100%;
   text-align: right;
   font-size: 20px;
@@ -1253,13 +1253,13 @@ iframe {
 }
 
 .soloacceder {
-  border: 1px solid #003568;
+  border: 1px solid #1B396A;
   text-decoration: none;
   padding: 10px 15px;
   display: inline-block;
   margin-top: 10px;
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
   border-radius: 5px;
 }
 
@@ -1299,7 +1299,7 @@ iframe {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 10px 15px;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
 }
 
@@ -1350,8 +1350,8 @@ iframe {
 
 .botonazulfuerte {
   color: white;
-  background-color: #003568;
-  border: 1px solid #003568;
+  background-color: #1B396A;
+  border: 1px solid #1B396A;
 }
 
 .botongris {
@@ -1410,7 +1410,7 @@ iframe {
   font-size: 22px;
   max-width: 250px;
   text-align: center;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   padding: 5px;
   border-radius: 10px;
@@ -1501,12 +1501,12 @@ iframe {
 
 .contfile i {
   font-size: 60px;
-  color: #003568;
+  color: #1B396A;
 }
 
 .contfile h2 {
   font-size: 40px;
-  color: #003568;
+  color: #1B396A;
 }
 
 #enviararchivo {
@@ -1542,7 +1542,7 @@ iframe {
   align-items: center;
   justify-content: start;
   gap: 10px;
-  background-color: #003568;
+  background-color: #1B396A;
   padding: 15px;
   margin: 50px 0;
   color: white;
@@ -1554,7 +1554,7 @@ iframe {
 }
 
 .redireccionadmin2 h2 {
-  color: #003568;
+  color: #1B396A;
 }
 
 .redireccionadmin h2 {
@@ -1563,7 +1563,7 @@ iframe {
 
 .admin a h2 {
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -1575,13 +1575,13 @@ iframe {
 
 .super-admin a h2:hover {
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
   padding: 10px 20px;
   border-radius: 5px;
 }
 .super-admin1 a h2 {
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -1593,7 +1593,7 @@ iframe {
 
 .admin1 a h2:hover {
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -1730,7 +1730,7 @@ iframe {
 }
 
 .generaltit {
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   font-size: 18px;
   padding: 20px 0;
@@ -1939,11 +1939,11 @@ iframe {
 }
 
 .tablaficherosubido h3 {
-  border: 1px solid #003568;
+  border: 1px solid #1B396A;
   padding: 20px;
   font-size: 22px;
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
 }
 
 .titUNO {
@@ -2020,7 +2020,7 @@ iframe {
 .btnOtroArchivo {
   width: 230px;
   padding: 10px 15px;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   margin: auto;
   margin-top: 20px;
@@ -2084,7 +2084,7 @@ iframe {
 .flecha {
   position: fixed;
   display: none;
-  background-color: #003568;
+  background-color: #1B396A;
   padding: 5px 10px;
   border-radius: 5px;
   color: white;
@@ -2098,7 +2098,7 @@ iframe {
 
 .botonesPag {
   display: inline-block;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -2108,7 +2108,7 @@ iframe {
 
 .botonesPagFiltrar {
   display: inline-block;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -2128,10 +2128,10 @@ iframe {
 }
 
 .btnSiguienteAdmin {
-  border: 1px solid #003568;
+  border: 1px solid #1B396A;
   padding: 10px 15px;
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s;
@@ -2163,25 +2163,21 @@ iframe {
 }
 
 .inicio i {
-  color: #003568;
+  color: #1B396A;
 }
 
 .inicio a {
-  color: #003568;
+  color: #1B396A;
 }
 
 .inicio a:hover {
-  color: #003568 !important;
-}
-
-.cabecera a:hover {
-  color: #088ee7;
+  color: #1B396A !important;
 }
 
 .buscador button:hover {
   background-color: white;
-  color: #003568;
-  border: 2px#003568 solid;
+  color: #1B396A;
+  border: 2px#1B396A solid;
 }
 
 .recuadro:hover {
@@ -2211,7 +2207,7 @@ iframe {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #003568;
+  background: #1B396A;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -2337,7 +2333,7 @@ iframe {
 }
 
 .botonnuevodoc:hover {
-  background-color: #001d38;
+  background-color: #1B396A;
 }
 
 .textotitulotabla a:hover {
@@ -2349,7 +2345,7 @@ iframe {
 }
 
 .btnSiguienteAdmin:hover {
-  background-color: #001d38;
+  background-color: #1B396A;
 }
 
 .Opc_Tit {
@@ -2413,7 +2409,7 @@ iframe {
   width: 100%;
   padding: 15px 25px;
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -2501,7 +2497,7 @@ iframe {
 
 .posgrados {
   border: none;
-  border-top: 4px #003568 solid;
+  border-top: 4px #1B396A solid;
   margin-top: 10px;
 }
 
@@ -2632,14 +2628,14 @@ iframe {
 .galeria hr {
   margin-top: 10px;
   border: none;
-  background-color: #003568;
+  background-color: #1B396A;
   height: 5px;
   width: 30%;
   margin: auto;
 }
 
 .galeria h1 {
-  color: #003568;
+  color: #1B396A;
   font-size: 41px;
   line-height: 49px;
   margin-top: 80px;
@@ -2658,7 +2654,7 @@ iframe {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  color: #003568;
+  color: #1B396A;
   font-size: 25px;
 }
 
@@ -2673,7 +2669,7 @@ iframe {
 
 .menu1 a:hover {
   transform: scale(1.05);
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   border-radius: 5px;
   padding: 5px 10px;
@@ -2686,7 +2682,7 @@ iframe {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  color: #003568;
+  color: #1B396A;
   font-size: 25px;
 }
 
@@ -2699,13 +2695,13 @@ iframe {
 
 .menu1_1 a:hover {
   transform: scale(1.05);
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   border-radius: 5px;
 }
 
 .arrow {
-  color: #003568;
+  color: #1B396A;
   font-size: 25px;
 }
 
@@ -2925,7 +2921,7 @@ iframe {
 }
 
 .periodos_flecha a {
-  color: #003568;
+  color: #1B396A;
   text-decoration: underline;
   margin-left: 20px;
   padding: 5px 10px;
@@ -2934,7 +2930,7 @@ iframe {
 
 .periodos_flecha a:hover {
   transform: scale(1.05);
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   border-radius: 5px;
   padding: 5px 10px;
@@ -2990,7 +2986,7 @@ iframe {
   text-decoration: none;
   display: inline-block;
   border-radius: 5px;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   padding: 5px 20px;
 }
@@ -3001,7 +2997,7 @@ iframe {
 }
 
 .echo_periodo a {
-  color: #003568;
+  color: #1B396A;
   text-decoration: underline;
   margin-left: 20px;
   padding: 5px 10px;
@@ -3010,7 +3006,7 @@ iframe {
 
 .echo_periodo a:hover {
   transform: scale(1.05);
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   border-radius: 5px;
   padding: 5px 10px;
@@ -3031,7 +3027,7 @@ iframe {
 }
 
 .doc_disp {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   border-radius: 20px;
   margin: auto;
   padding: 25px;
@@ -3042,7 +3038,7 @@ iframe {
 .titulo_autor {
   font-size: 25px;
   line-height: 33px;
-  color: #001d38;
+  color: #1B396A;
 }
 
 .nombre_carrera {
@@ -3063,7 +3059,7 @@ iframe {
   text-align: center !important;
   margin-bottom: 15px;
   color: white;
-  background-color: #001d38;
+  background-color: #1B396A;
   font-size: 30px;
 }
 
@@ -3072,7 +3068,7 @@ iframe {
 }
 
 .ficha strong {
-  color: #001d38;
+  color: #1B396A;
   font-weight: bold;
   font-size: 18px;
 }
@@ -3090,7 +3086,7 @@ iframe {
   text-align: center !important;
   margin-bottom: 15px;
   color: white;
-  background-color: #001d38;
+  background-color: #1B396A;
   font-size: 30px;
 }
 
@@ -3099,7 +3095,7 @@ iframe {
 }
 
 .ficha_posg strong {
-  color: #001d38;
+  color: #1B396A;
   font-weight: bold;
   font-size: 18px;
 }
@@ -3109,16 +3105,16 @@ iframe {
   text-decoration: none;
   margin-right: 20px;
   background-color: white;
-  color: #001d38;
-  border: 3px #001d38 solid;
+  color: #1B396A;
+  border: 3px #1B396A solid;
   padding: 10px;
   font-size: 17px;
   transition: all 0.5s linear;
 }
 
 .pdf:hover {
-  border: 3px #001d38 solid;
-  background-color: #001d38;
+  border: 3px #1B396A solid;
+  background-color: #1B396A;
   color: white;
 }
 
@@ -3127,8 +3123,8 @@ iframe {
   border-radius: 10px;
   text-decoration: none;
   margin-right: 20px;
-  background-color: #001d38;
-  border: 3px #001d38 solid;
+  background-color: #1B396A;
+  border: 3px #1B396A solid;
   padding: 10px;
   font-size: 17px;
   transition: all 0.5s linear;
@@ -3139,9 +3135,9 @@ iframe {
 }
 
 .view_ficha:hover {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   background-color: white;
-  color: #001d38;
+  color: #1B396A;
 }
 
 /* .sab{
@@ -3198,7 +3194,7 @@ iframe {
   border-radius: 10px;
   text-decoration: none;
   background-color: white;
-  color: #001d38;
+  color: #1B396A;
   font-size: 30px;
 }
 
@@ -3206,7 +3202,7 @@ iframe {
   border-radius: 10px;
   text-decoration: none;
   background-color: white;
-  color: #001d38;
+  color: #1B396A;
   font-size: 30px;
 }
 
@@ -3230,7 +3226,7 @@ iframe {
   border: none !important;
   text-decoration: none;
   background-color: white;
-  color: #001d38;
+  color: #1B396A;
   font-size: 30px;
   cursor: pointer;
 }
@@ -3249,10 +3245,10 @@ iframe {
 }
 
 .boton_doc {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   cursor: pointer;
   border-radius: 15px;
-  background-color: #001d38;
+  background-color: #1B396A;
   color: white;
   font-size: 25px;
   padding: 15px 55px;
@@ -3260,9 +3256,9 @@ iframe {
 }
 
 .boton_doc:hover {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   background-color: white;
-  color: #001d38;
+  color: #1B396A;
 }
 
 .clasificaciones {
@@ -3273,9 +3269,9 @@ iframe {
 }
 
 .clasificaciones input {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   border-radius: 20px;
-  color: #001d38;
+  color: #1B396A;
   width: 190px;
   padding: 10px 15px;
   font-size: 18px;
@@ -3286,12 +3282,12 @@ iframe {
 .clasificaciones label {
   margin-right: 20px;
   font-size: 20px;
-  color: #001d38;
+  color: #1B396A;
   font-weight: bold;
 }
 
 .busqueda_archivos {
-  background-color: #001d38;
+  background-color: #1B396A;
   color: white !important;
   cursor: pointer;
   transition: all 0.5s linear;
@@ -3299,12 +3295,12 @@ iframe {
 
 .busqueda_archivos:hover {
   background-color: white;
-  color: #001d38 !important;
+  color: #1B396A !important;
 }
 
 .tit_doc_busq td {
   background-color: #ececec;
-  color: #001d38 !important;
+  color: #1B396A !important;
   font-weight: bold;
   font-size: 19px;
   text-align: center;
@@ -3315,7 +3311,7 @@ iframe {
   text-decoration: none;
   border: 0px;
   background-color: transparent;
-  color: #001d38 !important;
+  color: #1B396A !important;
   font-size: 27px;
   transition: all 0.5s;
   cursor: pointer;
@@ -3327,7 +3323,7 @@ iframe {
 
 .tit_def {
   padding: 15px;
-  background-color: #001d38;
+  background-color: #1B396A;
   color: white;
 }
 
@@ -3339,7 +3335,7 @@ iframe {
 .tit_doc_lic_resumen {
   padding: 20px !important;
   font-size: 25px;
-  color: #001d38;
+  color: #1B396A;
 }
 
 .tabla {
@@ -3389,7 +3385,7 @@ iframe {
 }
 
 .tit_lic {
-  background-color: #001d38;
+  background-color: #1B396A;
   color: white;
   border-radius: 10px;
   width: 40%;
@@ -3406,7 +3402,7 @@ iframe {
 
 .form_lic label {
   color: white;
-  background-color: #003568;
+  background-color: #1B396A;
   font-size: 28px;
   padding: 10px;
   margin-top: 30px;
@@ -3414,11 +3410,11 @@ iframe {
 }
 
 .form_lic input {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   width: 100%;
   padding: 10px;
   font-size: 18px;
-  color: #001d38;
+  color: #1B396A;
   font-family: helvetica;
 }
 
@@ -3427,28 +3423,28 @@ iframe {
 }
 
 .form_lic textarea {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   width: 100%;
   padding: 10px;
   font-size: 18px;
-  color: #001d38;
+  color: #1B396A;
   font-family: helvetica;
 }
 
 .form_lic select {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   width: 100%;
   padding: 10px;
   font-size: 18px;
-  color: #001d38;
+  color: #1B396A;
   font-family: helvetica;
 }
 
 .enviar_doc {
   margin: auto !important;
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   border-radius: 10px;
-  background-color: #001d38;
+  background-color: #1B396A;
   color: white !important;
   width: 40% !important;
   cursor: pointer;
@@ -3456,9 +3452,9 @@ iframe {
 
 .enviar_doc:hover {
   border-radius: 10px;
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   background-color: white;
-  color: #001d38 !important;
+  color: #1B396A !important;
   transition: all 0.5s;
 }
 
@@ -3489,7 +3485,7 @@ iframe {
 }
 
 .paginacion .pagina-activa {
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   font-weight: bold;
 }
@@ -3529,52 +3525,52 @@ iframe {
   width: auto !important;
   font-size: 20px;
   padding: 10px 20px;
-  background-color: #003568;
+  background-color: #1B396A;
   color: white;
   border-radius: 10px;
 }
 
 .nuevas_carreras input {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   border-radius: 10px;
   width: 56%;
   height: 40px;
   padding: 10px;
   font-size: 18px;
-  color: #001d38;
+  color: #1B396A;
   font-family: helvetica;
 }
 
 .nuevas_carreras button {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   border-radius: 10px;
   width: 56%;
   height: 40px;
   padding: 10px;
   font-size: 18px;
-  color: #001d38;
+  color: #1B396A;
   font-family: helvetica;
 }
 
 .nuevas_carreras select {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   border-radius: 10px;
   width: 56%;
   height: 40px;
   padding: 5px;
   font-size: 18px;
-  color: #001d38;
+  color: #1B396A;
   font-family: helvetica;
 }
 
 .nuevas_carreras textarea {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   border-radius: 10px;
   width: 56%;
   height: auto;
   padding: 5px;
   font-size: 18px;
-  color: #001d38;
+  color: #1B396A;
   font-family: helvetica;
 }
 
@@ -3587,7 +3583,7 @@ iframe {
 }
 
 .nuevas_carreras img {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   width: 30%;
   height: 30%;
   object-fit: cover;
@@ -3599,14 +3595,14 @@ iframe {
 }
 
 .mod_car {
-  background-color: #001d38 !important;
+  background-color: #1B396A !important;
   color: white !important;
   transition: all 0.5s linear;
 }
 
 .mod_car:hover {
   background-color: white !important;
-  color: #001d38 !important;
+  color: #1B396A !important;
   cursor: pointer;
 }
 
@@ -3616,14 +3612,14 @@ iframe {
   font-size: 18px;
   border-radius: 15px;
   padding: 10px 25px;
-  background-color: #001d38 !important;
+  background-color: #1B396A !important;
   color: white !important;
   transition: all 0.5s linear;
 }
 
 .mod_car_1:hover {
   background-color: white !important;
-  color: #001d38 !important;
+  color: #1B396A !important;
   cursor: pointer;
 }
 
@@ -3640,12 +3636,12 @@ td {
 }
 
 .tab_mod th {
-  background-color: #003568 !important;
+  background-color: #1B396A !important;
   color: white !important;
 }
 
 .tab_mod img {
-  border: 3px #001d38 solid;
+  border: 3px #1B396A solid;
   border-radius: 100%;
   width: 90px;
 }
@@ -3690,7 +3686,7 @@ td {
 }
 
 .tab_mod_1 th {
-  background-color: #003568 !important;
+  background-color: #1B396A !important;
   color: white !important;
 }
 
@@ -3724,13 +3720,13 @@ td {
 .modal-content p {
   padding: 20px;
   text-align: justify;
-  border: 2px #003568 solid;
+  border: 2px #1B396A solid;
   margin-top: 10px;
   border-radius: 10px;
 }
 
 .modal-content h3 {
-  background-color: #001d38;
+  background-color: #1B396A;
   padding: 10px;
   text-align: center;
   width: 70%;
@@ -3755,14 +3751,14 @@ td {
 
 .docs_aprobados input {
   margin-top: 40px;
-  border: 3px #003568 solid;
+  border: 3px #1B396A solid;
   font-size: 18px;
   padding: 10px !important;
   border-radius: 15px;
 }
 
 .graphic{
-  border: 3px #003568 solid;
+  border: 3px #1B396A solid;
   width: 90%;
   height: 600px !important;
   margin: auto;
