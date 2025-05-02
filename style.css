@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0%;
@@ -9,7 +11,7 @@ html {
 }
 
 body {
-  font-family: helvetica;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #333;
@@ -323,6 +325,8 @@ body {
 }
 
 .recuadro h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   margin-top: 20px;
 }
 
@@ -379,6 +383,8 @@ body {
 }
 
 .Opciones_titulacion h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   text-align: center;
   line-height: 28px;
   margin-top: 15px;
@@ -580,6 +586,8 @@ iframe {
 }
 
 .titulologo h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   margin-bottom: 15px;
   color: #003568;
   font-size: 30px;
@@ -773,6 +781,8 @@ iframe {
 }
 
 .cardcarreras h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   text-align: center;
   font-size: 25px;
   line-height: 33px;
@@ -846,6 +856,8 @@ iframe {
 }
 
 .opcion2car h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 25px;
   text-decoration: none;
   color: white;
@@ -907,6 +919,8 @@ iframe {
 }
 
 .textobiblio h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 28px;
   line-height: 36px;
   max-width: 350px;
@@ -986,6 +1000,8 @@ iframe {
 }
 
 .titulodoc h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 30px;
 }
 
@@ -1373,6 +1389,8 @@ iframe {
 }
 
 .textoapartadodoc h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 30px;
 }
 
@@ -1505,6 +1523,8 @@ iframe {
 }
 
 .contfile h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 40px;
   color: #003568;
 }
@@ -1554,14 +1574,20 @@ iframe {
 }
 
 .redireccionadmin2 h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   color: #003568;
 }
 
 .redireccionadmin h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 26px;
 }
 
 .admin a h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   color: white;
   background-color: #003568;
   padding: 10px 20px;
@@ -1569,6 +1595,8 @@ iframe {
 }
 
 .super-admin a h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   padding: 10px 20px;
   transition: all 0.5s linear;
 }
@@ -1587,6 +1615,8 @@ iframe {
 }
 
 .admin1 a h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   padding: 10px 20px;
   transition: all 0.5s linear;
 }
@@ -1683,6 +1713,8 @@ iframe {
 }
 
 .contdetalles h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   margin-bottom: 30px;
   margin-top: 0px;
 }
@@ -1717,6 +1749,8 @@ iframe {
 }
 
 .textocontcarrera h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -1939,6 +1973,8 @@ iframe {
 }
 
 .tablaficherosubido h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   border: 1px solid #003568;
   padding: 20px;
   font-size: 22px;
@@ -2060,6 +2096,8 @@ iframe {
 }
 
 .primeraParteRTS h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 30px;
   margin-bottom: 15px;
 }
@@ -2381,6 +2419,8 @@ iframe {
 } */
 
 .titulo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   display: inline-block;
   font-size: 35px;
   line-height: 43px;
@@ -2391,6 +2431,8 @@ iframe {
 } */
 
 .titulo_proy_inv h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   display: inline-block;
   font-size: 40px;
 }
@@ -2400,6 +2442,8 @@ iframe {
 } */
 
 .titulo_proy_EGEL h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   display: inline-block;
   font-size: 40px;
   line-height: 48px;
@@ -2486,6 +2530,8 @@ iframe {
 }
 
 .Opciones_titulacion_posgrado h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   text-align: center;
   margin-top: 15px;
   font-size: 25px;
@@ -2550,6 +2596,8 @@ iframe {
 }
 
 .Opciones_titulacion_sabatico h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   text-align: center;
   margin-top: 15px;
   font-size: 25px;
@@ -2639,6 +2687,8 @@ iframe {
 }
 
 .galeria h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   color: #003568;
   font-size: 41px;
   line-height: 49px;
@@ -2739,6 +2789,8 @@ iframe {
 }
 
 .catalogo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   z-index: 10;
 }
 
@@ -2797,6 +2849,8 @@ iframe {
 }
 
 .catalogo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 30px;
 }
 
@@ -2818,6 +2872,8 @@ iframe {
 }
 
 .catalogo_super_admin h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 30px;
 }
 
@@ -2906,6 +2962,8 @@ iframe {
 }
 
 .info2 h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 45px;
   line-height: 53px;
   margin-top: 5px;
@@ -3058,6 +3116,8 @@ iframe {
 }
 
 .ficha h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   padding: 15px 25px;
   border-radius: 15px;
   text-align: center !important;
@@ -3085,6 +3145,8 @@ iframe {
 }
 
 .ficha_posg h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   padding: 15px 25px;
   border-radius: 15px;
   text-align: center !important;
@@ -3384,6 +3446,8 @@ iframe {
 }
 
 .catalogo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   z-index: 10;
   font-size: 30px;
 }
@@ -3514,6 +3578,8 @@ iframe {
 }
 
 .edit_car h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   margin: 0%;
   padding: 0%;
 }
@@ -3730,6 +3796,8 @@ td {
 }
 
 .modal-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   background-color: #001d38;
   padding: 10px;
   text-align: center;
