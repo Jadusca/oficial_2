@@ -60,9 +60,7 @@
                 </div>
             </li>
         </ul>
-        <p>Bienvenido al Repositorio Institucional de Acceso Abierto del Instituto Tecnológico de Mérida,
-            que almacena y organiza la documentación y producción de índole científica y académica con el
-            propósito de preservarla en formato digital y facilitar su acceso y visibilidad global.</p>
+        <p>Bienvenido al Repositorio Institucional de Acceso Abierto del Instituto Tecnológico de Mérida. Este espacio digital alberga, organiza y preserva la producción científica y académica generada en la institución, con el objetivo de facilitar su consulta y aumentar su visibilidad a nivel global.</p>
     </section>
     <section class="seccioncontenido ancho">
         <h1 class="titulos">CONTENIDO</h1>
