@@ -1872,12 +1872,10 @@
   }
 
   .tit_doc_lic_resumen{
-    border: 1px red solid;
     font-size: 18px;
   }
 
   .modal-content{
-    border: 2px red solid;
     width: 90%;
   }
 
