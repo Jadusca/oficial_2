@@ -16,9 +16,9 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     $params = [];
     $types = "";
 
-    if (!empty($_GET["autor"])) {
-        $where .= " AND $tabla.autor LIKE ?";
-        $params[] = "%" . $_GET["autor"] . "%";
+    if (!empty($_GET["titulo"])) {
+        $where .= " AND $tabla.titulo LIKE ?";
+        $params[] = "%" . $_GET["titulo"] . "%";
         $types .= "s";
     }
 
@@ -192,8 +192,8 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     </div>
 
     <form class="clasificaciones" method="GET">
-        <label>Autor: <input type="text" name="autor"
-                value="<?= htmlspecialchars($_GET['autor'] ?? '') ?>"></label>
+        <label>Titulo: <input type="text" name="titulo"
+                value="<?= htmlspecialchars($_GET['titulo'] ?? '') ?>"></label>
         <label>Palabra clave: <input type="text" name="palabras_clave"
                 value="<?= htmlspecialchars($_GET['palabras_clave'] ?? '') ?>"></label>
         <label class="date">Fecha: <input type="date" name="fecha" value="<?= htmlspecialchars($_GET['fecha'] ?? '') ?>"></label>

@@ -109,25 +109,16 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
         if ($docs->num_rows > 0) {
             while ($doc = $docs->fetch_assoc()) {
                 echo "<div class='doc_disp'>
-                    <div class='titulo_autor'>
-                        <strong>{$doc['titulo']}</strong><br> {$doc['autor']}
-                    </div><br>
-                    <div class='nombre_carrera'><em>{$doc['nombre_carrera']} | {$doc['nombre_titulacion']}</em></div><br>";
-                
+                <div class='titulo_autor'>
+                    <strong>{$doc['titulo']}</strong><br> {$doc['autor']}
+                </div><br>
+                <div class='nombre_carrera'><em>{$doc['nombre_carrera']} | {$doc['nombre_titulacion']}</em></div><br>";
                 $nombreArchivo = rawurlencode(basename($doc['documento']));
                 $ruta = "../../documentos/$nombreArchivo";
-            
-                echo "<div class='acciones_doc'>
-                        <a class='pdf' href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'>
-                            <i class='fa-solid fa-file-invoice'></i> Ver documento
-                        </a>
-                        <a class='view_ficha' href='javascript:void(0)' onclick='verFicha({$doc['id_ficha_carrera']})'>
-                            <i class='fa-solid fa-magnifying-glass'></i> Ver ficha
-                        </a>
-                    </div>
-                </div>";
+                echo "<a class='pdf' href='pdf/web/viewer.html?file=" . htmlspecialchars($ruta) . "' target='_blank'><i class='fa-solid fa-file-invoice'></i> Ver documento</a>";
+                echo "<a class='view_ficha' href='javascript:void(0)' onclick='verFicha({$doc['id_ficha_carrera']})'><i class='fa-solid fa-magnifying-glass'></i> Ver ficha</a>
+            </div>";
             }
-            
 
             // Paginación
             echo "<div class='paginacion'>";
@@ -193,6 +184,9 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
     } elseif ($id_periodo) {
         echo "<div class='echo_periodo';'><a href='licenciaturas.php' class='periodos'><i class='fa-solid fa-arrow-left'></i></a></div>";
         echo '<section class="carreras ancho">
+            <div class="titulocar">
+                <h1>Carreras</h1>
+            </div>
             <div class="viewport2">
                 <ul class="overview2">';
 
@@ -219,7 +213,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
         }
 
         if (!$hay_resultados) {
-            echo "<p class='mensaje_movil' style='margin: 20px;'>No se encontraron carreras con ese término.</p>";
+            echo "<p style='margin: 20px;'>No se encontraron carreras con ese término.</p>";
         }
 
         echo '</ul></div>';
@@ -227,7 +221,7 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
 
     } else {
         echo '<section class="periodos" id="periodosContainer">';
-        echo '<div class="periodos_flecha"><a href="index.php" class="periodos1"><i class="fa-solid fa-arrow-left"></i></a></div>';
+        echo '<div class="periodos_flecha"><a href="index.php" class="periodos"><i class="fa-solid fa-arrow-left"></i></a></div>';
         $periodos = $conectar->query("SELECT * FROM periodo_carrera");
         $contador = 0;
         echo '<div class="partes">';
