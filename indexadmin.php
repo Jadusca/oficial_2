@@ -1,3 +1,6 @@
+<?php
+    include "headeradmin.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,17 +17,6 @@
 </head>
 
 <body>
-    <?php
-    include "headeradmin.php";
-    ?>
-
-    <?php
-    $nombreUsuario = file_exists('nombreUsuario.txt') ? file_get_contents('nombreUsuario.txt') : 'Invitado';
-
-    if (empty($nombreUsuario)) {
-        header("Location:iniciosesion.php");
-    }
-    ?>
     <div id="subir" class="flecha">
         <i class="fa-solid fa-angle-up"></i>
     </div>

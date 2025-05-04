@@ -1,9 +1,5 @@
 <?php
-$nombreUsuario = file_exists('nombreUsuario.txt') ? file_get_contents('nombreUsuario.txt') : 'Invitado';
-
-if (empty($nombreUsuario)) {
-    header("Location:iniciosesion.php");
-}
+include "seguridadSuperAdmin.php";
 ?>
 
 <header class="cabecera pixeles">
@@ -11,14 +7,12 @@ if (empty($nombreUsuario)) {
         <div class="nombre_Usuario">
             <i class="fa-solid fa-sort-down iconocerrarsesion2"></i>
             <ul class="cerrarsesionad2" id="opcerrar2">
-                <li><a href="iniciosesionSuperAdmin.php">Cerrar Sesión ❌</a></li>
+                <li><a href="cerrarSesionSuperAdmin.php">Cerrar Sesión ❌</a></li>
             </ul>
         </div>
         <div class="inicio">
             <i class="fa-solid fa-house"></i>
-            <?php
-            echo "<a href='indexSuperadmin.php?nombreUsuario=$nombreUsuario'>Página Inicio</a>"
-                ?>
+            <a href='indexSuperadmin.php'>Página Inicio</a>
         </div>
         <div class="contenedorlogocabecera">
             <figure class="logo_nacional">
@@ -43,10 +37,10 @@ if (empty($nombreUsuario)) {
         <div class="ingresaradmin">
             <i class="fa-regular fa-user"></i>
             <div class="nombreUsuario">
-                <?php echo "<a href='#'>$nombreUsuario</a>"; ?>
+                <a href="#"><?php echo htmlspecialchars($nombreUsuario); ?></a>
                 <i class="fa-solid fa-sort-down iconocerrarsesion" id="iconoUsuario"></i>
                 <ul class="cerrarsesionad" id="opcerrarUsuario">
-                    <li><a href="javascript:void(0);" id="cerrarSesion">Cerrar Sesión ❌</a></li>
+                    <li><a href="cerrarSesionSuperAdmin.php">Cerrar Sesión ❌</a></li>
                 </ul>
             </div>
         </div>
@@ -59,14 +53,5 @@ if (empty($nombreUsuario)) {
         $('#iconoUsuario').click(function () {
             $('#opcerrarUsuario').toggle();
         });
-
-        $('#cerrarSesion').click(function () {
-            // Agregar alerta de sesión finalizada con éxito
-            alert('Sesión finalizada con éxito');
-            // Redireccionar a la página de cerrar sesión
-            window.location.href = "iniciosesionSuperAdmin.php";
-        });
     });
 </script>
-
-<script src="eliminarArchivo.js"></script>

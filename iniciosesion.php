@@ -38,7 +38,7 @@ if (isset($_GET['error'])) {
         echo "<script>
                 alert('Usuario y contraseña incorrectos');
                 window.location.href='iniciosesion.php';
-              </script>";
+            </script>";
     }
 }
 ?>
