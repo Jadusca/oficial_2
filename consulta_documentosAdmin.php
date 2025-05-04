@@ -1,5 +1,4 @@
 <?php
-include 'seguridad.php';
 include "headeradmin.php";
 ?>
 

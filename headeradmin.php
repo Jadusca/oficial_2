@@ -1,5 +1,4 @@
 <?php include "seguridad.php";
-$nombreUsuario = $_SESSION['nombreUsuario'];
 ?>
 
 <header id="inicio" class="cabecera pixeles">
