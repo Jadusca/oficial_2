@@ -1,5 +1,4 @@
-<?php include "seguridad.php";
-?>
+<?php include "seguridad.php"; ?>
 
 <header id="inicio" class="cabecera pixeles">
     <div class="uno uno_admin">
@@ -49,5 +48,3 @@
         </div>
     </div>
 </header>
-
-<script src="eliminarArchivo.js"></script>
