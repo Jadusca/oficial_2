@@ -1,4 +1,6 @@
-<?php include 'seguridad.php'; ?>
+<?php include "seguridad.php";
+$nombreUsuario = $_SESSION['nombreUsuario'];
+?>
 
 <header id="inicio" class="cabecera pixeles">
     <div class="uno uno_admin">

@@ -1,3 +1,6 @@
+<?php
+    include "headeradmin.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +17,6 @@
 </head>
 
 <body>
-    <?php
-    include "headeradmin.php";
-    ?>
 
     <div class="menu1">
         <a class="arrow" href="indexadmin.php"><i class="fa-solid fa-arrow-left"></i></a>
