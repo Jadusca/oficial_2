@@ -92,40 +92,40 @@
         <h1>GALERÍA</h1>
         <hr>
         <section class="galeria_grid">
-            <a class="foto1" data-fancybox="gallery" data-src="Imagenes/Galería/gallery 1.jpg"
+            <a class="foto1" data-fancybox="gallery" data-src="Imagenes/Galería/gallery1.jpg"
                 data-caption="FOTO 1 GALERIA">
                 <figure>
-                    <img src="imagenes/Galería/gallery 1.jpg" alt="" />
+                    <img src="imagenes/Galería/gallery1.jpg" alt="" />
                 </figure>
             </a>
-            <a class="foto2" data-fancybox="gallery" data-src="Imagenes/Galería/gallery 2.jpg"
+            <a class="foto2" data-fancybox="gallery" data-src="Imagenes/Galería/gallery2.jpg"
                 data-caption="FOTO 2 GALERIA">
                 <figure>
-                    <img src="imagenes/Galería/gallery 2.jpg" alt="" />
+                    <img src="imagenes/Galería/gallery2.jpg" alt="" />
                 </figure>
             </a>
-            <a class="foto3" data-fancybox="gallery" data-src="Imagenes/Galería/gallery 3.jpg"
+            <a class="foto3" data-fancybox="gallery" data-src="Imagenes/Galería/gallery3.jpg"
                 data-caption="FOTO 3 GALERIA">
                 <figure>
-                    <img src="imagenes/Galería/gallery 3.jpg" alt="" />
+                    <img src="imagenes/Galería/gallery3.jpg" alt="" />
                 </figure>
             </a>
-            <a class="foto4" data-fancybox="gallery" data-src="Imagenes/Galería/gallery 4.jpg"
+            <a class="foto4" data-fancybox="gallery" data-src="Imagenes/Galería/gallery4.jpg"
                 data-caption="FOTO 4 GALERIA">
                 <figure>
-                    <img src="imagenes/Galería/gallery 4.jpg" alt="" />
+                    <img src="imagenes/Galería/gallery4.jpg" alt="" />
                 </figure>
             </a>
-            <a class="foto5" data-fancybox="gallery" data-src="Imagenes/Galería/gallery 5.jpg"
+            <a class="foto5" data-fancybox="gallery" data-src="Imagenes/Galería/gallery5.jpg"
                 data-caption="FOTO 5 GALERIA">
                 <figure>
-                    <img src="imagenes/Galería/gallery 5.jpg" alt="" />
+                    <img src="imagenes/Galería/gallery5.jpg" alt="" />
                 </figure>
             </a>
-            <a class="foto6" data-fancybox="gallery" data-src="Imagenes/Galería/gallery 6.jpg"
+            <a class="foto6" data-fancybox="gallery" data-src="Imagenes/Galería/gallery6.jpg"
                 data-caption="FOTO 6 GALERIA">
                 <figure>
-                    <img src="imagenes/Galería/gallery 6.jpg" alt="" />
+                    <img src="imagenes/Galería/gallery6.jpg" alt="" />
                 </figure>
             </a>
         </section>
