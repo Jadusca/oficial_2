@@ -32,7 +32,8 @@
         <?php for ($i = 1; $i <= 6; $i++): ?>
             <label>Imagen <?= $i ?> :</label><br>
             <section>
-                <img src="Imagenes/Galería/gallery <?= $i ?>.jpg" width="150" alt="Imagen actual <?= $i ?>"><br>
+            <img src="Imagenes/Galería/gallery<?= $i ?>.jpg?<?= time() ?>" width="150" alt="Imagen actual <?= $i ?>">
+                <br>
                 <input class="image" type="file" name="imagen<?= $i ?>" accept="image/*">
             </section><br><br>
         <?php endfor; ?>
