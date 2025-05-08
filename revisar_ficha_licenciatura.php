@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,9 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">
     <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="responsiveslides.min.js"></script>
 </head>
+<body>
+
 <!-- Modal -->
 <div id="resumenModal" class="modal">
     <div class="modal-content">
@@ -34,11 +38,27 @@
             cerrarModal();
         }
     }
+
+    function confirmarAccion(id, tipo, accion) {
+        let mensaje = accion === 'aprobar' ? '¿Deseas aprobar este documento?' : '¿Deseas rechazar este documento?';
+        if (confirm(mensaje)) {
+            $.ajax({
+                url: accion + '.php',
+                type: 'GET',
+                data: { id: id, tipo: tipo },
+                success: function (respuesta) {
+                    alert('Documento ' + (accion === 'aprobar' ? 'aprobado' : 'rechazado') + ' correctamente.');
+                    location.reload();
+                },
+                error: function () {
+                    alert('Error al procesar la solicitud.');
+                }
+            });
+        }
+    }
 </script>
 
-<?php
-include "headerSuperadmin.php";
-?>
+<?php include "headerSuperadmin.php"; ?>
 
 <div class="edit_car">
     <div class="menu1_1">
@@ -88,9 +108,9 @@ $resultado = $conectar->query($query);
                     <td><?php echo $row['asesor_externo']; ?></td>
                     <td>
                         <div class="pdf_busqueda">
-                            <button
-                                onclick="mostrarResumen(`<?php echo htmlspecialchars($row['resumen'], ENT_QUOTES); ?>`)"><i
-                                    class="fa-solid fa-file-contract"></i></button>
+                            <button onclick="mostrarResumen('<?php echo htmlspecialchars($row['resumen'], ENT_QUOTES); ?>')">
+                                <i class="fa-solid fa-file-contract"></i>
+                            </button>
                         </div>
                     </td>
                     <td><?php echo $row['fecha']; ?></td>
@@ -102,22 +122,26 @@ $resultado = $conectar->query($query);
                         <div class="actions_1">
                             <div class="icon_action">
                                 <div class="pdf_busqueda">
-                                    <a href="ver_documento.php?archivo=<?php echo $row['documento']; ?>" target="_blank"><i
-                                            class="fa-solid fa-file-pdf"></i></a>
+                                    <a href="ver_documento.php?archivo=<?php echo $row['documento']; ?>" target="_blank">
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
                                 </div>
                                 <div class="pdf_busqueda">
-                                    <a href="ver_oficio.php?archivo=<?php echo $row['oficio']; ?>" target="_blank"><i
-                                            class="fa-solid fa-file-zipper"></i></a>
+                                    <a href="ver_oficio.php?archivo=<?php echo $row['oficio']; ?>" target="_blank">
+                                        <i class="fa-solid fa-file-zipper"></i>
+                                    </a>
                                 </div>
                             </div>
                             <div class="icon_action">
                                 <div class="pdf_busqueda_check">
-                                    <a href="aprobar.php?id=<?php echo $row['id_ficha_carrera']; ?>&tipo=lic"><i
-                                            class="fa-solid fa-square-check"></i></a>
+                                    <a href="javascript:void(0);" onclick="confirmarAccion(<?php echo $row['id_ficha_carrera']; ?>, 'lic', 'aprobar')">
+                                        <i class="fa-solid fa-square-check"></i>
+                                    </a>
                                 </div>
                                 <div class="pdf_busqueda_trash">
-                                    <a href="rechazar.php?id=<?php echo $row['id_ficha_carrera']; ?>&tipo=lic"><i
-                                            class="fa-solid fa-rectangle-xmark"></i></a>
+                                    <a href="javascript:void(0);" onclick="confirmarAccion(<?php echo $row['id_ficha_carrera']; ?>, 'lic', 'rechazar')">
+                                        <i class="fa-solid fa-rectangle-xmark"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -130,6 +154,7 @@ $resultado = $conectar->query($query);
 
 <br><br>
 
-<?php
-include "footer.php";
-?>
+<?php include "footer.php"; ?>
+
+</body>
+</html>

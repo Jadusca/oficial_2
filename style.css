@@ -332,6 +332,7 @@ body {
 
 .recuadro p{
   margin-bottom: 20px;
+  margin-top: 20px !important;
 }
 
 .recuadro a {

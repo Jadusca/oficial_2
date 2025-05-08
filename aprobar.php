@@ -35,4 +35,4 @@ if (isset($_GET['id']) && isset($_GET['tipo'])) {
     echo "Parámetros no válidos.";
 }
 ?>
-<a href="javascript:history.back()">Regresar</a>
+<a href="modulo_revision_general.php">Regresar</a>
