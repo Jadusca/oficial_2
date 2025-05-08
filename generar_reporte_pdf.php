@@ -79,7 +79,7 @@ if (!empty($imagenBase64) && preg_match('/^data:image\/(png|jpeg);base64,/', $im
 // Comentarios finales
 $pdf->Ln(10);
 $pdf->SetFont('helvetica', 'I', 11);
-$pdf->MultiCell(0, 10, "Observaciones: Se recomienda monitorear las tendencias semanales para identificar patrones de uso o caídas de tráfico.", 0, 'L');
+// $pdf->MultiCell(0, 10, "Observaciones: Se recomienda monitorear las tendencias semanales para identificar patrones de uso o caídas de tráfico.", 0, 'L');
 
 $pdf->Output('reporte_visitas.pdf', 'I');
 ?>

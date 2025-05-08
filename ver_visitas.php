@@ -17,9 +17,7 @@
 
 <body>
 
-    <?php
-    include "headerSuperadmin.php";
-    ?>
+    <?php include "headerSuperadmin.php"; ?>
 
     <div class="edit_car">
         <div class="menu1_1">
@@ -79,9 +77,26 @@
             }
         });
 
-        // Convertir gráfica a imagen y enviarla al generar PDF
         function generarPDF() {
-            const imagen = document.getElementById('grafica').toDataURL('image/jpeg', 1.0);
+            const canvas = document.getElementById('grafica');
+
+            // Crear un nuevo canvas temporal para agregar fondo blanco
+            const fondo = document.createElement('canvas');
+            fondo.width = canvas.width;
+            fondo.height = canvas.height;
+            const fondoCtx = fondo.getContext('2d');
+
+            // Fondo blanco
+            fondoCtx.fillStyle = 'white';
+            fondoCtx.fillRect(0, 0, fondo.width, fondo.height);
+
+            // Dibujar la gráfica encima del fondo blanco
+            fondoCtx.drawImage(canvas, 0, 0);
+
+            // Convertir a imagen
+            const imagen = fondo.toDataURL('image/jpeg', 1.0);
+
+            // Crear y enviar formulario con los datos
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = 'generar_reporte_pdf.php';
@@ -117,8 +132,6 @@
 
 <br><br>
 
-<?php
-include "footer.php";
-?>
+<?php include "footer.php"; ?>
 
 </html>
