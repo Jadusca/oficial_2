@@ -1,6 +1,5 @@
 <?php
 require "conexion.php";
-date_default_timezone_set('America/Merida'); // Zona horaria correcta
 
 $desde = $_GET['desde'] ?? date("Y-m-01");
 $hasta = $_GET['hasta'] ?? date("Y-m-d", strtotime("-1 day")); // un día antes

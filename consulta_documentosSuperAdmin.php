@@ -201,7 +201,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
                 value="<?= htmlspecialchars($_GET['autor'] ?? '') ?>"></label>
         <label>Palabra clave: <input type="text" name="palabras_clave"
                 value="<?= htmlspecialchars($_GET['palabras_clave'] ?? '') ?>"></label>
-        <label>Fecha: <input type="date" name="fecha" value="<?= htmlspecialchars($_GET['fecha'] ?? '') ?>"></label>
+        <label class="date_1">Fecha: <input type="date" name="fecha" value="<?= htmlspecialchars($_GET['fecha'] ?? '') ?>"></label>
         <input class="busqueda_archivos" type="submit" value="Buscar">
     </form>
 

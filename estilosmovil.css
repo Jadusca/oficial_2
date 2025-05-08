@@ -1741,7 +1741,12 @@
   }
 
   .clasificaciones label {
-    margin-left: 2%;
+    margin-left: 2% !important;
+    font-size: 18px;
+  }
+
+  .clasificaciones .date_1 {
+    margin-left: -14% !important;
     font-size: 18px;
   }
 
