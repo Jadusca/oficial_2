@@ -80,6 +80,8 @@ $posgrados = $conectar->query("SELECT * FROM posgrados");
     <?php
     include "footer.php";
     ?>
+
+    <script src="./funciones.js"></script>
 </body>
 
 </html>

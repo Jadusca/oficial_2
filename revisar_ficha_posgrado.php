@@ -155,5 +155,7 @@ $resultado = $conectar->query($query);
 
 <?php include "footer.php"; ?>
 
+<script src="funciones.js"></script>
+
 </body>
 </html>

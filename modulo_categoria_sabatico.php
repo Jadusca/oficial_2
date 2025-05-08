@@ -58,42 +58,44 @@ $sabaticos = $conectar->query("SELECT * FROM sabaticos");
     </form>
 
     <h2 class="tit_mod_car">Lista de categorías</h2>
-    <table class="tab_mod">
-        <tr>
-            <th>ID</th>
-            <th>Categoría</th>
-            <th>Sabático</th>
-            <th>Acciones</th>
-        </tr>
-        <?php
-        // Traer sabáticos junto con las categorías (JOIN)
-        $categoriasConSabaticos = $conectar->query("
+    <div class="tabla-responsive">
+        <table class="tab_mod">
+            <tr>
+                <th>ID</th>
+                <th>Categoría</th>
+                <th>Sabático</th>
+                <th>Acciones</th>
+            </tr>
+            <?php
+            // Traer sabáticos junto con las categorías (JOIN)
+            $categoriasConSabaticos = $conectar->query("
             SELECT cs.*, s.nombre_sabatico, s.anio_sabatico
             FROM categoria_sabatico cs
             LEFT JOIN sabaticos s ON cs.sabaticos = s.id_sabaticos
         ");
-        while ($row = $categoriasConSabaticos->fetch_assoc()):
-            ?>
-            <tr>
-                <td><?= $row['id_categoria_sab'] ?></td>
-                <td><?= htmlspecialchars($row['nombre_categoria']) ?></td>
-                <td><?= htmlspecialchars($row['nombre_sabatico']) ?></td>
-                <td>
-                    <div class="actions">
-                        <div class="pdf_busqueda">
-                            <a href="editar_categoria_sabatico.php?id=<?= $row['id_categoria_sab'] ?>"><i
-                                    class="fa-solid fa-pen-to-square"></i></a>
+            while ($row = $categoriasConSabaticos->fetch_assoc()):
+                ?>
+                <tr>
+                    <td><?= $row['id_categoria_sab'] ?></td>
+                    <td><?= htmlspecialchars($row['nombre_categoria']) ?></td>
+                    <td><?= htmlspecialchars($row['nombre_sabatico']) ?></td>
+                    <td>
+                        <div class="actions">
+                            <div class="pdf_busqueda">
+                                <a href="editar_categoria_sabatico.php?id=<?= $row['id_categoria_sab'] ?>"><i
+                                        class="fa-solid fa-pen-to-square"></i></a>
+                            </div>
+                            <div class="pdf_busqueda">
+                                <a href="eliminar_categoria_sabatico.php?id=<?= $row['id_categoria_sab'] ?>"
+                                    onclick="return confirm('¿Estás seguro de que deseas eliminar esta categoría?')"><i
+                                        class="fa-solid fa-trash-can"></i></a>
+                            </div>
                         </div>
-                        <div class="pdf_busqueda">
-                            <a href="eliminar_categoria_sabatico.php?id=<?= $row['id_categoria_sab'] ?>"
-                                onclick="return confirm('¿Estás seguro de que deseas eliminar esta categoría?')"><i
-                                    class="fa-solid fa-trash-can"></i></a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        <?php endwhile; ?>
-    </table>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </div>
 </body>
 
 <br><br>
@@ -101,5 +103,7 @@ $sabaticos = $conectar->query("SELECT * FROM sabaticos");
 <?php
 include "footer.php";
 ?>
+
+<script src="./funciones.js"></script>
 
 </html>

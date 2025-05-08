@@ -100,6 +100,7 @@ $titulaciones = $conectar->query("SELECT * FROM tipo_titulacion_posgrado");
     <?php
     include "footer.php";
     ?>
+    <script src="funciones.js"></script>
 </body>
 
 </html>

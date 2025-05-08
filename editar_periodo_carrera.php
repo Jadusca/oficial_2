@@ -46,12 +46,14 @@ $periodo = $result->fetch_assoc();
 
         <input class="mod_car" type="submit" value="Actualizar">
     </form>
-    
+
     <br><br>
 
     <?php
     include "footer.php";
     ?>
+
+    <script src="./funciones.js"></script>
 
 </body>
 

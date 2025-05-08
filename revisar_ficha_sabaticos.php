@@ -193,6 +193,8 @@
 
     <?php include "footer.php"; ?>
 
+    <script src="funciones.js"></script>
+
 </body>
 
 </html>

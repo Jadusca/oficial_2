@@ -1,4 +1,10 @@
-<?php require "conexion.php"; ?>
+<?php
+require "conexion.php";
+date_default_timezone_set('America/Merida'); // Zona horaria correcta
+
+$desde = $_GET['desde'] ?? date("Y-m-01");
+$hasta = $_GET['hasta'] ?? date("Y-m-d", strtotime("-1 day")); // un día antes
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -10,17 +16,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">
     <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="responsiveslides.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-    <?php
-    include "headeradmin.php";
-    ?>
+    <?php include "headeradmin.php"; ?>
 
     <div class="edit_car">
         <div class="menu1_1">
@@ -31,11 +34,13 @@
 
     <form class="nuevas_carreras" method="GET">
         <section>
-            <label>Desde:</label> <input type="date" name="desde" required>
+            <label>Desde:</label>
+            <input type="date" name="desde" value="<?= $desde ?>" required>
         </section>
         <br>
         <section>
-            <label>Hasta:</label> <input type="date" name="hasta" required>
+            <label>Hasta:</label>
+            <input type="date" name="hasta" value="<?= $hasta ?>" required>
         </section>
         <br>
         <button class="mod_car" type="submit">Filtrar</button>
@@ -44,10 +49,12 @@
     <canvas class="graphic" id="grafica"></canvas>
 
     <?php
-    $desde = $_GET['desde'] ?? date("Y-m-01");
-    $hasta = $_GET['hasta'] ?? date("Y-m-d");
+    $sql = "SELECT DATE(fecha) AS fecha, SUM(cantidad) AS cantidad
+        FROM visitas
+        WHERE DATE(fecha) BETWEEN ? AND ?
+        GROUP BY DATE(fecha)
+        ORDER BY fecha";
 
-    $sql = "SELECT fecha, cantidad FROM visitas WHERE fecha BETWEEN ? AND ? ORDER BY fecha";
     $stmt = $conectar->prepare($sql);
     $stmt->bind_param("ss", $desde, $hasta);
     $stmt->execute();
@@ -75,14 +82,36 @@
                     label: 'Visitas por Día',
                     data: datos,
                     borderColor: 'blue',
-                    fill: false
+                    fill: false,
+                    tension: 0.3
                 }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: { color: 'black' }
+                    }
+                },
+                scales: {
+                    x: { ticks: { color: 'black' } },
+                    y: { ticks: { color: 'black' } }
+                }
             }
         });
 
-        // Convertir gráfica a imagen y enviarla al generar PDF
         function generarPDF() {
-            const imagen = document.getElementById('grafica').toDataURL('image/jpeg', 1.0);
+            const canvas = document.getElementById('grafica');
+            const fondo = document.createElement('canvas');
+            fondo.width = canvas.width;
+            fondo.height = canvas.height;
+            const fondoCtx = fondo.getContext('2d');
+
+            fondoCtx.fillStyle = 'white';
+            fondoCtx.fillRect(0, 0, fondo.width, fondo.height);
+            fondoCtx.drawImage(canvas, 0, 0);
+
+            const imagen = fondo.toDataURL('image/jpeg', 1.0);
+
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = 'generar_reporte_pdf.php';
@@ -106,19 +135,17 @@
             form.appendChild(inputDesde);
             form.appendChild(inputHasta);
             form.appendChild(inputImg);
-
             document.body.appendChild(form);
             form.submit();
         }
     </script>
 
-    <button class="mod_car_1" onclick="generarPDF()"><i class="fa-solid fa-file-arrow-down"></i> Descargar PDF</button>
-
-    <br></br>
-
-    <?php
-    include "footer.php";
-    ?>
+    <button class="mod_car_1" onclick="generarPDF()">
+        <i class="fa-solid fa-file-arrow-down"></i> Descargar PDF
+    </button>
+    <br><br>
+    <?php include "footer.php"; ?>
+    <script src="funciones.js"></script>
 
 </body>
 

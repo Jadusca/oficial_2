@@ -8,6 +8,7 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -190,6 +191,8 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     <?php
     include "footer.php";
     ?>
+
+    <script src="funciones.js"></script>
 
 </body>
 

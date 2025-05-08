@@ -92,6 +92,13 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
             <?php endwhile; ?>
         </table>
     </div>
+
+    <?php
+    include "footer.php";
+    ?>
+
+    <script src="./funciones.js"></script>
+
 </body>
 
 </html>

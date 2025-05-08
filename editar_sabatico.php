@@ -49,6 +49,8 @@ $sabatico = $result->fetch_assoc();
 
 <br><br>
 
-    <?php
-    include "footer.php";
-    ?>
+<?php
+include "footer.php";
+?>
+
+<script src="./funciones.js"></script>

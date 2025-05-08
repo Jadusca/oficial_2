@@ -87,6 +87,8 @@ $periodos = $conectar->query("SELECT * FROM periodo_carrera");
     include "footer.php";
     ?>
 
+    <script src="./funciones.js"></script>
+
 </body>
 
 </html>

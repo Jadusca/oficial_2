@@ -75,3 +75,5 @@ $result = $conectar->query("SELECT * FROM sabaticos");
 <?php
 include "footer.php";
 ?>
+
+<script src="./funciones.js"></script>
