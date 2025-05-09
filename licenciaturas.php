@@ -13,7 +13,8 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentos por Carrera</title>
+    <title>Periodos de Licenciaturas</title>
+    <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.ico" type="image/x-icon">
     <script src="funciones.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">

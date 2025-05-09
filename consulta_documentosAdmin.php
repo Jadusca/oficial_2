@@ -1,3 +1,5 @@
+<link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
+
 <?php
 include "headeradmin.php";
 ?>
@@ -56,8 +58,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repositorio del Instituto Tecnológico de Mérida</title>
-    <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
+    <title>Panel de busqueda Administrativo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">
     <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>

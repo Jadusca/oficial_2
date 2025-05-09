@@ -1,3 +1,5 @@
+<link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
+
 <?php
 include 'headerSuperadmin.php';
 ?>
@@ -62,7 +64,7 @@ function consultar($tabla, $joins = "", $campos_extra = "")
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repositorio del Instituto Tecnológico de Mérida</title>
+    <title>Panel de busqueda Super Administrativo</title>
     <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">

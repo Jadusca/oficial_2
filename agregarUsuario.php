@@ -38,7 +38,7 @@
         <div class="lineaForm">
           <div>
             <p>Escriba su nombre completo</p>
-            <label for="" class="tituloapartadoUs">Nombre Completo:</label><br /><br />
+            <label for="" class="tituloapartadoUs">Nombres:</label><br /><br />
             <input name="nombre" class="inputAU tituloapartadoUs" type="text" required />
           </div>
         </div>

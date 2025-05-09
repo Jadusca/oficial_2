@@ -13,6 +13,7 @@ $id_categoria = isset($_GET['categoria']) ? intval($_GET['categoria']) : 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos Sabáticos</title>
+    <link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilosmovil.css">
     <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
