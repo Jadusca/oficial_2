@@ -51,6 +51,7 @@ if (!$res) {
         <th>Estado</th>
         <th>Documento</th>
         <th>Oficio</th>
+        <th>Editar</th>
     </tr>
     <?php while ($row = $res->fetch_assoc()): ?>
         <tr>
@@ -61,19 +62,21 @@ if (!$res) {
             <td><?= $row['nombre_estado'] ?></td>
             <td class='line_pdf'>
                 <div class="pdf_busqueda_1">
-                    <a href="ver_documento.php?archivo=<?= $row['documento'] ?>" target="_blank"><i
-                            class='fa-solid fa-file-pdf'></i></a>
+                    <a href="ver_documento.php?archivo=<?= $row['documento'] ?>" target="_blank"><i class='fa-solid fa-file-pdf'></i></a>
                 </div>
             </td>
             <td class='line_pdf'>
                 <?= $row['oficio'] ? "<div class='pdf_busqueda_1'><a href='ver_oficio.php?archivo={$row['oficio']}' target='_blank'><i class='fa-solid fa-file-zipper'></i></a></div>" : "No disponible" ?>
+            </td>
+            <td>
+                <a href="editar_documento_pos.php?id=<?= $row['id_ficha_posgrado'] ?>" class="btn-editar">
+                    <i class="fa-solid fa-pen-to-square"></i> Editar</a>
             </td>
         </tr>
     <?php endwhile; ?>
 </table>
 </div>
 
-<!-- Paginación con estilos -->
 <div class="paginacion">
     <?php for ($i = 1; $i <= $total_paginas; $i++):
         $clase = ($i == $pagina) ? 'pagina pagina-activa' : 'pagina';

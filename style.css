@@ -3825,3 +3825,17 @@ td {
   margin: auto;
   border-radius: 10px;
 }
+
+.btn-editar {
+  background-color: #003568;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-editar:hover {
+  background-color: #005aa7;
+}
