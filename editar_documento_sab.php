@@ -1,3 +1,5 @@
+<link rel="shortcut icon" href="Imagenes/Logo_ITM/Logo_ITM.png" type="image/x-icon">
+
 <?php
 require 'conexion.php';
 
@@ -74,41 +76,85 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar documento sabático</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilosmovil.css">
+    <script src="https://kit.fontawesome.com/1b0d4e5620.js" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src="responsiveslides.min.js"></script>
 </head>
+
 <body>
 
-<h2>Editar documento de sabático</h2>
-<form method="POST" enctype="multipart/form-data">
-    <label>Título:</label>
-    <input type="text" name="titulo" value="<?= htmlspecialchars($ficha['titulo']) ?>" required><br>
+    <?php
+    include "headerSuperadmin.php";
+    ?>
 
-    <label>Autor:</label>
-    <input type="text" name="autor" value="<?= htmlspecialchars($ficha['autor']) ?>" required><br>
+    <div class="edit_car">
+        <div class="menu1_1">
+            <a class="arrow" href="documentos_revisados.php"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <h2 class="tit_mod_car">Editar documento de sabático</h2>
+    </div>
+    <form class="nuevas_carreras" method="POST" enctype="multipart/form-data">
+        <section>
+            <label>Título:</label>
+            <input type="text" name="titulo" value="<?= htmlspecialchars($ficha['titulo']) ?>" required>
+        </section><br><br>
 
-    <label>Documento PDF:</label>
-    <input type="file" name="documento" accept="application/pdf"><br>
-    <?php if ($ficha['documento']): ?>
-        <p>Documento actual: <a href="ver_documento.php?archivo=<?= $ficha['documento'] ?>" target="_blank"><?= $ficha['documento'] ?></a></p>
-    <?php endif; ?>
+        <section>
+            <label>Autor:</label>
+            <input type="text" name="autor" value="<?= htmlspecialchars($ficha['autor']) ?>" required>
+        </section><br><br>
 
-    <label>Oficio PDF:</label>
-    <input type="file" name="oficio" accept="application/pdf"><br>
-    <?php if ($ficha['oficio']): ?>
-        <p>Oficio actual: <a href="ver_oficio.php?archivo=<?= $ficha['oficio'] ?>" target="_blank"><?= $ficha['oficio'] ?></a></p>
-    <?php endif; ?>
+        <section class="image_movil">
+            <label>Documento PDF:</label>
+            <input class="image" type="file" name="documento" accept="application/pdf">
+        </section><br><br>
+        <?php if ($ficha['documento']): ?>
+            <section class="image_movil">
+                <label>Documento actual:</label>
+                <div class="tabla-responsive">
+                    <a href="ver_documento.php?archivo=<?= $ficha['documento'] ?>"
+                        target="_blank"><?= $ficha['documento'] ?></a>
+                </div>
+            </section><br><br>
+        <?php endif; ?>
 
-    <?php if ($ficha['estado_revision'] == 3): // 3 = Rechazado ?>
-        <label>
-            <input type="checkbox" name="aprobar_rechazado"> Aprobar este documento
-        </label><br>
-    <?php endif; ?>
+        <section class="image_movil">
+            <label>Oficio PDF:</label>
+            <input class="image" type="file" name="oficio" accept="application/pdf">
+        </section><br><br>
+        <?php if ($ficha['oficio']): ?>
+            <section class="image_movil">
+                <label>Oficio actual:</label>
+                <div class="tabla-responsive">
+                    <a href="ver_oficio.php?archivo=<?= $ficha['oficio'] ?>" target="_blank"><?= $ficha['oficio'] ?></a>
+                </div>
+            </section><br><br>
+        <?php endif; ?>
 
-    <button type="submit">Guardar cambios</button>
-</form>
+        <?php if ($ficha['estado_revision'] == 3): // 3 = Rechazado ?>
+            <label>
+                <input type="checkbox" name="aprobar_rechazado"> Aprobar este documento
+            </label><br>
+        <?php endif; ?>
+
+        <button class="mod_car" type="submit">Guardar cambios</button>
+    </form>
+
+    <br><br>
+
+    <?php
+    include "footer.php";
+    ?>
+
+    <script src="./funciones.js"></script>
 
 </body>
+
 </html>

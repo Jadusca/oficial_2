@@ -70,7 +70,9 @@ while ($row = $res->fetch_assoc()) {
                 : "No disponible") . "
         </td>
         <td>
-            <a href='editar_documento.php?id={$row['id_ficha_carrera']}' class='btn-editar'>Editar</a>
+            <div class='pdf_busqueda'>
+            <a href='editar_documento.php?id={$row['id_ficha_carrera']}' class='btn-editar'><i
+                                        class='fa-solid fa-pen-to-square'></i></a></div>
         </td>
     </tr>";
 }

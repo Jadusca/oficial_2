@@ -65,7 +65,9 @@ if (!$res) {
                 <?= $row['oficio'] ? "<div class='pdf_busqueda_1'><a href='ver_oficio.php?archivo={$row['oficio']}' target='_blank'><i class='fa-solid fa-file-zipper'></i></a></div>" : "No disponible" ?>
             </td>
             <td>
-                <a href="editar_documento_sab.php?id=<?= $row['id_ficha_sabatico'] ?>" class="btn-editar">Editar</a>
+                <div class="pdf_busqueda">
+                    <a href="editar_documento_sab.php?id=<?= $row['id_ficha_sabatico'] ?>" class="btn-editar"><i class="fa-solid fa-pen-to-square"></i></a>
+                </div>
             </td>
         </tr>
     <?php endwhile; ?>
