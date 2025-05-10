@@ -1,4 +1,8 @@
 <?php
+include "seguridadSuperAdmin.php";
+?>
+
+<?php
 require 'conexion.php';
 
 $limite = 20;
