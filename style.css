@@ -896,7 +896,7 @@ iframe {
   display: flex;
   flex-direction: row;
   align-items: start;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .muro figure img {
