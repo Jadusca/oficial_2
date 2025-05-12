@@ -202,13 +202,13 @@ $buscar = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
         while ($carrera = $carreras->fetch_assoc()) {
             if ($buscar === '' || stripos($carrera['nombre_carrera'], $buscar) !== false) {
                 $nombre = $carrera['nombre_carrera'];
-                $logo = "../../oficial_2/logos/" . $carrera['logo_carrera'];
+                $logo = "logos/" . $carrera['logo_carrera'];
                 $id = $carrera['id_carreras'];
 
                 echo "<a href='?periodo=$id_periodo&carrera=$id'>
                     <div class='cardcarreras'>
                         <div class='logocar'>
-                            <figure><img src='$logo' alt='Logo de $nombre' onerror=\"this.onerror=null;this.src='../../oficial_2/logos/default.png';\"></figure>
+                            <figure><img src='$logo' alt='Logo de $nombre' onerror=\"this.onerror=null;this.src='/logos/default.png';\"></figure>
                         </div>
                         <h1>$nombre</h1>
                         <div class='fondo'></div>
