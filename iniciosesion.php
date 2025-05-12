@@ -66,13 +66,13 @@ if (isset($_GET['error'])) {
         <div class="textoforms">
             <!-- Opcional para recuperación de contraseña -->
         </div>
+        <br>
         <div class="logotecbiblio1">
             <figure><img src="Imagenes/Logo_ITM/Logo_ITM.png" alt=""></figure>
         </div>
         <div class="fondo-admin"></div>
     </div>
 </section>
-
 <div class="footer">
     <?php include 'footer.php'; ?>
 </div>

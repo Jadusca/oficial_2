@@ -602,7 +602,7 @@ iframe {
 /* CSS Tabla Ordenar*/
 
 .footer {
-  margin-top: -7px;
+  margin-top: 0px;
 }
 
 .ordenar {
@@ -896,13 +896,23 @@ iframe {
   display: flex;
   flex-direction: row;
   align-items: start;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-.muro figure img {
-  margin-left: -0.6%;
-  min-width: 900px;
-  height: 700px;
+.muro{
+  width: 90%;
+  margin-bottom: -0.5%;
+}
+
+.muro figure{
+  height: 100%;
+}
+
+.muro img {
+  display: inline-block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .iniciosesion {

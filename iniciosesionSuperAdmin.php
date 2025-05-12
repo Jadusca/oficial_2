@@ -57,6 +57,7 @@
                 <h1>Panel Super Administrativo</h1><br>
                 <h1>Centro de Información del Instituto Tecnológico de Mérida</h1>
             </div>
+            <br>
             <div class="formulariobiblio">
                 <form method="post" action="validarSuperUsuarioSuperAdmin.php">
                     <input type="text" name="usuario" class="campo" placeholder="Usuario Super Administrador"><br><br>
@@ -69,6 +70,7 @@
                     <a href="olvido_contrasena.php" style="text-decoration: none; color: #007BFF;">¿Olvidaste tu contraseña?</a>
                 </div>
             </div>
+            <br>
             <div class="logotecbiblio">
                 <figure>
                     <img src="Imagenes/Logo_ITM/Logo_ITM.png" alt="">
